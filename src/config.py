@@ -14,9 +14,8 @@ class QMLConfig:
         self.qml_keywords = {
             'primary': [
                 'quantum machine learning', 'quantum neural network', 'quantum neural networks',
-                'variational quantum', 'quantum classifier', 'quantum kernel',
-                'quantum circuit learning', 'parametric quantum', 'parametrized quantum',
-                'hybrid quantum', 'quantum-classical hybrid'
+                'supervised learning', 'parametric quantum', 'parametrized quantum',
+                'hybrid quantum', 'quantum-classical hybrid', 'fourier'
             ],
             'encoding': [
                 'data encoding', 'feature map', 'embedding', 'data uploading',
@@ -24,27 +23,18 @@ class QMLConfig:
                 'encoding circuit', 'feature encoding', 'quantum feature map'
             ],
             'algorithms': [
-                'VQC', 'QAOA', 'VQE', 'PQC', 'variational quantum circuit',
-                'parametrized quantum circuit', 'quantum approximate optimization',
-                'variational quantum eigensolver', 'quantum neural network',
-                'quantum convolutional', 'quantum recurrent'
+                'VQC', 'quantum neural network',
             ],
             'theory': [
                 'expressivity', 'expressive power', 'barren plateau', 'trainability',
-                'quantum advantage', 'quantum supremacy', 'quantum speedup',
-                'generalization', 'quantum generalization', 'fourier analysis',
+                'fourier analysis',
                 'fourier series', 'frequency spectrum', 'universal approximation'
             ],
             'applications': [
-                'NISQ', 'near-term quantum', 'quantum classification',
-                'quantum regression', 'quantum clustering', 'quantum reinforcement',
-                'quantum optimization', 'quantum sensing', 'quantum chemistry'
+                'quantum regression'
             ],
             'techniques': [
-                'gradient-based optimization', 'parameter-shift rule',
-                'quantum natural gradient', 'quantum fisher information',
-                'measurement optimization', 'observable optimization',
-                'quantum kernel methods', 'quantum support vector'
+                'gradient-based optimization'
             ]
         }
 
@@ -61,20 +51,14 @@ class QMLConfig:
         # Key authors in quantum ML (add/remove as needed)
         self.key_authors = {
             # Pioneers and leading researchers
-            'Maria Schuld', 'Seth Lloyd', 'John Preskill', 'Jacob Biamonte',
-            'Peter Wittek', 'Nathan Wiebe', 'Marcello Benedetti', 'Stefan Woerner',
-            'Ryan LaRose', 'Vojtech Dunjko', 'Patrick Coles', 'Marco Cerezo',
+            'Maria Schuld', 'Marco Cerezo',
 
             # Data encoding and expressivity specialists
             'Ryan Sweke', 'Johannes Jakob Meyer', 'Adrián Pérez-Salinas',
             'Supanut Thanasilp', 'Sofiene Jerbi', 'Hsin-Yuan Huang',
-
-            # Quantum advantage and complexity
-            'Yunchao Liu', 'Srinivasan Arunachalam', 'Juan Carrasquilla',
-            'Giacomo Torlai', 'Giuseppe Carleo', 'Lukasz Cincio',
+            'Marco Wiedmann', 'Daniel Scherer', 'Hela Mhiri', 'Jonas Landman'
 
             # NISQ and variational algorithms
-            'Andrew Arrasmith', 'Tyler Volkoff', 'Samson Wang',
             'Cristina Cîrstoiu', 'Kosuke Mitarai', 'Keisuke Fujii'
         }
 
@@ -86,34 +70,10 @@ class QMLConfig:
                 "year": 2021,
                 "weight": 15  # Your main reference gets highest weight
             },
-            "1707.08561": {
-                "title": "Quantum machine learning: a classical perspective",
-                "authors": ["Ciliberto", "Schuld", "Rocchetto"],
-                "year": 2018,
-                "weight": 12
-            },
-            "1802.06002": {
-                "title": "Classification with quantum neural networks on near term processors",
-                "authors": ["Farhi", "Neven"],
-                "year": 2018,
-                "weight": 10
-            },
             "1804.00633": {
                 "title": "Barren plateaus in quantum neural network training landscapes",
                 "authors": ["McClean", "Boixo", "Smelyanskiy"],
                 "year": 2018,
-                "weight": 10
-            },
-            "2001.03622": {
-                "title": "Quantum embeddings for machine learning",
-                "authors": ["Lloyd", "Schuld", "Ijaz"],
-                "year": 2020,
-                "weight": 8
-            },
-            "2103.05561": {
-                "title": "Power of data in quantum machine learning",
-                "authors": ["Huang", "Broughton", "Mohseni"],
-                "year": 2021,
                 "weight": 10
             },
             "2109.11676": {
@@ -122,20 +82,11 @@ class QMLConfig:
                 "year": 2021,
                 "weight": 8
             },
-            "2105.02276": {
-                "title": "Generalization in quantum machine learning from few training data",
-                "authors": ["Caro", "Huang", "Ezzell"],
-                "year": 2022,
-                "weight": 8
-            }
         }
 
         # arXiv categories to search (in order of priority)
         self.arxiv_categories = [
             'quant-ph',  # Quantum Physics (highest priority)
-            'cs.LG',  # Machine Learning
-            'cs.AI',  # Artificial Intelligence
-            'stat.ML',  # Statistics - Machine Learning
             'physics.comp-ph',  # Computational Physics
             'math.OC'  # Optimization and Control
         ]
