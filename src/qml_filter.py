@@ -390,7 +390,7 @@ class GitHubQMLFilter:
     </body></html>'''
 
     def save_outputs(self, papers: List[Dict], date_str: str) -> Dict[str, str]:
-        """Save all output formats"""
+        """Save all output formats - Fixed version"""
         outputs = {}
 
         # Text digest
@@ -410,16 +410,27 @@ class GitHubQMLFilter:
         json_file.write_text(json.dumps(papers, indent=2, default=str), encoding='utf-8')
         outputs['json_file'] = str(json_file)
 
-        # GitHub Actions outputs
+        # GitHub Actions outputs (with better error handling)
         if os.getenv('GITHUB_ACTIONS'):
-            with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
-                f.write(f"relevant_papers={len(papers)}\n")
-                if papers:
-                    f.write(f"top_paper={papers[0]['title']}\n")
-                    f.write(f"top_score={papers[0]['combined_score']:.1f}\n")
+            try:
+                output_file = os.environ.get('GITHUB_OUTPUT')
+                if output_file and os.path.exists(os.path.dirname(output_file)):
+                    with open(output_file, 'a') as f:
+                        f.write(f"relevant_papers={len(papers)}\n")
+                        if papers:
+                            # Sanitize title for GitHub Actions (remove newlines, limit length)
+                            clean_title = papers[0]['title'].replace('\n', ' ').replace('\r', ' ')[:100]
+                            clean_title = ''.join(c for c in clean_title if c.isprintable() and c != '"')
+
+                            f.write(f"top_paper={clean_title}\n")
+                            f.write(f"top_score={papers[0]['combined_score']:.1f}\n")
+                else:
+                    print("⚠️  GITHUB_OUTPUT file not accessible, skipping GitHub Actions outputs")
+            except Exception as e:
+                print(f"⚠️  GitHub Actions output failed: {e}")
+                # Don't fail the entire process for output issues
 
         return outputs
-
     def run(self, days_back: int = 1, min_score: int = 5) -> Dict:
         """Main execution function"""
         start_time = time.time()
