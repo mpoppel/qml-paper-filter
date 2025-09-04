@@ -80,8 +80,14 @@ class QMLConfig:
                 "title": "Theory of overparametrization in quantum neural networks",
                 "authors": ["Larocca", "Ju", "García-Martín"],
                 "year": 2021,
-                "weight": 8
+                "weight": 10
             },
+            "2411.03450": {
+                "title": "TFourier Analysis of Variational Quantum Circuits for Supervised Learning",
+                "authors": ["Wiedmann", "Periyasamy", "Daniel D. Scherer"],
+                "year": 2024,
+                "weight": 10
+            }
         }
 
         # arXiv categories to search (in order of priority)
@@ -106,7 +112,7 @@ class QMLConfig:
 
         # API and rate limiting settings
         self.api_settings = {
-            'arxiv_max_results_per_category': 200,
+            'arxiv_max_results_per_category': 500,
             'request_timeout': 30,
             'rate_limit_delay': 1.0,  # seconds between requests
             'semantic_scholar_delay': 1.5,
