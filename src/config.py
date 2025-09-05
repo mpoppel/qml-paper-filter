@@ -12,6 +12,7 @@ class QMLConfig:
 
         # Quantum ML keywords organized by category with weights
         self.qml_keywords = {
+            'essential' : ['quantum'],
             'primary': [
                 'quantum machine learning', 'quantum neural network', 'quantum neural networks',
                 'supervised learning', 'parametric quantum', 'parametrized quantum',
@@ -40,6 +41,7 @@ class QMLConfig:
 
         # Scoring weights for each category
         self.keyword_weights = {
+            'essential' : 10 ,
             'primary': 10,  # Core QML terms get highest weight
             'encoding': 8,  # Data encoding is your focus area
             'algorithms': 6,  # Specific algorithms
@@ -100,7 +102,7 @@ class QMLConfig:
         # Minimum scores for different priority levels
         self.score_thresholds = {
             'high_priority': 25,  # Definitely relevant
-            'medium_priority': 15,  # Likely relevant
+            'medium_priority': 20,  # Likely relevant
             'low_priority': 8,  # Possibly relevant
             'skip': 0  # Not relevant
         }
