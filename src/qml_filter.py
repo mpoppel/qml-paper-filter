@@ -41,14 +41,13 @@ class GitHubQMLFilter:
         for i, category in enumerate(categories):
             print(f"🔍 Searching category {category} ({i + 1}/{len(categories)})")
 
-            # Build arXiv API query
             query = f"cat:{category}"
             base_url = "http://export.arxiv.org/api/query"
 
             params = {
                 'search_query': query,
                 'start': 0,
-                'max_results': min(200, 1000 // len(categories)),  # Distribute API calls
+                'max_results': min(200, 1000 // len(categories)),
                 'sortBy': 'submittedDate',
                 'sortOrder': 'descending'
             }
@@ -58,13 +57,20 @@ class GitHubQMLFilter:
                 category_papers = self._parse_arxiv_response(response.text, start_date)
                 papers.extend(category_papers)
                 print(f"   Found {len(category_papers)} recent papers in {category}")
-                time.sleep(1)  # Rate limiting
-
+                time.sleep(1)
             except Exception as e:
                 print(f"❌ Error fetching {category}: {e}")
 
-        print(f"📊 Total papers fetched: {len(papers)}")
-        return papers
+        # ✅ Deduplicate by arXiv ID
+        unique_papers = {}
+
+        for paper in papers:
+            unique_papers[paper['id']] = paper  # overwrite duplicates safely
+
+        #print(f"📊 Total papers fetched (before dedup): {len(papers)}")
+        #print(f"📊 Unique papers after deduplication: {len(unique_papers)}")
+
+        return list(unique_papers.values())
 
     def _parse_arxiv_response(self, xml_content: str, start_date: datetime) -> List[Dict]:
         """Parse arXiv API XML response with error handling"""
