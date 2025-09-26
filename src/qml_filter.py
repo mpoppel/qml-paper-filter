@@ -488,6 +488,11 @@ def main():
 
     args = parser.parse_args()
 
+    # Auto-adjust days_back for weekends
+    if args.days_back is None:
+        today = datetime.datetime.now().weekday()  # 0 = Monday, 6 = Sunday
+        args.days_back = 3 if today == 0 else 1  # 3 days back on Monday, 1 otherwise
+
     # Load configuration
     config = QMLConfig()
 
