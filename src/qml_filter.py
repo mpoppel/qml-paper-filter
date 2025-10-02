@@ -475,25 +475,44 @@ class GitHubQMLFilter:
 
 def main():
     parser = argparse.ArgumentParser(description='Quantum ML Paper Filter')
-    parser.add_argument('--days-back', type=int, default=1, help='Days to look back')
+    parser.add_argument('--days-back', type=int, default=None, help='Days to look back')
     parser.add_argument('--min-score', type=int, default=5, help='Minimum relevance score')
     parser.add_argument('--output-format', choices=['text', 'html', 'both'], default='both')
     parser.add_argument('--weekly-summary', action='store_true', help='Generate weekly summary')
+    parser.add_argument('--last-digest-date', type=str, default=None, help='Date of last digest (YYYY-MM-DD)')
 
     args = parser.parse_args()
 
+    # Determine lookback period
+    today = datetime.now().date()
+    if args.last_digest_date:
+        last_digest_date = datetime.strptime(args.last_digest_date, "%Y-%m-%d").date()
+        days_back = (today - last_digest_date).days
+        # If days_back is 0, fallback to 1 to avoid empty fetch
+        days_back = max(days_back, 1)
+    else:
+        days_back = args.days_back if args.days_back is not None else 1
+        last_digest_date = today - timedelta(days=days_back)
+
     # Load configuration
     config = QMLConfig()
-
-    # Create and run filter
     filter_instance = GitHubQMLFilter(config)
-    result = filter_instance.run(
-        days_back=args.days_back,
-        min_score=args.min_score
-    )
+
+    # Fetch papers
+    papers = filter_instance.fetch_recent_papers(days_back=days_back)
+
+    # Filter papers strictly between last_digest_date (exclusive) and today (inclusive)
+    filtered_papers = [
+        p for p in papers
+        if p.get('published') and last_digest_date < p['published'].date() <= today
+    ]
+
+    # Continue with filtering and output
+    relevant_papers = filter_instance.filter_and_enhance_papers(filtered_papers, min_score=args.min_score)
+    result = filter_instance.save_outputs(relevant_papers, today.strftime("%Y-%m-%d"))
 
     # Exit with appropriate code
-    sys.exit(0 if result['success'] else 1)
+    sys.exit(0 if relevant_papers else 1)
 
 
 if __name__ == "__main__":

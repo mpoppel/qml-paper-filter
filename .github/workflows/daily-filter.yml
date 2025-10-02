@@ -31,13 +31,14 @@ jobs:
       uses: actions/cache@v4
       with:
         path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
+        key: "${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}"
+        restore-keys:
+          - "${{ runner.os }}-pip-"
 
     - name: Set environment variables
       run: |
         echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+        echo "WEEKDAY=$(date +'%A')" >> $GITHUB_ENV
         echo "EMAIL_ENABLED=${{ secrets.EMAIL_USERNAME != '' && secrets.EMAIL_PASSWORD != '' && secrets.EMAIL_TO != '' }}" >> $GITHUB_ENV
         echo "SLACK_ENABLED=${{ secrets.SLACK_WEBHOOK_URL != '' }}" >> $GITHUB_ENV
 
@@ -46,13 +47,37 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Determine last digest date
+      run: |
+        DIGEST_FILE="src/output/last_digest_date.txt"
+        if [ -f "$DIGEST_FILE" ]; then
+          LAST_DIGEST_DATE=$(cat "$DIGEST_FILE")
+        else
+          LAST_DIGEST_DATE=$(date -d 'yesterday' +'%Y-%m-%d')
+        fi
+        echo "LAST_DIGEST_DATE=$LAST_DIGEST_DATE" >> $GITHUB_ENV
+
     - name: Run paper filter
       id: filter
       run: |
         cd src
-        python qml_filter.py --days-back ${{ github.event.inputs.days_back || '1' }} --output-format both
+        python qml_filter.py --last-digest-date "${{ env.LAST_DIGEST_DATE }}" --output-format both
       env:
         PYTHONPATH: ${{ github.workspace }}/src
+
+    - name: Update last digest date
+      if: success()
+      run: |
+        echo "$(date +'%Y-%m-%d')" > src/output/last_digest_date.txt
+
+    - name: Commit and push last digest date
+      if: success()
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add src/output/last_digest_date.txt
+        git diff --staged --quiet || git commit -m "Update last digest date to ${{ env.DATE }}"
+        git push
 
     - name: Upload digest artifact
       uses: actions/upload-artifact@v4
@@ -90,51 +115,14 @@ jobs:
           
           <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View full digest>
 
-    - name: Create issue on failure
+    - name: Log failure details
       if: failure()
-      uses: actions/github-script@v7
-      with:
-        script: |
-          github.rest.issues.create({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            title: `QML Paper Filter Failed - ${new Date().toISOString().split('T')[0]}`,
-            body: `The quantum ML paper filter failed to run successfully.
-            
-            **Run Details:**
-            - Workflow: ${context.workflow}
-            - Run ID: ${context.runId}
-            - Trigger: ${context.eventName}
-            
-            **Error Details:**
-            Check the [workflow run](${context.payload.repository.html_url}/actions/runs/${context.runId}) for details.
-            
-            This issue will be automatically closed when the next successful run completes.`,
-            labels: ['bug', 'automated']
-          })
-
-    - name: Close previous failure issues
-      if: success()
-      uses: actions/github-script@v7
-      with:
-        script: |
-          const issues = await github.rest.issues.listForRepo({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            labels: 'automated',
-            state: 'open'
-          });
-          
-          for (const issue of issues.data) {
-            if (issue.title.includes('QML Paper Filter Failed')) {
-              await github.rest.issues.update({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: issue.number,
-                state: 'closed'
-              });
-            }
-          }
+      run: |
+        echo "❌ QML Paper Filter Failed - ${{ env.DATE }}"
+        echo "Workflow: ${{ github.workflow }}"
+        echo "Run ID: ${{ github.run_id }}"
+        echo "Trigger: ${{ github.event_name }}"
+        echo "Check the workflow run for details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
   # Optional: Weekly summary job
   weekly-summary:
