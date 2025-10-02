@@ -1,7 +1,7 @@
 name: Quantum ML Paper Filter
 
 on:
-  # Run daily at 9 AM UTC (adjust timezone as needed)
+  # Run daily at 6 AM UTC (adjust timezone as needed)
   schedule:
     - cron: '0 6 * * *'
 
@@ -46,6 +46,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Create output directory
+      run: |
+        mkdir -p src/output
+
     - name: Determine last digest date
       run: |
         DIGEST_FILE="src/output/last_digest_date.txt"
@@ -75,15 +79,16 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add src/output/last_digest_date.txt
-        git diff --staged --quiet || git commit -m "Update last digest date to ${{ env.DATE }}"
-        git push
+        if ! git diff --staged --quiet; then
+          git commit -m "Update last digest date to ${{ env.DATE }}"
+          git push
+        fi
 
     - name: Upload digest artifact
       uses: actions/upload-artifact@v4
       with:
         name: qml-digest-${{ env.DATE }}
-        path: |
-          src/output/
+        path: src/output/
         retention-days: 90
 
     - name: Send email notification
@@ -114,14 +119,17 @@ jobs:
           
           <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View full digest>
 
-    - name: Log failure details
-      if: failure()
+    - name: Log completion
       run: |
-        echo "❌ QML Paper Filter Failed - ${{ env.DATE }}"
+        echo "✅ QML Paper Filter completed - ${{ env.DATE }}"
         echo "Workflow: ${{ github.workflow }}"
         echo "Run ID: ${{ github.run_id }}"
         echo "Trigger: ${{ github.event_name }}"
-        echo "Check the workflow run for details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        if [ -f "src/output/digest_${{ env.DATE }}.txt" ]; then
+          echo "📄 Digest generated successfully"
+        else
+          echo "⚠️ No digest file found"
+        fi
 
   # Optional: Weekly summary job
   weekly-summary:
