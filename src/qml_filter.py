@@ -41,14 +41,13 @@ class GitHubQMLFilter:
         for i, category in enumerate(categories):
             print(f"🔍 Searching category {category} ({i + 1}/{len(categories)})")
 
-            # Build arXiv API query
             query = f"cat:{category}"
             base_url = "http://export.arxiv.org/api/query"
 
             params = {
                 'search_query': query,
                 'start': 0,
-                'max_results': min(200, 1000 // len(categories)),  # Distribute API calls
+                'max_results': min(200, 1000 // len(categories)),
                 'sortBy': 'submittedDate',
                 'sortOrder': 'descending'
             }
@@ -58,13 +57,20 @@ class GitHubQMLFilter:
                 category_papers = self._parse_arxiv_response(response.text, start_date)
                 papers.extend(category_papers)
                 print(f"   Found {len(category_papers)} recent papers in {category}")
-                time.sleep(1)  # Rate limiting
-
+                time.sleep(1)
             except Exception as e:
                 print(f"❌ Error fetching {category}: {e}")
 
-        print(f"📊 Total papers fetched: {len(papers)}")
-        return papers
+        # ✅ Deduplicate by arXiv ID
+        unique_papers = {}
+
+        for paper in papers:
+            unique_papers[paper['id']] = paper  # overwrite duplicates safely
+
+        #print(f"📊 Total papers fetched (before dedup): {len(papers)}")
+        #print(f"📊 Unique papers after deduplication: {len(unique_papers)}")
+
+        return list(unique_papers.values())
 
     def _parse_arxiv_response(self, xml_content: str, start_date: datetime) -> List[Dict]:
         """Parse arXiv API XML response with error handling"""
@@ -475,44 +481,30 @@ class GitHubQMLFilter:
 
 def main():
     parser = argparse.ArgumentParser(description='Quantum ML Paper Filter')
-    parser.add_argument('--days-back', type=int, default=None, help='Days to look back')
+    parser.add_argument('--days-back', type=int, default=1, help='Days to look back')
     parser.add_argument('--min-score', type=int, default=5, help='Minimum relevance score')
     parser.add_argument('--output-format', choices=['text', 'html', 'both'], default='both')
     parser.add_argument('--weekly-summary', action='store_true', help='Generate weekly summary')
-    parser.add_argument('--last-digest-date', type=str, default=None, help='Date of last digest (YYYY-MM-DD)')
 
     args = parser.parse_args()
 
-    # Determine lookback period
-    today = datetime.now().date()
-    if args.last_digest_date:
-        last_digest_date = datetime.strptime(args.last_digest_date, "%Y-%m-%d").date()
-        days_back = (today - last_digest_date).days
-        # If days_back is 0, fallback to 1 to avoid empty fetch
-        days_back = max(days_back, 1)
-    else:
-        days_back = args.days_back if args.days_back is not None else 1
-        last_digest_date = today - timedelta(days=days_back)
+    # Auto-adjust days_back for weekends
+    if args.days_back is None:
+        today = datetime.datetime.now().weekday()  # 0 = Monday, 6 = Sunday
+        args.days_back = 3 if today == 0 else 1  # 3 days back on Monday, 1 otherwise
 
     # Load configuration
     config = QMLConfig()
+
+    # Create and run filter
     filter_instance = GitHubQMLFilter(config)
-
-    # Fetch papers
-    papers = filter_instance.fetch_recent_papers(days_back=days_back)
-
-    # Filter papers strictly between last_digest_date (exclusive) and today (inclusive)
-    filtered_papers = [
-        p for p in papers
-        if p.get('published') and last_digest_date < p['published'].date() <= today
-    ]
-
-    # Continue with filtering and output
-    relevant_papers = filter_instance.filter_and_enhance_papers(filtered_papers, min_score=args.min_score)
-    result = filter_instance.save_outputs(relevant_papers, today.strftime("%Y-%m-%d"))
+    result = filter_instance.run(
+        days_back=args.days_back,
+        min_score=args.min_score
+    )
 
     # Exit with appropriate code
-    sys.exit(0 if relevant_papers else 1)
+    sys.exit(0 if result['success'] else 1)
 
 
 if __name__ == "__main__":
