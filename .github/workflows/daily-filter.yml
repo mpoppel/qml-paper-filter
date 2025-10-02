@@ -20,6 +20,10 @@ on:
         default: false
         type: boolean
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   filter-papers:
     runs-on: ubuntu-latest
