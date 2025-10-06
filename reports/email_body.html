@@ -1,0 +1,1286 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        .paper {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+        .paper-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .paper-title a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .paper-title a:hover {
+            text-decoration: underline;
+        }
+        .paper-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .paper-meta span {
+            margin-right: 15px;
+        }
+        .relevance-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .relevance-high {
+            background-color: #48bb78;
+            color: white;
+        }
+        .relevance-medium {
+            background-color: #ed8936;
+            color: white;
+        }
+        .relevance-low {
+            background-color: #cbd5e0;
+            color: #2d3748;
+        }
+        .paper-abstract {
+            font-size: 14px;
+            color: #4a5568;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .paper-keywords {
+            font-size: 12px;
+            color: #667eea;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .paper-links {
+            margin-top: 15px;
+        }
+        .paper-links a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin-right: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .btn-arxiv {
+            background-color: #667eea;
+            color: white;
+        }
+        .btn-pdf {
+            background-color: #f56565;
+            color: white;
+        }
+        .btn-arxiv:hover, .btn-pdf:hover {
+            opacity: 0.9;
+        }
+        .summary {
+            background-color: #edf2f7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        .no-papers {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📚 arXiv Quantum ML Digest</h1>
+        <p>2025-10-06 • 54 papers found</p>
+        <p>Ranked by relevance to your research</p>
+    </div>
+
+    <div class="summary">
+        <strong>Search Summary:</strong> Found 54 papers in the last 7 days, 
+        sorted by relevance to quantum circuits, machine learning, and Fourier analysis.
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-high">High Relevance (Score: 10)</span>
+            <br>
+            1. <a href="http://arxiv.org/abs/2509.25930v1">Classical feature map surrogates and metrics for quantum control landscapes</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Martino Calzavara, Tommaso Calarco, Felix Motzoi</span>
+            <span>📅 Published: 2025-09-30</span>
+            <span>🏷️ quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            We derive and analyze three feature map representations of parametrized quantum dynamics, which generalize variational quantum circuits. These are (i) a Lie-Fourier partial sum, (ii) a Taylor expansion, and (iii) a finite-dimensional sinc kernel regression representation. The Lie-Fourier representat...
+        </div>
+        <div class="paper-keywords">Matched keywords: fourier, variational quantum, quantum circuit, barren plateau</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2509.25930v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2509.25930v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-high">High Relevance (Score: 6)</span>
+            <br>
+            2. <a href="http://arxiv.org/abs/2510.02497v1">Amplitude-based Input Attribution in Quantum Learning via Integrated Gradients</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Nicholas S. DiBrita, Jason Han, Younghyun Cho et al.</span>
+            <span>📅 Published: 2025-10-02</span>
+            <span>🏷️ quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            Quantum machine learning (QML) algorithms have demonstrated early promise across hardware platforms, but remain difficult to interpret due to the inherent opacity of quantum state evolution. Widely used classical interpretability methods, such as integrated gradients and surrogate-based sensitivity ...
+        </div>
+        <div class="paper-keywords">Matched keywords: quantum machine learning, quantum circuit, qml</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.02497v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.02497v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-high">High Relevance (Score: 6)</span>
+            <br>
+            3. <a href="http://arxiv.org/abs/2510.01850v1">NGGAN: Noise Generation GAN Based on the Practical Measurement Dataset for Narrowband Powerline Communications</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Ying-Ren Chien, Po-Heng Chou, You-Jie Peng et al.</span>
+            <span>📅 Published: 2025-10-02</span>
+            <span>🏷️ eess.SP, cs.AI, cs.IT</span>
+        </div>
+        <div class="paper-abstract">
+            Capturing comprehensive statistics of nonperiodic asynchronous impulsive noise is a critical issue in enhancing impulse noise processing for narrowband powerline communication (NB-PLC) transceivers. However, existing mathematical noise generative models capture only some of the characteristics of ad...
+        </div>
+        <div class="paper-keywords">Matched keywords: spectral, frequency</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.01850v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.01850v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-high">High Relevance (Score: 6)</span>
+            <br>
+            4. <a href="http://arxiv.org/abs/2510.00468v1">Feature Identification via the Empirical NTK</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Jennifer Lin</span>
+            <span>📅 Published: 2025-10-01</span>
+            <span>🏷️ cs.LG, cs.AI</span>
+        </div>
+        <div class="paper-abstract">
+            We provide evidence that eigenanalysis of the empirical neural tangent kernel (eNTK) can surface the features used by trained neural networks. Across two standard toy models for mechanistic interpretability, Toy Models of Superposition (TMS) and a 1-layer MLP trained on modular addition, we find tha...
+        </div>
+        <div class="paper-keywords">Matched keywords: fourier, spectral</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.00468v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.00468v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-medium">Medium Relevance (Score: 3)</span>
+            <br>
+            5. <a href="http://arxiv.org/abs/2510.03209v1">Joint Bidding on Intraday and Frequency Containment Reserve Markets</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Yiming Zhang, Wolfgang Ridinger, David Wozabal</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ q-fin.CP, cs.LG, q-fin.TR</span>
+        </div>
+        <div class="paper-abstract">
+            As renewable energy integration increases supply variability, battery energy storage systems (BESS) present a viable solution for balancing supply and demand. This paper proposes a novel approach for optimizing battery BESS participation in multiple electricity markets. We develop a joint bidding st...
+        </div>
+        <div class="paper-keywords">Matched keywords: frequency</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03209v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03209v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-medium">Medium Relevance (Score: 3)</span>
+            <br>
+            6. <a href="http://arxiv.org/abs/2510.03199v1">Best-of-Majority: Minimax-Optimal Strategy for Pass@$k$ Inference Scaling</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Qiwei Di, Kaixuan Ji, Xuheng Li et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.LG, stat.ML</span>
+        </div>
+        <div class="paper-abstract">
+            LLM inference often generates a batch of candidates for a prompt and selects one via strategies like majority voting or Best-of- N (BoN). For difficult tasks, this single-shot selection often underperforms. Consequently, evaluations commonly report Pass@$k$: the agent may submit up to $k$ responses,...
+        </div>
+        <div class="paper-keywords">Matched keywords: frequency</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03199v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03199v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-medium">Medium Relevance (Score: 3)</span>
+            <br>
+            7. <a href="http://arxiv.org/abs/2510.02009v1">ShapeGen3DCP: A Deep Learning Framework for Layer Shape Prediction in 3D Concrete Printing</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Giacomo Rizzieri, Federico Lanteri, Liberato Ferrara et al.</span>
+            <span>📅 Published: 2025-10-02</span>
+            <span>🏷️ cs.CE, cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            This work introduces ShapeGen3DCP, a deep learning framework for fast and accurate prediction of filament cross-sectional geometry in 3D Concrete Printing (3DCP). The method is based on a neural network architecture that takes as input both material properties in the fluid state (density, yield stre...
+        </div>
+        <div class="paper-keywords">Matched keywords: fourier</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.02009v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.02009v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-medium">Medium Relevance (Score: 3)</span>
+            <br>
+            8. <a href="http://arxiv.org/abs/2510.00184v1">Why Can't Transformers Learn Multiplication? Reverse-Engineering Reveals Long-Range Dependency Pitfalls</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Xiaoyan Bai, Itamar Pres, Yuntian Deng et al.</span>
+            <span>📅 Published: 2025-09-30</span>
+            <span>🏷️ cs.LG, cs.AI</span>
+        </div>
+        <div class="paper-abstract">
+            Language models are increasingly capable, yet still fail at a seemingly simple task of multi-digit multiplication. In this work, we study why, by reverse-engineering a model that successfully learns multiplication via \emph{implicit chain-of-thought}, and report three findings: (1) Evidence of long-...
+        </div>
+        <div class="paper-keywords">Matched keywords: fourier</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.00184v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.00184v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-medium">Medium Relevance (Score: 3)</span>
+            <br>
+            9. <a href="http://arxiv.org/abs/2509.26131v1">Domain-Aware Hyperdimensional Computing for Edge Smart Manufacturing</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Fardin Jalil Piran, Anandkumar Patel, Rajiv Malhotra et al.</span>
+            <span>📅 Published: 2025-09-30</span>
+            <span>🏷️ cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            Smart manufacturing requires on-device intelligence that meets strict latency and energy budgets. HyperDimensional Computing (HDC) offers a lightweight alternative by encoding data as high-dimensional hypervectors and computing with simple operations. Prior studies often assume that the qualitative ...
+        </div>
+        <div class="paper-keywords">Matched keywords: fourier</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2509.26131v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2509.26131v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-medium">Medium Relevance (Score: 3)</span>
+            <br>
+            10. <a href="http://arxiv.org/abs/2509.24800v1">DSAT-HD: Dual-Stream Adaptive Transformer with Hybrid Decomposition for Multivariate Time Series Forecasting</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Zixu Wang, Hongbin Dong, Xiaoping Zhang</span>
+            <span>📅 Published: 2025-09-29</span>
+            <span>🏷️ cs.LG, cs.AI</span>
+        </div>
+        <div class="paper-abstract">
+            Time series forecasting is crucial for various applications, such as weather, traffic, electricity, and energy predictions. Currently, common time series forecasting methods are based on Transformers. However, existing approaches primarily model limited time series or fixed scales, making it more ch...
+        </div>
+        <div class="paper-keywords">Matched keywords: fourier</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2509.24800v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2509.24800v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 2)</span>
+            <br>
+            11. <a href="http://arxiv.org/abs/2510.03225v1">Absence of quantum Darwinism as a resource in secure quantum communication and computation</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Bishal Kumar Das, Sourav Manna, Vaibhav Madhok</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            The emergence of classical world from underlying quantum mechanics is characterized by not only vanishing quantum correlations but also an unfolding of objectivity also known as quantum Darwinism. We show that the absence of this objectivity has a quantum advantage in cryptography and also provides ...
+        </div>
+        <div class="paper-keywords">Matched keywords: quantum circuit</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03225v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03225v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 2)</span>
+            <br>
+            12. <a href="http://arxiv.org/abs/2510.03113v1">Bounds on Atomistic Disorder for Scalable Electron Shuttling</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Raphaël J. Prentki, Pericles Philippopoulos, Mohammad Reza Mostaan et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ quant-ph, cond-mat.mes-hall</span>
+        </div>
+        <div class="paper-abstract">
+            Electron shuttling is emerging as a key enabler of scalable silicon spin-qubit quantum computing, but fidelities are limited by atomistic disorder. We introduce a multiscale simulation framework combining time-dependent finite-element electrostatics and atomistic tight-binding to capture the impact ...
+        </div>
+        <div class="paper-keywords">Matched keywords: qubit, quantum computing</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03113v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03113v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 2)</span>
+            <br>
+            13. <a href="http://arxiv.org/abs/2510.03083v1">To break, or not to break: Symmetries in adaptive quantum simulations, a case study on the Schwinger model</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Karunya Shailesh Shirali, Kyle Sherbert, Yanzhu Chen et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ quant-ph, hep-lat</span>
+        </div>
+        <div class="paper-abstract">
+            We investigate the role of symmetries in constructing resource-efficient operator pools for adaptive variational quantum eigensolvers. In particular, we focus on the lattice Schwinger model, a discretized model of $1+1$ dimensional electrodynamics, which we use as a proxy for spin chains with a cont...
+        </div>
+        <div class="paper-keywords">Matched keywords: variational quantum</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03083v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03083v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 1)</span>
+            <br>
+            14. <a href="http://arxiv.org/abs/2510.03218v1">Cheat-Penalised Quantum Weak Coin-Flipping</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Atul Singh Arora, Carl A. Miller, Mauro E. S. Morales et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ quant-ph, cs.CR</span>
+        </div>
+        <div class="paper-abstract">
+            Coin-flipping is a fundamental task in two-party cryptography where two remote mistrustful parties wish to generate a shared uniformly random bit. While quantum protocols promising near-perfect security exist for weak coin-flipping -- when the parties want opposing outcomes -- it has been shown that...
+        </div>
+        <div class="paper-keywords">Matched keywords: qubit</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03218v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03218v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 1)</span>
+            <br>
+            15. <a href="http://arxiv.org/abs/2510.03099v1">Polarization dependence of spin-electric transitions in molecular exchange qubits</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Filippo Troiani, Athanassios K. Boudalis</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cond-mat.mes-hall, quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            Quasi-optical experiments are emerging as a powerful technique to probe magnetic transitions in molecular spin systems. However, the simultaneous presence of the electric- and magnetic-dipole induced transitions poses the challenge of discriminating between these two contributions. Besides, the iden...
+        </div>
+        <div class="paper-keywords">Matched keywords: qubit</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03099v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03099v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 1)</span>
+            <br>
+            16. <a href="http://arxiv.org/abs/2510.03077v1">Probability distribution reconstruction using circuit cutting applied to a variational classifier</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Niels M. P. Neumann, Carlos M. R. Rocha, Jasper Verbree et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            Significant efforts are being spent on building a quantum computer. At the same time, developments in quantum software are rapidly progressing. Insufficient quantum resources often are the problem when running quantum algorithms. New techniques can aid in using smaller quantum computers to run large...
+        </div>
+        <div class="paper-keywords">Matched keywords: quantum algorithm</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03077v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03077v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 1)</span>
+            <br>
+            17. <a href="http://arxiv.org/abs/2509.25587v2">Encoder Circuit Optimization for Non-Binary Quantum Error Correction Codes in Prime Dimensions: An Algorithmic Framework</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Aditya Sodhani, Keshab K. Parhi</span>
+            <span>📅 Published: 2025-09-29</span>
+            <span>🏷️ quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            Quantum computers are a revolutionary class of computational platforms with applications in combinatorial and global optimization, machine learning, and other domains involving computationally hard problems. While these machines typically operate on qubits, which are quantum information elements tha...
+        </div>
+        <div class="paper-keywords">Matched keywords: qubit</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2509.25587v2" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2509.25587v2" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            18. <a href="http://arxiv.org/abs/2510.03231v1">Reward Models are Metrics in a Trench Coat</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Sebastian Gehrmann</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.CL, cs.AI</span>
+        </div>
+        <div class="paper-abstract">
+            The emergence of reinforcement learning in post-training of large language models has sparked significant interest in reward models. Reward models assess the quality of sampled model outputs to generate training signals. This task is also performed by evaluation metrics that monitor the performance ...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03231v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03231v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            19. <a href="http://arxiv.org/abs/2510.03230v1">Improving GUI Grounding with Explicit Position-to-Coordinate Mapping</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Suyuchen Wang, Tianyu Zhang, Ahmed Masry et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.CV, cs.AI</span>
+        </div>
+        <div class="paper-abstract">
+            GUI grounding, the task of mapping natural-language instructions to pixel coordinates, is crucial for autonomous agents, yet remains difficult for current VLMs. The core bottleneck is reliable patch-to-pixel mapping, which breaks when extrapolating to high-resolution displays unseen during training....
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03230v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03230v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            20. <a href="http://arxiv.org/abs/2510.03227v1">Plugging Leaks in Fault-Tolerant Quantum Computation and Verification</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Theodoros Kapourniotis, Dominik Leichtle, Luka Music et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            With the advent of quantum cloud computing, the security of delegated quantum computation has become of utmost importance. While multiple statistically secure blind verification schemes in the prepare-and-send model have been proposed, none of them achieves full quantum fault-tolerance, a prerequisi...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03227v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03227v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            21. <a href="http://arxiv.org/abs/2510.03224v1">Test-Time Defense Against Adversarial Attacks via Stochastic Resonance of Latent Ensembles</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Dong Lao, Yuxiang Zhang, Haniyeh Ehsani Oskouie et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.CV, cs.AI, cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            We propose a test-time defense mechanism against adversarial attacks: imperceptible image perturbations that significantly alter the predictions of a model. Unlike existing methods that rely on feature filtering or smoothing, which can lead to information loss, we propose to "combat noise with noise...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03224v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03224v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            22. <a href="http://arxiv.org/abs/2510.03223v1">Self-Anchor: Large Language Model Reasoning via Step-by-step Attention Alignment</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Hongxiang Zhang, Yuan Tian, Tianyi Zhang</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.CL, cs.AI</span>
+        </div>
+        <div class="paper-abstract">
+            To solve complex reasoning tasks for Large Language Models (LLMs), prompting-based methods offer a lightweight alternative to fine-tuning and reinforcement learning. However, as reasoning chains extend, critical intermediate steps and the original prompt will be buried in the context, receiving insu...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03223v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03223v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            23. <a href="http://arxiv.org/abs/2510.03222v1">Low-probability Tokens Sustain Exploration in Reinforcement Learning with Verifiable Reward</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Guanhua Huang, Tingqiang Xu, Mingze Wang et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.LG, cs.CL</span>
+        </div>
+        <div class="paper-abstract">
+            Reinforcement Learning with Verifiable Rewards (RLVR) has propelled Large Language Models in complex reasoning, yet its scalability is often hindered by a training bottleneck where performance plateaus as policy entropy collapses, signaling a loss of exploration. Previous methods typically address t...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03222v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03222v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            24. <a href="http://arxiv.org/abs/2510.03217v1">Abstain and Validate: A Dual-LLM Policy for Reducing Noise in Agentic Program Repair</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 José Cambronero, Michele Tufano, Sherry Shi et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.SE, cs.AI</span>
+        </div>
+        <div class="paper-abstract">
+            Agentic Automated Program Repair (APR) is increasingly tackling complex, repository-level bugs in industry, but ultimately agent-generated patches still need to be reviewed by a human before committing them to ensure they address the bug. Showing unlikely patches to developers can lead to substantia...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03217v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03217v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            25. <a href="http://arxiv.org/abs/2510.03216v1">Wave-GMS: Lightweight Multi-Scale Generative Model for Medical Image Segmentation</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Talha Ahmed, Nehal Ahmed Shaikh, Hassan Mohy-ud-Din</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ eess.IV, cs.AI, cs.CV</span>
+        </div>
+        <div class="paper-abstract">
+            For equitable deployment of AI tools in hospitals and healthcare facilities, we need Deep Segmentation Networks that offer high performance and can be trained on cost-effective GPUs with limited memory and large batch sizes. In this work, we propose Wave-GMS, a lightweight and efficient multi-scale ...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03216v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03216v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            26. <a href="http://arxiv.org/abs/2510.03215v1">Cache-to-Cache: Direct Semantic Communication Between Large Language Models</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Tianyu Fu, Zihan Min, Hanling Zhang et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.CL, cs.LG, 68T07, 68T50</span>
+        </div>
+        <div class="paper-abstract">
+            Multi-LLM systems harness the complementary strengths of diverse Large Language Models, achieving performance and efficiency gains unattainable by a single model. In existing designs, LLMs communicate through text, forcing internal representations to be transformed into output token sequences. This ...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03215v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03215v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            27. <a href="http://arxiv.org/abs/2510.03212v1">The top quark in 2025 -- International year of Quantum Science and Technology</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 J. A. Aguilar-Saavedra</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ hep-ph, hep-ex, quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            Since its discovery at the Tevatron in 1995, the top quark has been extensively studied due to its unique properties. We discuss how the remarkable progress in top-quark physics has opened the possibility of using the top quark as a tool to test quantum mechanics at the energy frontier. After review...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03212v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03212v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            28. <a href="http://arxiv.org/abs/2510.03207v1">To Distill or Decide? Understanding the Algorithmic Trade-off in Partially Observable Reinforcement Learning</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Yuda Song, Dhruv Rohatgi, Aarti Singh et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            Partial observability is a notorious challenge in reinforcement learning (RL), due to the need to learn complex, history-dependent policies. Recent empirical successes have used privileged expert distillation--which leverages availability of latent state information during training (e.g., from a sim...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03207v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03207v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            29. <a href="http://arxiv.org/abs/2510.03205v1">Automatic Generation of Digital Twins for Network Testing</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Shenjia Ding, David Flynn, Paul Harvey</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.NI, cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            The increased use of software in the operation and management of telecommunication networks has moved the industry one step closer to realizing autonomous network operation. One consequence of this shift is the significantly increased need for testing and validation before such software can be deplo...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03205v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03205v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            30. <a href="http://arxiv.org/abs/2510.03197v1">Estimation of Resistance Training RPE using Inertial Sensors and Electromyography</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 James Thomas, Johan Walhström</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            Accurate estimation of rating of perceived exertion (RPE) can enhance resistance training through personalized feedback and injury prevention. This study investigates the application of machine learning models to estimate RPE during single-arm dumbbell bicep curls, using data from wearable inertial ...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03197v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03197v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            31. <a href="http://arxiv.org/abs/2510.03194v1">CoDA: Agentic Systems for Collaborative Data Visualization</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Zichen Chen, Jiefeng Chen, Sercan Ö. Arik et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.AI</span>
+        </div>
+        <div class="paper-abstract">
+            Deep research has revolutionized data analysis, yet data scientists still devote substantial time to manually crafting visualizations, highlighting the need for robust automation from natural language queries. However, current systems struggle with complex datasets containing multiple files and iter...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03194v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03194v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            32. <a href="http://arxiv.org/abs/2510.03186v1">Superposition disentanglement of neural representations reveals hidden alignment</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 André Longon, David Klindt, Meenakshi Khosla</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            The superposition hypothesis states that a single neuron within a population may participate in the representation of multiple features in order for the population to represent more features than the number of neurons. In neuroscience and AI, representational alignment metrics measure the extent to ...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03186v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03186v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            33. <a href="http://arxiv.org/abs/2510.03185v1">PRISM-Physics: Causal DAG-Based Process Evaluation for Physics Reasoning</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Wanjia Zhao, Qinwei Ma, Jingzhe Shi et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            Benchmarks for competition-style reasoning have advanced evaluation in mathematics and programming, yet physics remains comparatively explored. Most existing physics benchmarks evaluate only final answers, which fail to capture reasoning processes, while recent stepwise methods rely on heuristic LLM...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03185v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03185v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            34. <a href="http://arxiv.org/abs/2510.03181v1">Q-Learning with Shift-Aware Upper Confidence Bound in Non-Stationary Reinforcement Learning</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Ha Manh Bui, Felix Parker, Kimia Ghobadi et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            We study the Non-Stationary Reinforcement Learning (RL) under distribution shifts in both finite-horizon episodic and infinite-horizon discounted Markov Decision Processes (MDPs). In the finite-horizon case, the transition functions may suddenly change at a particular episode. In the infinite-horizo...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03181v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03181v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            35. <a href="http://arxiv.org/abs/2510.03174v1">Topic Modeling as Long-Form Generation: Can Long-Context LLMs revolutionize NTM via Zero-Shot Prompting?</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Xuan Xu, Haolun Li, Zhongliang Yang et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.CL, cs.AI</span>
+        </div>
+        <div class="paper-abstract">
+            Traditional topic models such as neural topic models rely on inference and generation networks to learn latent topic distributions. This paper explores a new paradigm for topic modeling in the era of large language models, framing TM as a long-form generation task whose definition is updated in this...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03174v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03174v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            36. <a href="http://arxiv.org/abs/2510.03167v1">Improving Online-to-Nonconvex Conversion for Smooth Optimization via Double Optimism</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Francisco Patitucci, Ruichen Jiang, Aryan Mokhtari</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ math.OC, cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            A recent breakthrough in nonconvex optimization is the online-to-nonconvex conversion framework of \cite{cutkosky2023optimal}, which reformulates the task of finding an $\varepsilon$-first-order stationary point as an online learning problem. When both the gradient and the Hessian are Lipschitz cont...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03167v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03167v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            37. <a href="http://arxiv.org/abs/2510.03165v1">FTTE: Federated Learning on Resource-Constrained Devices</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Irene Tenison, Anna Murphy, Charles Beauville et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            Federated learning (FL) enables collaborative model training across distributed devices while preserving data privacy, but deployment on resource-constrained edge nodes remains challenging due to limited memory, energy, and communication bandwidth. Traditional synchronous and asynchronous FL approac...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03165v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03165v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            38. <a href="http://arxiv.org/abs/2510.03164v1">Why Do We Need Warm-up? A Theoretical Perspective</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Foivos Alimisis, Rustem Islamov, Aurelien Lucchi</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.LG, math.OC, stat.ML</span>
+        </div>
+        <div class="paper-abstract">
+            Learning rate warm-up - increasing the learning rate at the beginning of training - has become a ubiquitous heuristic in modern deep learning, yet its theoretical foundations remain poorly understood. In this work, we provide a principled explanation for why warm-up improves training. We rely on a g...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03164v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03164v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            39. <a href="http://arxiv.org/abs/2510.03162v1">Calibrated Uncertainty Sampling for Active Learning</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Ha Manh Bui, Iliana Maifeld-Carucci, Anqi Liu</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            We study the problem of actively learning a classifier with a low calibration error. One of the most popular Acquisition Functions (AFs) in pool-based Active Learning (AL) is querying by the model's uncertainty. However, we recognize that an uncalibrated uncertainty model on the unlabeled pool may s...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03162v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03162v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            40. <a href="http://arxiv.org/abs/2510.03159v1">Slow dynamics from a nested hierarchy of frozen states</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Vanja Marić, Luka Paljk, Lenart Zadnik</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cond-mat.stat-mech, quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            We identify the mechanism of slow heterogeneous relaxation in quantum kinetically constrained models (KCMs) in which the potential energy strength is controlled by a coupling parameter. The regime of slow relaxation includes the large-coupling limit. By expanding around that limit, we reveal a \emph...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03159v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03159v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            41. <a href="http://arxiv.org/abs/2510.03155v1">Stimulus-Voltage-Based Prediction of Action Potential Onset Timing: Classical vs. Quantum-Inspired Approaches</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Stevens Johnson, Varun Puram, Johnson Thomas et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ q-bio.NC, cs.AI, cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            Accurate modeling of neuronal action potential (AP) onset timing is crucial for understanding neural coding of danger signals. Traditional leaky integrate-and-fire (LIF) models, while widely used, exhibit high relative error in predicting AP onset latency, especially under strong or rapidly changing...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03155v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03155v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            42. <a href="http://arxiv.org/abs/2510.03152v1">ReeMark: Reeb Graphs for Simulating Patterns of Life in Spatiotemporal Trajectories</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Anantajit Subrahmanya, Chandrakanth Gudavalli, Connor Levenson et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.CV, cs.CE, cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            Accurately modeling human mobility is critical for urban planning, epidemiology, and traffic management. In this work, we introduce Markovian Reeb Graphs, a novel framework for simulating spatiotemporal trajectories that preserve Patterns of Life (PoLs) learned from baseline data. By combining indiv...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03152v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03152v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            43. <a href="http://arxiv.org/abs/2510.03112v1">Analytical solution of a free-fermion chain with time-dependent ramps</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Viktor Eisler, Riccarda Bonsignori, Stefano Scopa</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cond-mat.stat-mech, quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            We provide an exact analytical solution of the single-particle Schr\"odinger equation for a chain of non-interacting fermions subject to a time-dependent linear potential, with its slope varied as an arbitrary function of time. The resulting dynamics exhibit self-similar behavior, with a structure r...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03112v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03112v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            44. <a href="http://arxiv.org/abs/2510.03090v1">Modified logarithmic Sobolev inequalities for CSS codes</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Sebastian Stengele, Ángela Capel, Li Gao et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ quant-ph, math-ph, math.MP</span>
+        </div>
+        <div class="paper-abstract">
+            We consider the class of Davies quantum semigroups modelling thermalization for translation-invariant Calderbank-Shor-Steane (CSS) codes in D dimensions. We prove that conditions of Dobrushin-Shlosman-type on the quantum Gibbs state imply a modified logarithmic Sobolev inequality with a constant tha...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03090v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03090v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            45. <a href="http://arxiv.org/abs/2510.03080v1">New Junction Condition and Casimir effect for Network CFT</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Sinan Pang, Ling Li, Tian-Ming Zhao et al.</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ hep-th, cond-mat.other, quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            Recently, BCFT and ICFT have been generalized to the CFT on networks (NCFT). A key aspect of NCFT is how we connect the CFTs in different edges at the nodes of the network. For a free scalar field, one naturally requires that the scalar fields are continuous at the nodes. In this paper, we introduce...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03080v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03080v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            46. <a href="http://arxiv.org/abs/2510.03064v1">Comparative Analysis of Parameterized Action Actor-Critic Reinforcement Learning Algorithms for Web Search Match Plan Generation</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Ubayd Bapoo, Clement N Nyirenda</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.LG, cs.AI</span>
+        </div>
+        <div class="paper-abstract">
+            This study evaluates the performance of Soft Actor Critic (SAC), Greedy Actor Critic (GAC), and Truncated Quantile Critics (TQC) in high-dimensional decision-making tasks using fully observable environments. The focus is on parametrized action (PA) spaces, eliminating the need for recurrent networks...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03064v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03064v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            47. <a href="http://arxiv.org/abs/2510.03057v1">Tradeoffs on the volume of fault-tolerant circuits</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Anirudh Krishna, Gilles Zémor</span>
+            <span>📅 Published: 2025-10-03</span>
+            <span>🏷️ cs.IT, math.IT, quant-ph</span>
+        </div>
+        <div class="paper-abstract">
+            Dating back to the seminal work of von Neumann [von Neumann, Automata Studies, 1956], it is known that error correcting codes can overcome faulty circuit components to enable robust computation. Choosing an appropriate code is non-trivial as it must balance several requirements. Increasing the rate ...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.03057v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.03057v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            48. <a href="http://arxiv.org/abs/2510.02516v1">In-memory Training on Analog Devices with Limited Conductance States via Multi-tile Residual Learning</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Jindan Li, Zhaoxian Wu, Gaowen Liu et al.</span>
+            <span>📅 Published: 2025-10-02</span>
+            <span>🏷️ cs.LG, cs.AR, math.OC</span>
+        </div>
+        <div class="paper-abstract">
+            Analog in-memory computing (AIMC) accelerators enable efficient deep neural network computation directly within memory using resistive crossbar arrays, where model parameters are represented by the conductance states of memristive devices. However, effective in-memory training typically requires at ...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.02516v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.02516v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            49. <a href="http://arxiv.org/abs/2510.00845v2">Mechanistic Interpretability as Statistical Estimation: A Variance Analysis of EAP-IG</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Maxime Méloux, François Portet, Maxime Peyrard</span>
+            <span>📅 Published: 2025-10-01</span>
+            <span>🏷️ cs.LG, cs.AI, cs.CL</span>
+        </div>
+        <div class="paper-abstract">
+            The development of trustworthy artificial intelligence requires moving beyond black-box performance metrics toward an understanding of models' internal computations. Mechanistic Interpretability (MI) aims to meet this need by identifying the algorithmic mechanisms underlying model behaviors. Yet, th...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.00845v2" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.00845v2" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            50. <a href="http://arxiv.org/abs/2510.00831v1">Benchmarking Machine Learning Models for Fault Classification and Localization in Power System Protection</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Julian Oelhaf, Georg Kordowich, Changhun Kim et al.</span>
+            <span>📅 Published: 2025-10-01</span>
+            <span>🏷️ cs.AI, cs.LG, eess.SP</span>
+        </div>
+        <div class="paper-abstract">
+            The increasing integration of distributed energy resources (DERs), particularly renewables, poses significant challenges for power system protection, with fault classification (FC) and fault localization (FL) being among the most critical tasks. Conventional protection schemes, based on fixed thresh...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2510.00831v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2510.00831v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            51. <a href="http://arxiv.org/abs/2509.25686v1">Minimalist Explanation Generation and Circuit Discovery</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Pirzada Suhail, Aditya Anand, Amit Sethi</span>
+            <span>📅 Published: 2025-09-30</span>
+            <span>🏷️ cs.LG</span>
+        </div>
+        <div class="paper-abstract">
+            Machine learning models, by virtue of training, learn a large repertoire of decision rules for any given input, and any one of these may suffice to justify a prediction. However, in high-dimensional input spaces, such rules are difficult to identify and interpret. In this paper, we introduce an acti...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2509.25686v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2509.25686v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            52. <a href="http://arxiv.org/abs/2509.25510v1">EEsizer: LLM-Based AI Agent for Sizing of Analog and Mixed Signal Circuit</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Chang Liu, Danial Chitnis</span>
+            <span>📅 Published: 2025-09-29</span>
+            <span>🏷️ cs.LG, cs.AR</span>
+        </div>
+        <div class="paper-abstract">
+            The design of Analog and Mixed-Signal (AMS) integrated circuits (ICs) often involves significant manual effort, especially during the transistor sizing process. While Machine Learning techniques in Electronic Design Automation (EDA) have shown promise in reducing complexity and minimizing human inte...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2509.25510v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2509.25510v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            53. <a href="http://arxiv.org/abs/2509.24713v1">Circuit-Aware Reward Training: A Mechanistic Framework for Longtail Robustness in RLHF</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Jing Liu</span>
+            <span>📅 Published: 2025-09-29</span>
+            <span>🏷️ cs.LG, cs.AI</span>
+        </div>
+        <div class="paper-abstract">
+            Reinforcement Learning from Human Feedback (RLHF) reward models exhibit systematic failures on longtail distributions, leading to reward hacking and misalignment. We propose a mechanistic interpretability framework that identifies specialized neural circuits responsible for rare-event processing in ...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2509.24713v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2509.24713v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span>
+            <br>
+            54. <a href="http://arxiv.org/abs/2509.24601v1">CURA: Size Isnt All You Need -- A Compact Universal Architecture for On-Device Intelligence</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Jae-Bum Seo, Muhammad Salman, Lismer Andres Caceres-Najarro</span>
+            <span>📅 Published: 2025-09-29</span>
+            <span>🏷️ cs.LG, eess.SP</span>
+        </div>
+        <div class="paper-abstract">
+            Existing on-device AI architectures for resource-constrained environments face two critical limitations: they lack compactness, with parameter requirements scaling proportionally to task complexity, and they exhibit poor generalizability, performing effectively only on specific application domains (...
+        </div>
+        
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2509.24601v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="http://arxiv.org/pdf/2509.24601v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>This is an automated digest from your arXiv paper monitor.</p>
+        <p>View full reports on <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/tree/main/reports">GitHub</a></p>
+    </div>
+</body>
+</html>

@@ -17,6 +17,210 @@ This digest includes papers on:
 ## Papers
 
 
+### [Classical feature map surrogates and metrics for quantum control landscapes](http://arxiv.org/abs/2509.25930v1)
+**Authors:** Martino Calzavara, Tommaso Calarco, Felix Motzoi  
+**Published:** 2025-09-30  
+**Updated:** 2025-09-30  
+**Categories:** quant-ph  
+
+**Abstract:** We derive and analyze three feature map representations of parametrized quantum dynamics, which generalize variational quantum circuits. These are (i) a Lie-Fourier partial sum, (ii) a Taylor expansion, and (iii) a finite-dimensional sinc kernel regression representation. The Lie-Fourier representation is shown to have a dense spectrum with discrete peaks, that reflects control Hamiltonian propert...
+
+[View on arXiv](http://arxiv.org/abs/2509.25930v1) | [PDF](http://arxiv.org/pdf/2509.25930v1)
+
+---
+
+### [Amplitude-based Input Attribution in Quantum Learning via Integrated Gradients](http://arxiv.org/abs/2510.02497v1)
+**Authors:** Nicholas S. DiBrita, Jason Han, Younghyun Cho et al.  
+**Published:** 2025-10-02  
+**Updated:** 2025-10-02  
+**Categories:** quant-ph  
+
+**Abstract:** Quantum machine learning (QML) algorithms have demonstrated early promise across hardware platforms, but remain difficult to interpret due to the inherent opacity of quantum state evolution. Widely used classical interpretability methods, such as integrated gradients and surrogate-based sensitivity analysis, are not directly compatible with quantum circuits due to measurement collapse and the expo...
+
+[View on arXiv](http://arxiv.org/abs/2510.02497v1) | [PDF](http://arxiv.org/pdf/2510.02497v1)
+
+---
+
+### [NGGAN: Noise Generation GAN Based on the Practical Measurement Dataset for Narrowband Powerline Communications](http://arxiv.org/abs/2510.01850v1)
+**Authors:** Ying-Ren Chien, Po-Heng Chou, You-Jie Peng et al.  
+**Published:** 2025-10-02  
+**Updated:** 2025-10-02  
+**Categories:** eess.SP, cs.AI, cs.IT, cs.LG, math.IT, 68T07, 94A12, 62M10, I.2.6; I.5.4; C.2.1  
+
+**Abstract:** Capturing comprehensive statistics of nonperiodic asynchronous impulsive noise is a critical issue in enhancing impulse noise processing for narrowband powerline communication (NB-PLC) transceivers. However, existing mathematical noise generative models capture only some of the characteristics of additive noise. Therefore, we propose a generative adversarial network (GAN), called the noise-generat...
+
+[View on arXiv](http://arxiv.org/abs/2510.01850v1) | [PDF](http://arxiv.org/pdf/2510.01850v1)
+
+---
+
+### [Feature Identification via the Empirical NTK](http://arxiv.org/abs/2510.00468v1)
+**Authors:** Jennifer Lin  
+**Published:** 2025-10-01  
+**Updated:** 2025-10-01  
+**Categories:** cs.LG, cs.AI  
+
+**Abstract:** We provide evidence that eigenanalysis of the empirical neural tangent kernel (eNTK) can surface the features used by trained neural networks. Across two standard toy models for mechanistic interpretability, Toy Models of Superposition (TMS) and a 1-layer MLP trained on modular addition, we find that the eNTK exhibits sharp spectral cliffs whose top eigenspaces align with ground-truth features. In...
+
+[View on arXiv](http://arxiv.org/abs/2510.00468v1) | [PDF](http://arxiv.org/pdf/2510.00468v1)
+
+---
+
+### [Joint Bidding on Intraday and Frequency Containment Reserve Markets](http://arxiv.org/abs/2510.03209v1)
+**Authors:** Yiming Zhang, Wolfgang Ridinger, David Wozabal  
+**Published:** 2025-10-03  
+**Updated:** 2025-10-03  
+**Categories:** q-fin.CP, cs.LG, q-fin.TR  
+
+**Abstract:** As renewable energy integration increases supply variability, battery energy storage systems (BESS) present a viable solution for balancing supply and demand. This paper proposes a novel approach for optimizing battery BESS participation in multiple electricity markets. We develop a joint bidding strategy that combines participation in the primary frequency reserve market with continuous trading i...
+
+[View on arXiv](http://arxiv.org/abs/2510.03209v1) | [PDF](http://arxiv.org/pdf/2510.03209v1)
+
+---
+
+### [Best-of-Majority: Minimax-Optimal Strategy for Pass@$k$ Inference Scaling](http://arxiv.org/abs/2510.03199v1)
+**Authors:** Qiwei Di, Kaixuan Ji, Xuheng Li et al.  
+**Published:** 2025-10-03  
+**Updated:** 2025-10-03  
+**Categories:** cs.LG, stat.ML  
+
+**Abstract:** LLM inference often generates a batch of candidates for a prompt and selects one via strategies like majority voting or Best-of- N (BoN). For difficult tasks, this single-shot selection often underperforms. Consequently, evaluations commonly report Pass@$k$: the agent may submit up to $k$ responses, and only the best of them is used when computing regret. Motivated by this, we study inference scal...
+
+[View on arXiv](http://arxiv.org/abs/2510.03199v1) | [PDF](http://arxiv.org/pdf/2510.03199v1)
+
+---
+
+### [ShapeGen3DCP: A Deep Learning Framework for Layer Shape Prediction in 3D Concrete Printing](http://arxiv.org/abs/2510.02009v1)
+**Authors:** Giacomo Rizzieri, Federico Lanteri, Liberato Ferrara et al.  
+**Published:** 2025-10-02  
+**Updated:** 2025-10-02  
+**Categories:** cs.CE, cs.LG  
+
+**Abstract:** This work introduces ShapeGen3DCP, a deep learning framework for fast and accurate prediction of filament cross-sectional geometry in 3D Concrete Printing (3DCP). The method is based on a neural network architecture that takes as input both material properties in the fluid state (density, yield stress, plastic viscosity) and process parameters (nozzle diameter, nozzle height, printing and flow vel...
+
+[View on arXiv](http://arxiv.org/abs/2510.02009v1) | [PDF](http://arxiv.org/pdf/2510.02009v1)
+
+---
+
+### [Why Can't Transformers Learn Multiplication? Reverse-Engineering Reveals Long-Range Dependency Pitfalls](http://arxiv.org/abs/2510.00184v1)
+**Authors:** Xiaoyan Bai, Itamar Pres, Yuntian Deng et al.  
+**Published:** 2025-09-30  
+**Updated:** 2025-09-30  
+**Categories:** cs.LG, cs.AI  
+
+**Abstract:** Language models are increasingly capable, yet still fail at a seemingly simple task of multi-digit multiplication. In this work, we study why, by reverse-engineering a model that successfully learns multiplication via \emph{implicit chain-of-thought}, and report three findings: (1) Evidence of long-range structure: Logit attributions and linear probes indicate that the model encodes the necessary ...
+
+[View on arXiv](http://arxiv.org/abs/2510.00184v1) | [PDF](http://arxiv.org/pdf/2510.00184v1)
+
+---
+
+### [Domain-Aware Hyperdimensional Computing for Edge Smart Manufacturing](http://arxiv.org/abs/2509.26131v1)
+**Authors:** Fardin Jalil Piran, Anandkumar Patel, Rajiv Malhotra et al.  
+**Published:** 2025-09-30  
+**Updated:** 2025-09-30  
+**Categories:** cs.LG  
+
+**Abstract:** Smart manufacturing requires on-device intelligence that meets strict latency and energy budgets. HyperDimensional Computing (HDC) offers a lightweight alternative by encoding data as high-dimensional hypervectors and computing with simple operations. Prior studies often assume that the qualitative relation between HDC hyperparameters and performance is stable across applications. Our analysis of ...
+
+[View on arXiv](http://arxiv.org/abs/2509.26131v1) | [PDF](http://arxiv.org/pdf/2509.26131v1)
+
+---
+
+### [DSAT-HD: Dual-Stream Adaptive Transformer with Hybrid Decomposition for Multivariate Time Series Forecasting](http://arxiv.org/abs/2509.24800v1)
+**Authors:** Zixu Wang, Hongbin Dong, Xiaoping Zhang  
+**Published:** 2025-09-29  
+**Updated:** 2025-09-29  
+**Categories:** cs.LG, cs.AI  
+
+**Abstract:** Time series forecasting is crucial for various applications, such as weather, traffic, electricity, and energy predictions. Currently, common time series forecasting methods are based on Transformers. However, existing approaches primarily model limited time series or fixed scales, making it more challenging to capture diverse features cross different ranges. Additionally, traditional methods like...
+
+[View on arXiv](http://arxiv.org/abs/2509.24800v1) | [PDF](http://arxiv.org/pdf/2509.24800v1)
+
+---
+
+### [Absence of quantum Darwinism as a resource in secure quantum communication and computation](http://arxiv.org/abs/2510.03225v1)
+**Authors:** Bishal Kumar Das, Sourav Manna, Vaibhav Madhok  
+**Published:** 2025-10-03  
+**Updated:** 2025-10-03  
+**Categories:** quant-ph  
+
+**Abstract:** The emergence of classical world from underlying quantum mechanics is characterized by not only vanishing quantum correlations but also an unfolding of objectivity also known as quantum Darwinism. We show that the absence of this objectivity has a quantum advantage in cryptography and also provides the crucial missing link in efficient classical simulation of quantum circuits with zero discord. Fo...
+
+[View on arXiv](http://arxiv.org/abs/2510.03225v1) | [PDF](http://arxiv.org/pdf/2510.03225v1)
+
+---
+
+### [Bounds on Atomistic Disorder for Scalable Electron Shuttling](http://arxiv.org/abs/2510.03113v1)
+**Authors:** Raphaël J. Prentki, Pericles Philippopoulos, Mohammad Reza Mostaan et al.  
+**Published:** 2025-10-03  
+**Updated:** 2025-10-03  
+**Categories:** quant-ph, cond-mat.mes-hall  
+
+**Abstract:** Electron shuttling is emerging as a key enabler of scalable silicon spin-qubit quantum computing, but fidelities are limited by atomistic disorder. We introduce a multiscale simulation framework combining time-dependent finite-element electrostatics and atomistic tight-binding to capture the impact of random alloying and interface roughness on the valley splitting and phase of shuttled electrons. ...
+
+[View on arXiv](http://arxiv.org/abs/2510.03113v1) | [PDF](http://arxiv.org/pdf/2510.03113v1)
+
+---
+
+### [To break, or not to break: Symmetries in adaptive quantum simulations, a case study on the Schwinger model](http://arxiv.org/abs/2510.03083v1)
+**Authors:** Karunya Shailesh Shirali, Kyle Sherbert, Yanzhu Chen et al.  
+**Published:** 2025-10-03  
+**Updated:** 2025-10-03  
+**Categories:** quant-ph, hep-lat  
+
+**Abstract:** We investigate the role of symmetries in constructing resource-efficient operator pools for adaptive variational quantum eigensolvers. In particular, we focus on the lattice Schwinger model, a discretized model of $1+1$ dimensional electrodynamics, which we use as a proxy for spin chains with a continuum limit. We present an extensive set of simulations comprising a total of $11$ different operato...
+
+[View on arXiv](http://arxiv.org/abs/2510.03083v1) | [PDF](http://arxiv.org/pdf/2510.03083v1)
+
+---
+
+### [Cheat-Penalised Quantum Weak Coin-Flipping](http://arxiv.org/abs/2510.03218v1)
+**Authors:** Atul Singh Arora, Carl A. Miller, Mauro E. S. Morales et al.  
+**Published:** 2025-10-03  
+**Updated:** 2025-10-03  
+**Categories:** quant-ph, cs.CR  
+
+**Abstract:** Coin-flipping is a fundamental task in two-party cryptography where two remote mistrustful parties wish to generate a shared uniformly random bit. While quantum protocols promising near-perfect security exist for weak coin-flipping -- when the parties want opposing outcomes -- it has been shown that they must be inefficient in terms of their round complexity, and it is an open question of how spac...
+
+[View on arXiv](http://arxiv.org/abs/2510.03218v1) | [PDF](http://arxiv.org/pdf/2510.03218v1)
+
+---
+
+### [Polarization dependence of spin-electric transitions in molecular exchange qubits](http://arxiv.org/abs/2510.03099v1)
+**Authors:** Filippo Troiani, Athanassios K. Boudalis  
+**Published:** 2025-10-03  
+**Updated:** 2025-10-03  
+**Categories:** cond-mat.mes-hall, quant-ph  
+
+**Abstract:** Quasi-optical experiments are emerging as a powerful technique to probe magnetic transitions in molecular spin systems. However, the simultaneous presence of the electric- and magnetic-dipole induced transitions poses the challenge of discriminating between these two contributions. Besides, the identification of the spin-electric transitions can hardly rely on the peak intensity, because of the cu...
+
+[View on arXiv](http://arxiv.org/abs/2510.03099v1) | [PDF](http://arxiv.org/pdf/2510.03099v1)
+
+---
+
+### [Probability distribution reconstruction using circuit cutting applied to a variational classifier](http://arxiv.org/abs/2510.03077v1)
+**Authors:** Niels M. P. Neumann, Carlos M. R. Rocha, Jasper Verbree et al.  
+**Published:** 2025-10-03  
+**Updated:** 2025-10-03  
+**Categories:** quant-ph  
+
+**Abstract:** Significant efforts are being spent on building a quantum computer. At the same time, developments in quantum software are rapidly progressing. Insufficient quantum resources often are the problem when running quantum algorithms. New techniques can aid in using smaller quantum computers to run larger quantum algorithms. One of these techniques is circuit cutting. With this method, a circuit is bro...
+
+[View on arXiv](http://arxiv.org/abs/2510.03077v1) | [PDF](http://arxiv.org/pdf/2510.03077v1)
+
+---
+
+### [Encoder Circuit Optimization for Non-Binary Quantum Error Correction Codes in Prime Dimensions: An Algorithmic Framework](http://arxiv.org/abs/2509.25587v2)
+**Authors:** Aditya Sodhani, Keshab K. Parhi  
+**Published:** 2025-09-29  
+**Updated:** 2025-10-01  
+**Categories:** quant-ph  
+
+**Abstract:** Quantum computers are a revolutionary class of computational platforms with applications in combinatorial and global optimization, machine learning, and other domains involving computationally hard problems. While these machines typically operate on qubits, which are quantum information elements that can occupy superpositions of the basis states 0 and 1, recent advances have demonstrated the pract...
+
+[View on arXiv](http://arxiv.org/abs/2509.25587v2) | [PDF](http://arxiv.org/pdf/2509.25587v2)
+
+---
+
 ### [Reward Models are Metrics in a Trench Coat](http://arxiv.org/abs/2510.03231v1)
 **Authors:** Sebastian Gehrmann  
 **Published:** 2025-10-03  
@@ -53,18 +257,6 @@ This digest includes papers on:
 
 ---
 
-### [Absence of quantum Darwinism as a resource in secure quantum communication and computation](http://arxiv.org/abs/2510.03225v1)
-**Authors:** Bishal Kumar Das, Sourav Manna, Vaibhav Madhok  
-**Published:** 2025-10-03  
-**Updated:** 2025-10-03  
-**Categories:** quant-ph  
-
-**Abstract:** The emergence of classical world from underlying quantum mechanics is characterized by not only vanishing quantum correlations but also an unfolding of objectivity also known as quantum Darwinism. We show that the absence of this objectivity has a quantum advantage in cryptography and also provides the crucial missing link in efficient classical simulation of quantum circuits with zero discord. Fo...
-
-[View on arXiv](http://arxiv.org/abs/2510.03225v1) | [PDF](http://arxiv.org/pdf/2510.03225v1)
-
----
-
 ### [Test-Time Defense Against Adversarial Attacks via Stochastic Resonance of Latent Ensembles](http://arxiv.org/abs/2510.03224v1)
 **Authors:** Dong Lao, Yuxiang Zhang, Haniyeh Ehsani Oskouie et al.  
 **Published:** 2025-10-03  
@@ -98,18 +290,6 @@ This digest includes papers on:
 **Abstract:** Reinforcement Learning with Verifiable Rewards (RLVR) has propelled Large Language Models in complex reasoning, yet its scalability is often hindered by a training bottleneck where performance plateaus as policy entropy collapses, signaling a loss of exploration. Previous methods typically address this by maintaining high policy entropy, yet the precise mechanisms that govern meaningful exploratio...
 
 [View on arXiv](http://arxiv.org/abs/2510.03222v1) | [PDF](http://arxiv.org/pdf/2510.03222v1)
-
----
-
-### [Cheat-Penalised Quantum Weak Coin-Flipping](http://arxiv.org/abs/2510.03218v1)
-**Authors:** Atul Singh Arora, Carl A. Miller, Mauro E. S. Morales et al.  
-**Published:** 2025-10-03  
-**Updated:** 2025-10-03  
-**Categories:** quant-ph, cs.CR  
-
-**Abstract:** Coin-flipping is a fundamental task in two-party cryptography where two remote mistrustful parties wish to generate a shared uniformly random bit. While quantum protocols promising near-perfect security exist for weak coin-flipping -- when the parties want opposing outcomes -- it has been shown that they must be inefficient in terms of their round complexity, and it is an open question of how spac...
-
-[View on arXiv](http://arxiv.org/abs/2510.03218v1) | [PDF](http://arxiv.org/pdf/2510.03218v1)
 
 ---
 
@@ -161,18 +341,6 @@ This digest includes papers on:
 
 ---
 
-### [Joint Bidding on Intraday and Frequency Containment Reserve Markets](http://arxiv.org/abs/2510.03209v1)
-**Authors:** Yiming Zhang, Wolfgang Ridinger, David Wozabal  
-**Published:** 2025-10-03  
-**Updated:** 2025-10-03  
-**Categories:** q-fin.CP, cs.LG, q-fin.TR  
-
-**Abstract:** As renewable energy integration increases supply variability, battery energy storage systems (BESS) present a viable solution for balancing supply and demand. This paper proposes a novel approach for optimizing battery BESS participation in multiple electricity markets. We develop a joint bidding strategy that combines participation in the primary frequency reserve market with continuous trading i...
-
-[View on arXiv](http://arxiv.org/abs/2510.03209v1) | [PDF](http://arxiv.org/pdf/2510.03209v1)
-
----
-
 ### [To Distill or Decide? Understanding the Algorithmic Trade-off in Partially Observable Reinforcement Learning](http://arxiv.org/abs/2510.03207v1)
 **Authors:** Yuda Song, Dhruv Rohatgi, Aarti Singh et al.  
 **Published:** 2025-10-03  
@@ -194,18 +362,6 @@ This digest includes papers on:
 **Abstract:** The increased use of software in the operation and management of telecommunication networks has moved the industry one step closer to realizing autonomous network operation. One consequence of this shift is the significantly increased need for testing and validation before such software can be deployed. Complementing existing simulation or hardware-based approaches, digital twins present an enviro...
 
 [View on arXiv](http://arxiv.org/abs/2510.03205v1) | [PDF](http://arxiv.org/pdf/2510.03205v1)
-
----
-
-### [Best-of-Majority: Minimax-Optimal Strategy for Pass@$k$ Inference Scaling](http://arxiv.org/abs/2510.03199v1)
-**Authors:** Qiwei Di, Kaixuan Ji, Xuheng Li et al.  
-**Published:** 2025-10-03  
-**Updated:** 2025-10-03  
-**Categories:** cs.LG, stat.ML  
-
-**Abstract:** LLM inference often generates a batch of candidates for a prompt and selects one via strategies like majority voting or Best-of- N (BoN). For difficult tasks, this single-shot selection often underperforms. Consequently, evaluations commonly report Pass@$k$: the agent may submit up to $k$ responses, and only the best of them is used when computing regret. Motivated by this, we study inference scal...
-
-[View on arXiv](http://arxiv.org/abs/2510.03199v1) | [PDF](http://arxiv.org/pdf/2510.03199v1)
 
 ---
 
@@ -365,18 +521,6 @@ This digest includes papers on:
 
 ---
 
-### [Bounds on Atomistic Disorder for Scalable Electron Shuttling](http://arxiv.org/abs/2510.03113v1)
-**Authors:** Raphaël J. Prentki, Pericles Philippopoulos, Mohammad Reza Mostaan et al.  
-**Published:** 2025-10-03  
-**Updated:** 2025-10-03  
-**Categories:** quant-ph, cond-mat.mes-hall  
-
-**Abstract:** Electron shuttling is emerging as a key enabler of scalable silicon spin-qubit quantum computing, but fidelities are limited by atomistic disorder. We introduce a multiscale simulation framework combining time-dependent finite-element electrostatics and atomistic tight-binding to capture the impact of random alloying and interface roughness on the valley splitting and phase of shuttled electrons. ...
-
-[View on arXiv](http://arxiv.org/abs/2510.03113v1) | [PDF](http://arxiv.org/pdf/2510.03113v1)
-
----
-
 ### [Analytical solution of a free-fermion chain with time-dependent ramps](http://arxiv.org/abs/2510.03112v1)
 **Authors:** Viktor Eisler, Riccarda Bonsignori, Stefano Scopa  
 **Published:** 2025-10-03  
@@ -386,18 +530,6 @@ This digest includes papers on:
 **Abstract:** We provide an exact analytical solution of the single-particle Schr\"odinger equation for a chain of non-interacting fermions subject to a time-dependent linear potential, with its slope varied as an arbitrary function of time. The resulting dynamics exhibit self-similar behavior, with a structure reminiscent of the domain wall melting problem, albeit characterized by a nontrivial time-dependent l...
 
 [View on arXiv](http://arxiv.org/abs/2510.03112v1) | [PDF](http://arxiv.org/pdf/2510.03112v1)
-
----
-
-### [Polarization dependence of spin-electric transitions in molecular exchange qubits](http://arxiv.org/abs/2510.03099v1)
-**Authors:** Filippo Troiani, Athanassios K. Boudalis  
-**Published:** 2025-10-03  
-**Updated:** 2025-10-03  
-**Categories:** cond-mat.mes-hall, quant-ph  
-
-**Abstract:** Quasi-optical experiments are emerging as a powerful technique to probe magnetic transitions in molecular spin systems. However, the simultaneous presence of the electric- and magnetic-dipole induced transitions poses the challenge of discriminating between these two contributions. Besides, the identification of the spin-electric transitions can hardly rely on the peak intensity, because of the cu...
-
-[View on arXiv](http://arxiv.org/abs/2510.03099v1) | [PDF](http://arxiv.org/pdf/2510.03099v1)
 
 ---
 
@@ -413,18 +545,6 @@ This digest includes papers on:
 
 ---
 
-### [To break, or not to break: Symmetries in adaptive quantum simulations, a case study on the Schwinger model](http://arxiv.org/abs/2510.03083v1)
-**Authors:** Karunya Shailesh Shirali, Kyle Sherbert, Yanzhu Chen et al.  
-**Published:** 2025-10-03  
-**Updated:** 2025-10-03  
-**Categories:** quant-ph, hep-lat  
-
-**Abstract:** We investigate the role of symmetries in constructing resource-efficient operator pools for adaptive variational quantum eigensolvers. In particular, we focus on the lattice Schwinger model, a discretized model of $1+1$ dimensional electrodynamics, which we use as a proxy for spin chains with a continuum limit. We present an extensive set of simulations comprising a total of $11$ different operato...
-
-[View on arXiv](http://arxiv.org/abs/2510.03083v1) | [PDF](http://arxiv.org/pdf/2510.03083v1)
-
----
-
 ### [New Junction Condition and Casimir effect for Network CFT](http://arxiv.org/abs/2510.03080v1)
 **Authors:** Sinan Pang, Ling Li, Tian-Ming Zhao et al.  
 **Published:** 2025-10-03  
@@ -434,18 +554,6 @@ This digest includes papers on:
 **Abstract:** Recently, BCFT and ICFT have been generalized to the CFT on networks (NCFT). A key aspect of NCFT is how we connect the CFTs in different edges at the nodes of the network. For a free scalar field, one naturally requires that the scalar fields are continuous at the nodes. In this paper, we introduce a new junction condition that instead requires the normal derivative of the scalar field to be cont...
 
 [View on arXiv](http://arxiv.org/abs/2510.03080v1) | [PDF](http://arxiv.org/pdf/2510.03080v1)
-
----
-
-### [Probability distribution reconstruction using circuit cutting applied to a variational classifier](http://arxiv.org/abs/2510.03077v1)
-**Authors:** Niels M. P. Neumann, Carlos M. R. Rocha, Jasper Verbree et al.  
-**Published:** 2025-10-03  
-**Updated:** 2025-10-03  
-**Categories:** quant-ph  
-
-**Abstract:** Significant efforts are being spent on building a quantum computer. At the same time, developments in quantum software are rapidly progressing. Insufficient quantum resources often are the problem when running quantum algorithms. New techniques can aid in using smaller quantum computers to run larger quantum algorithms. One of these techniques is circuit cutting. With this method, a circuit is bro...
-
-[View on arXiv](http://arxiv.org/abs/2510.03077v1) | [PDF](http://arxiv.org/pdf/2510.03077v1)
 
 ---
 
@@ -485,30 +593,6 @@ This digest includes papers on:
 
 ---
 
-### [Amplitude-based Input Attribution in Quantum Learning via Integrated Gradients](http://arxiv.org/abs/2510.02497v1)
-**Authors:** Nicholas S. DiBrita, Jason Han, Younghyun Cho et al.  
-**Published:** 2025-10-02  
-**Updated:** 2025-10-02  
-**Categories:** quant-ph  
-
-**Abstract:** Quantum machine learning (QML) algorithms have demonstrated early promise across hardware platforms, but remain difficult to interpret due to the inherent opacity of quantum state evolution. Widely used classical interpretability methods, such as integrated gradients and surrogate-based sensitivity analysis, are not directly compatible with quantum circuits due to measurement collapse and the expo...
-
-[View on arXiv](http://arxiv.org/abs/2510.02497v1) | [PDF](http://arxiv.org/pdf/2510.02497v1)
-
----
-
-### [ShapeGen3DCP: A Deep Learning Framework for Layer Shape Prediction in 3D Concrete Printing](http://arxiv.org/abs/2510.02009v1)
-**Authors:** Giacomo Rizzieri, Federico Lanteri, Liberato Ferrara et al.  
-**Published:** 2025-10-02  
-**Updated:** 2025-10-02  
-**Categories:** cs.CE, cs.LG  
-
-**Abstract:** This work introduces ShapeGen3DCP, a deep learning framework for fast and accurate prediction of filament cross-sectional geometry in 3D Concrete Printing (3DCP). The method is based on a neural network architecture that takes as input both material properties in the fluid state (density, yield stress, plastic viscosity) and process parameters (nozzle diameter, nozzle height, printing and flow vel...
-
-[View on arXiv](http://arxiv.org/abs/2510.02009v1) | [PDF](http://arxiv.org/pdf/2510.02009v1)
-
----
-
 ### [Mechanistic Interpretability as Statistical Estimation: A Variance Analysis of EAP-IG](http://arxiv.org/abs/2510.00845v2)
 **Authors:** Maxime Méloux, François Portet, Maxime Peyrard  
 **Published:** 2025-10-01  
@@ -521,30 +605,6 @@ This digest includes papers on:
 
 ---
 
-### [NGGAN: Noise Generation GAN Based on the Practical Measurement Dataset for Narrowband Powerline Communications](http://arxiv.org/abs/2510.01850v1)
-**Authors:** Ying-Ren Chien, Po-Heng Chou, You-Jie Peng et al.  
-**Published:** 2025-10-02  
-**Updated:** 2025-10-02  
-**Categories:** eess.SP, cs.AI, cs.IT, cs.LG, math.IT, 68T07, 94A12, 62M10, I.2.6; I.5.4; C.2.1  
-
-**Abstract:** Capturing comprehensive statistics of nonperiodic asynchronous impulsive noise is a critical issue in enhancing impulse noise processing for narrowband powerline communication (NB-PLC) transceivers. However, existing mathematical noise generative models capture only some of the characteristics of additive noise. Therefore, we propose a generative adversarial network (GAN), called the noise-generat...
-
-[View on arXiv](http://arxiv.org/abs/2510.01850v1) | [PDF](http://arxiv.org/pdf/2510.01850v1)
-
----
-
-### [Encoder Circuit Optimization for Non-Binary Quantum Error Correction Codes in Prime Dimensions: An Algorithmic Framework](http://arxiv.org/abs/2509.25587v2)
-**Authors:** Aditya Sodhani, Keshab K. Parhi  
-**Published:** 2025-09-29  
-**Updated:** 2025-10-01  
-**Categories:** quant-ph  
-
-**Abstract:** Quantum computers are a revolutionary class of computational platforms with applications in combinatorial and global optimization, machine learning, and other domains involving computationally hard problems. While these machines typically operate on qubits, which are quantum information elements that can occupy superpositions of the basis states 0 and 1, recent advances have demonstrated the pract...
-
-[View on arXiv](http://arxiv.org/abs/2509.25587v2) | [PDF](http://arxiv.org/pdf/2509.25587v2)
-
----
-
 ### [Benchmarking Machine Learning Models for Fault Classification and Localization in Power System Protection](http://arxiv.org/abs/2510.00831v1)
 **Authors:** Julian Oelhaf, Georg Kordowich, Changhun Kim et al.  
 **Published:** 2025-10-01  
@@ -554,54 +614,6 @@ This digest includes papers on:
 **Abstract:** The increasing integration of distributed energy resources (DERs), particularly renewables, poses significant challenges for power system protection, with fault classification (FC) and fault localization (FL) being among the most critical tasks. Conventional protection schemes, based on fixed thresholds, cannot reliably identify and localize short circuits with the increasing complexity of the gri...
 
 [View on arXiv](http://arxiv.org/abs/2510.00831v1) | [PDF](http://arxiv.org/pdf/2510.00831v1)
-
----
-
-### [Feature Identification via the Empirical NTK](http://arxiv.org/abs/2510.00468v1)
-**Authors:** Jennifer Lin  
-**Published:** 2025-10-01  
-**Updated:** 2025-10-01  
-**Categories:** cs.LG, cs.AI  
-
-**Abstract:** We provide evidence that eigenanalysis of the empirical neural tangent kernel (eNTK) can surface the features used by trained neural networks. Across two standard toy models for mechanistic interpretability, Toy Models of Superposition (TMS) and a 1-layer MLP trained on modular addition, we find that the eNTK exhibits sharp spectral cliffs whose top eigenspaces align with ground-truth features. In...
-
-[View on arXiv](http://arxiv.org/abs/2510.00468v1) | [PDF](http://arxiv.org/pdf/2510.00468v1)
-
----
-
-### [Why Can't Transformers Learn Multiplication? Reverse-Engineering Reveals Long-Range Dependency Pitfalls](http://arxiv.org/abs/2510.00184v1)
-**Authors:** Xiaoyan Bai, Itamar Pres, Yuntian Deng et al.  
-**Published:** 2025-09-30  
-**Updated:** 2025-09-30  
-**Categories:** cs.LG, cs.AI  
-
-**Abstract:** Language models are increasingly capable, yet still fail at a seemingly simple task of multi-digit multiplication. In this work, we study why, by reverse-engineering a model that successfully learns multiplication via \emph{implicit chain-of-thought}, and report three findings: (1) Evidence of long-range structure: Logit attributions and linear probes indicate that the model encodes the necessary ...
-
-[View on arXiv](http://arxiv.org/abs/2510.00184v1) | [PDF](http://arxiv.org/pdf/2510.00184v1)
-
----
-
-### [Domain-Aware Hyperdimensional Computing for Edge Smart Manufacturing](http://arxiv.org/abs/2509.26131v1)
-**Authors:** Fardin Jalil Piran, Anandkumar Patel, Rajiv Malhotra et al.  
-**Published:** 2025-09-30  
-**Updated:** 2025-09-30  
-**Categories:** cs.LG  
-
-**Abstract:** Smart manufacturing requires on-device intelligence that meets strict latency and energy budgets. HyperDimensional Computing (HDC) offers a lightweight alternative by encoding data as high-dimensional hypervectors and computing with simple operations. Prior studies often assume that the qualitative relation between HDC hyperparameters and performance is stable across applications. Our analysis of ...
-
-[View on arXiv](http://arxiv.org/abs/2509.26131v1) | [PDF](http://arxiv.org/pdf/2509.26131v1)
-
----
-
-### [Classical feature map surrogates and metrics for quantum control landscapes](http://arxiv.org/abs/2509.25930v1)
-**Authors:** Martino Calzavara, Tommaso Calarco, Felix Motzoi  
-**Published:** 2025-09-30  
-**Updated:** 2025-09-30  
-**Categories:** quant-ph  
-
-**Abstract:** We derive and analyze three feature map representations of parametrized quantum dynamics, which generalize variational quantum circuits. These are (i) a Lie-Fourier partial sum, (ii) a Taylor expansion, and (iii) a finite-dimensional sinc kernel regression representation. The Lie-Fourier representation is shown to have a dense spectrum with discrete peaks, that reflects control Hamiltonian propert...
-
-[View on arXiv](http://arxiv.org/abs/2509.25930v1) | [PDF](http://arxiv.org/pdf/2509.25930v1)
 
 ---
 
@@ -626,18 +638,6 @@ This digest includes papers on:
 **Abstract:** The design of Analog and Mixed-Signal (AMS) integrated circuits (ICs) often involves significant manual effort, especially during the transistor sizing process. While Machine Learning techniques in Electronic Design Automation (EDA) have shown promise in reducing complexity and minimizing human intervention, they still face challenges such as numerous iterations and a lack of knowledge about AMS c...
 
 [View on arXiv](http://arxiv.org/abs/2509.25510v1) | [PDF](http://arxiv.org/pdf/2509.25510v1)
-
----
-
-### [DSAT-HD: Dual-Stream Adaptive Transformer with Hybrid Decomposition for Multivariate Time Series Forecasting](http://arxiv.org/abs/2509.24800v1)
-**Authors:** Zixu Wang, Hongbin Dong, Xiaoping Zhang  
-**Published:** 2025-09-29  
-**Updated:** 2025-09-29  
-**Categories:** cs.LG, cs.AI  
-
-**Abstract:** Time series forecasting is crucial for various applications, such as weather, traffic, electricity, and energy predictions. Currently, common time series forecasting methods are based on Transformers. However, existing approaches primarily model limited time series or fixed scales, making it more challenging to capture diverse features cross different ranges. Additionally, traditional methods like...
-
-[View on arXiv](http://arxiv.org/abs/2509.24800v1) | [PDF](http://arxiv.org/pdf/2509.24800v1)
 
 ---
 
