@@ -1,0 +1,52 @@
+FOUND 54 RELEVANT PAPERS
+Date: 2025-10-06
+Search period: Last 7 days
+
+============================================================
+NEW PAPERS:
+============================================================
+
+1. Reward Models are Metrics in a Trench Coat
+   http://arxiv.org/abs/2510.03231v1
+   Published: 2025-10-03
+
+2. Improving GUI Grounding with Explicit Position-to-Coordinate Mapping
+   http://arxiv.org/abs/2510.03230v1
+   Published: 2025-10-03
+
+3. Plugging Leaks in Fault-Tolerant Quantum Computation and Verification
+   http://arxiv.org/abs/2510.03227v1
+   Published: 2025-10-03
+
+4. Absence of quantum Darwinism as a resource in secure quantum communication and computation
+   http://arxiv.org/abs/2510.03225v1
+   Published: 2025-10-03
+
+5. Test-Time Defense Against Adversarial Attacks via Stochastic Resonance of Latent Ensembles
+   http://arxiv.org/abs/2510.03224v1
+   Published: 2025-10-03
+
+6. Self-Anchor: Large Language Model Reasoning via Step-by-step Attention Alignment
+   http://arxiv.org/abs/2510.03223v1
+   Published: 2025-10-03
+
+7. Low-probability Tokens Sustain Exploration in Reinforcement Learning with Verifiable Reward
+   http://arxiv.org/abs/2510.03222v1
+   Published: 2025-10-03
+
+8. Cheat-Penalised Quantum Weak Coin-Flipping
+   http://arxiv.org/abs/2510.03218v1
+   Published: 2025-10-03
+
+9. Abstain and Validate: A Dual-LLM Policy for Reducing Noise in Agentic Program Repair
+   http://arxiv.org/abs/2510.03217v1
+   Published: 2025-10-03
+
+10. Wave-GMS: Lightweight Multi-Scale Generative Model for Medical Image Segmentation
+   http://arxiv.org/abs/2510.03216v1
+   Published: 2025-10-03
+
+
+... and 44 more papers.
+
+View full report on GitHub: https://github.com/YOUR_USERNAME/YOUR_REPO/blob/main/reports/arxiv_digest_2025-10-06.md
