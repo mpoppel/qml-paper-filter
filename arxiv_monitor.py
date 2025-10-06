@@ -1,5 +1,6 @@
 import arxiv
 import datetime
+from datetime import timezone
 import os
 from pathlib import Path
 
@@ -62,11 +63,15 @@ def format_paper(paper):
 
 def search_arxiv_papers():
     """Search arXiv for recent papers matching our criteria."""
-    cutoff_date = datetime.datetime.now() - datetime.timedelta(days=DAYS_BACK)
+    # Create timezone-aware cutoff date (UTC)
+    cutoff_date = datetime.datetime.now(timezone.utc) - datetime.timedelta(days=DAYS_BACK)
     all_papers = []
     seen_ids = set()
 
     print(f"Searching from {cutoff_date.strftime('%Y-%m-%d')} onwards...")
+
+    # Create arxiv client (new API)
+    client = arxiv.Client()
 
     # Search general queries
     for query in SEARCH_QUERIES:
@@ -79,13 +84,17 @@ def search_arxiv_papers():
             sort_order=arxiv.SortOrder.Descending
         )
 
-        for paper in search.results():
-            # Check both published and updated dates
-            paper_date = max(paper.published, paper.updated)
-            if paper_date >= cutoff_date and paper.entry_id not in seen_ids:
-                if any(cat in paper.categories for cat in CATEGORIES):
-                    all_papers.append(paper)
-                    seen_ids.add(paper.entry_id)
+        try:
+            for paper in client.results(search):
+                # Check both published and updated dates
+                paper_date = max(paper.published, paper.updated)
+                if paper_date >= cutoff_date and paper.entry_id not in seen_ids:
+                    if any(cat in paper.categories for cat in CATEGORIES):
+                        all_papers.append(paper)
+                        seen_ids.add(paper.entry_id)
+        except Exception as e:
+            print(f"  Warning: Error searching '{query}': {e}")
+            continue
 
     # Search for papers citing key references
     print("\nSearching for papers citing key references...")
@@ -100,12 +109,16 @@ def search_arxiv_papers():
             sort_order=arxiv.SortOrder.Descending
         )
 
-        for paper in search.results():
-            paper_date = max(paper.published, paper.updated)
-            if paper_date >= cutoff_date and paper.entry_id not in seen_ids:
-                if any(cat in paper.categories for cat in CATEGORIES):
-                    all_papers.append(paper)
-                    seen_ids.add(paper.entry_id)
+        try:
+            for paper in client.results(search):
+                paper_date = max(paper.published, paper.updated)
+                if paper_date >= cutoff_date and paper.entry_id not in seen_ids:
+                    if any(cat in paper.categories for cat in CATEGORIES):
+                        all_papers.append(paper)
+                        seen_ids.add(paper.entry_id)
+        except Exception as e:
+            print(f"  Warning: Error searching citations for '{ref_name}': {e}")
+            continue
 
     # Sort by most recent first
     all_papers.sort(key=lambda x: max(x.published, x.updated), reverse=True)
