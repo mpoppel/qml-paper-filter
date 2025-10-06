@@ -1,0 +1,98 @@
+name: arXiv Daily Paper Monitor
+
+on:
+  schedule:
+    # Run daily at 9:00 AM UTC (adjust as needed)
+    - cron: '0 9 * * *'
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  search-papers:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install arxiv
+
+    - name: Run arXiv search
+      id: search
+      run: |
+        python arxiv_monitor.py
+        # Store paper count for use in later steps
+        PAPER_COUNT=$(grep -oP 'FOUND \K\d+' reports/email_body.txt || echo "0")
+        echo "paper_count=$PAPER_COUNT" >> $GITHUB_OUTPUT
+
+    - name: Commit and push report
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add reports/
+        git diff --staged --quiet || git commit -m "📚 Daily arXiv digest $(date +'%Y-%m-%d')"
+        git push
+      continue-on-error: true
+
+    - name: Send email notification
+      if: always()
+      uses: dawidd6/action-send-mail@v3
+      with:
+        # SMTP server configuration
+        server_address: smtp.gmail.com
+        server_port: 587
+
+        # Credentials stored in GitHub Secrets
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+
+        # Email details
+        subject: "📚 arXiv Digest: ${{ steps.search.outputs.paper_count }} new papers (${{ github.run_number }})"
+        to: ${{ secrets.EMAIL_TO }}
+        from: arXiv Monitor <${{ secrets.EMAIL_USERNAME }}>
+
+        # Email body from file
+        body: file://reports/email_body.txt
+
+        # Optional: attach full report
+        attachments: reports/arxiv_digest_*.md
+
+        # Use HTML if you want formatted emails
+        html_body: |
+          <h2>arXiv Quantum ML Papers - $(date +'%Y-%m-%d')</h2>
+          <p><strong>Found ${{ steps.search.outputs.paper_count }} papers</strong></p>
+          <p>View the full report in the attached file or on <a href="https://github.com/${{ github.repository }}/tree/main/reports">GitHub</a>.</p>
+          <pre>$(cat reports/email_body.txt)</pre>
+
+    - name: Create GitHub Issue (optional)
+      if: steps.search.outputs.paper_count > 0
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const today = new Date().toISOString().split('T')[0];
+          const reportPath = `reports/arxiv_digest_${today}.md`;
+          
+          if (fs.existsSync(reportPath)) {
+            const content = fs.readFileSync(reportPath, 'utf8');
+            const paperCount = '${{ steps.search.outputs.paper_count }}';
+            
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `📚 arXiv Digest - ${today} (${paperCount} papers)`,
+              body: content,
+              labels: ['arxiv', 'automated', 'papers']
+            });
+          }
