@@ -160,7 +160,9 @@ This digest includes papers on:
 
 def save_report(report, output_dir="reports"):
     """Save the report to a markdown file."""
-    Path(output_dir).mkdir(exist_ok=True)
+    # Ensure directory exists
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+
     today = datetime.datetime.now().strftime('%Y-%m-%d')
     filename = f"{output_dir}/arxiv_digest_{today}.md"
 
@@ -174,11 +176,20 @@ def save_report(report, output_dir="reports"):
 def generate_email_body(papers):
     """Generate a concise email body."""
     today = datetime.datetime.now().strftime('%Y-%m-%d')
+    paper_count = len(papers)
+
+    # Start with paper count for easy parsing
+    email = f"FOUND {paper_count} RELEVANT PAPERS\n"
+    email += f"Date: {today}\n"
+    email += f"Search period: Last {DAYS_BACK} days\n\n"
 
     if not papers:
-        return f"No new papers found in the last {DAYS_BACK} days."
+        email += f"No new papers found in the last {DAYS_BACK} days.\n"
+        return email
 
-    email = f"Found {len(papers)} new papers ({today}):\n\n"
+    email += "=" * 60 + "\n"
+    email += "NEW PAPERS:\n"
+    email += "=" * 60 + "\n\n"
 
     for i, paper in enumerate(papers[:10], 1):  # Limit to top 10 for email
         email += f"{i}. {paper.title}\n"
@@ -188,7 +199,7 @@ def generate_email_body(papers):
     if len(papers) > 10:
         email += f"\n... and {len(papers) - 10} more papers.\n"
 
-    email += f"\nView full report: https://github.com/YOUR_USERNAME/YOUR_REPO/blob/main/reports/arxiv_digest_{today}.md"
+    email += f"\nView full report on GitHub: https://github.com/YOUR_USERNAME/YOUR_REPO/blob/main/reports/arxiv_digest_{today}.md"
 
     return email
 
@@ -200,6 +211,9 @@ def main():
     print(f"Search date: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"Looking back {DAYS_BACK} day(s)")
     print("-" * 60)
+
+    # Ensure reports directory exists
+    Path("reports").mkdir(parents=True, exist_ok=True)
 
     papers = search_arxiv_papers()
     print(f"\n{'=' * 60}")
@@ -214,6 +228,8 @@ def main():
     email_file = "reports/email_body.txt"
     with open(email_file, 'w', encoding='utf-8') as f:
         f.write(email_body)
+
+    print(f"Email body saved to: {email_file}")
 
     # Print summary to console
     if papers:

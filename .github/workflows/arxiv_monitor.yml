@@ -31,9 +31,18 @@ jobs:
     - name: Run arXiv search
       id: search
       run: |
+        # Ensure reports directory exists
+        mkdir -p reports
+        
+        # Run the search script
         python arxiv_monitor.py
+        
         # Store paper count for use in later steps
-        PAPER_COUNT=$(grep -oP 'FOUND \K\d+' reports/email_body.txt || echo "0")
+        if [ -f reports/email_body.txt ]; then
+          PAPER_COUNT=$(grep -oP 'FOUND \K\d+' reports/email_body.txt || echo "0")
+        else
+          PAPER_COUNT="0"
+        fi
         echo "paper_count=$PAPER_COUNT" >> $GITHUB_OUTPUT
 
     - name: Commit and push report
@@ -46,7 +55,7 @@ jobs:
       continue-on-error: true
 
     - name: Send email notification
-      if: always()
+      if: always() && hashFiles('reports/email_body.txt') != ''
       uses: dawidd6/action-send-mail@v3
       with:
         # SMTP server configuration
