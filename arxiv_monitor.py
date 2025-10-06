@@ -30,9 +30,45 @@ KEY_REFERENCE_PAPERS = {
     "Barthe 2024": "gradients frequency profiles quantum re-uploading"
 }
 
+# Keywords for relevance scoring (from your research interests)
+RELEVANCE_KEYWORDS = {
+    'high': ['fourier', 'fourier series', 'barren plateau', 'data encoding', 'expressivity',
+             'frequency', 'spectral', 'trainability'],
+    'medium': ['quantum circuit', 'variational quantum', 'parametrized quantum',
+               'quantum machine learning', 'qml', 'quantum neural network'],
+    'low': ['quantum computing', 'quantum algorithm', 'qubit']
+}
+
 CATEGORIES = ["quant-ph", "cs.LG", "cs.AI"]
 MAX_RESULTS_PER_QUERY = 25
 DAYS_BACK = 7  # Extended lookback period to catch delayed publications
+
+
+def calculate_relevance_score(paper):
+    """Calculate relevance score for a paper based on keywords in title and abstract."""
+    text = (paper.title + " " + paper.summary).lower()
+    score = 0
+    matched_keywords = []
+
+    # High priority keywords
+    for keyword in RELEVANCE_KEYWORDS['high']:
+        if keyword in text:
+            score += 3
+            matched_keywords.append(keyword)
+
+    # Medium priority keywords
+    for keyword in RELEVANCE_KEYWORDS['medium']:
+        if keyword in text:
+            score += 2
+            matched_keywords.append(keyword)
+
+    # Low priority keywords
+    for keyword in RELEVANCE_KEYWORDS['low']:
+        if keyword in text:
+            score += 1
+            matched_keywords.append(keyword)
+
+    return score, matched_keywords
 
 
 def format_paper(paper):
@@ -120,8 +156,11 @@ def search_arxiv_papers():
             print(f"  Warning: Error searching citations for '{ref_name}': {e}")
             continue
 
-    # Sort by most recent first
-    all_papers.sort(key=lambda x: max(x.published, x.updated), reverse=True)
+    # Sort by relevance score first, then by date
+    for paper in all_papers:
+        paper.relevance_score, paper.matched_keywords = calculate_relevance_score(paper)
+
+    all_papers.sort(key=lambda x: (x.relevance_score, max(x.published, x.updated)), reverse=True)
     return all_papers
 
 
@@ -187,34 +226,244 @@ def save_report(report, output_dir="reports"):
 
 
 def generate_email_body(papers):
-    """Generate a concise email body."""
+    """Generate a rich HTML email body with paper summaries."""
     today = datetime.datetime.now().strftime('%Y-%m-%d')
     paper_count = len(papers)
 
-    # Start with paper count for easy parsing
-    email = f"FOUND {paper_count} RELEVANT PAPERS\n"
-    email += f"Date: {today}\n"
-    email += f"Search period: Last {DAYS_BACK} days\n\n"
+    # Plain text version for the body parameter
+    plain_text = f"FOUND {paper_count} RELEVANT PAPERS\n"
+    plain_text += f"Date: {today}\n"
+    plain_text += f"Search period: Last {DAYS_BACK} days\n"
 
     if not papers:
-        email += f"No new papers found in the last {DAYS_BACK} days.\n"
-        return email
+        plain_text += f"\nNo new papers found in the last {DAYS_BACK} days.\n"
 
-    email += "=" * 60 + "\n"
-    email += "NEW PAPERS:\n"
-    email += "=" * 60 + "\n\n"
+    return plain_text
 
-    for i, paper in enumerate(papers[:10], 1):  # Limit to top 10 for email
-        email += f"{i}. {paper.title}\n"
-        email += f"   {paper.entry_id}\n"
-        email += f"   Published: {paper.published.strftime('%Y-%m-%d')}\n\n"
 
-    if len(papers) > 10:
-        email += f"\n... and {len(papers) - 10} more papers.\n"
+def generate_email_html(papers):
+    """Generate rich HTML email with paper summaries and relevance scores."""
+    today = datetime.datetime.now().strftime('%Y-%m-%d')
+    paper_count = len(papers)
 
-    email += f"\nView full report on GitHub: https://github.com/YOUR_USERNAME/YOUR_REPO/blob/main/reports/arxiv_digest_{today}.md"
+    html = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }}
+        .header {{
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }}
+        .header h1 {{
+            margin: 0;
+            font-size: 28px;
+        }}
+        .header p {{
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }}
+        .paper {{
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }}
+        .paper-title {{
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }}
+        .paper-title a {{
+            color: #667eea;
+            text-decoration: none;
+        }}
+        .paper-title a:hover {{
+            text-decoration: underline;
+        }}
+        .paper-meta {{
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }}
+        .paper-meta span {{
+            margin-right: 15px;
+        }}
+        .relevance-badge {{
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+        }}
+        .relevance-high {{
+            background-color: #48bb78;
+            color: white;
+        }}
+        .relevance-medium {{
+            background-color: #ed8936;
+            color: white;
+        }}
+        .relevance-low {{
+            background-color: #cbd5e0;
+            color: #2d3748;
+        }}
+        .paper-abstract {{
+            font-size: 14px;
+            color: #4a5568;
+            margin: 10px 0;
+            line-height: 1.6;
+        }}
+        .paper-keywords {{
+            font-size: 12px;
+            color: #667eea;
+            margin-top: 10px;
+            font-style: italic;
+        }}
+        .paper-links {{
+            margin-top: 15px;
+        }}
+        .paper-links a {{
+            display: inline-block;
+            padding: 8px 15px;
+            margin-right: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }}
+        .btn-arxiv {{
+            background-color: #667eea;
+            color: white;
+        }}
+        .btn-pdf {{
+            background-color: #f56565;
+            color: white;
+        }}
+        .btn-arxiv:hover, .btn-pdf:hover {{
+            opacity: 0.9;
+        }}
+        .summary {{
+            background-color: #edf2f7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }}
+        .footer {{
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }}
+        .no-papers {{
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📚 arXiv Quantum ML Digest</h1>
+        <p>{today} • {paper_count} papers found</p>
+        <p>Ranked by relevance to your research</p>
+    </div>
+"""
 
-    return email
+    if not papers:
+        html += """
+    <div class="no-papers">
+        <h2>No new papers found</h2>
+        <p>No papers matching your criteria were published in the last {} days.</p>
+    </div>
+""".format(DAYS_BACK)
+    else:
+        html += f"""
+    <div class="summary">
+        <strong>Search Summary:</strong> Found {paper_count} papers in the last {DAYS_BACK} days, 
+        sorted by relevance to quantum circuits, machine learning, and Fourier analysis.
+    </div>
+"""
+
+        for i, paper in enumerate(papers, 1):
+            # Get relevance level
+            score = paper.relevance_score
+            if score >= 6:
+                relevance_class = "relevance-high"
+                relevance_text = f"High Relevance (Score: {score})"
+            elif score >= 3:
+                relevance_class = "relevance-medium"
+                relevance_text = f"Medium Relevance (Score: {score})"
+            else:
+                relevance_class = "relevance-low"
+                relevance_text = f"Low Relevance (Score: {score})"
+
+            # Format authors
+            authors = ", ".join([author.name for author in paper.authors[:3]])
+            if len(paper.authors) > 3:
+                authors += " et al."
+
+            # Truncate abstract for email
+            abstract = paper.summary.replace('\n', ' ').strip()
+            if len(abstract) > 300:
+                abstract = abstract[:300] + "..."
+
+            # Format matched keywords
+            keywords_text = ""
+            if paper.matched_keywords:
+                keywords_text = "Matched keywords: " + ", ".join(list(set(paper.matched_keywords))[:5])
+
+            html += f"""
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge {relevance_class}">{relevance_text}</span>
+            <br>
+            {i}. <a href="{paper.entry_id}">{paper.title}</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 {authors}</span>
+            <span>📅 Published: {paper.published.strftime('%Y-%m-%d')}</span>
+            <span>🏷️ {', '.join(paper.categories[:3])}</span>
+        </div>
+        <div class="paper-abstract">
+            {abstract}
+        </div>
+        {f'<div class="paper-keywords">{keywords_text}</div>' if keywords_text else ''}
+        <div class="paper-links">
+            <a href="{paper.entry_id}" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="{paper.pdf_url}" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+"""
+
+    html += f"""
+    <div class="footer">
+        <p>This is an automated digest from your arXiv paper monitor.</p>
+        <p>View full reports on <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/tree/main/reports">GitHub</a></p>
+    </div>
+</body>
+</html>
+"""
+
+    return html
 
 
 def main():
@@ -242,7 +491,14 @@ def main():
     with open(email_file, 'w', encoding='utf-8') as f:
         f.write(email_body)
 
+    # Generate HTML email
+    email_html = generate_email_html(papers)
+    html_file = "reports/email_body.html"
+    with open(html_file, 'w', encoding='utf-8') as f:
+        f.write(email_html)
+
     print(f"Email body saved to: {email_file}")
+    print(f"Email HTML saved to: {html_file}")
 
     # Print summary to console
     if papers:

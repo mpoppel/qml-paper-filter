@@ -67,22 +67,18 @@ jobs:
         password: ${{ secrets.EMAIL_PASSWORD }}
 
         # Email details
-        subject: "📚 arXiv Digest: ${{ steps.search.outputs.paper_count }} new papers (${{ github.run_number }})"
+        subject: "📚 arXiv Digest: ${{ steps.search.outputs.paper_count }} papers ranked by relevance"
         to: ${{ secrets.EMAIL_TO }}
-        from: arXiv Monitor <${{ secrets.EMAIL_USERNAME }}>
+        from: arXiv Quantum ML Monitor <${{ secrets.EMAIL_USERNAME }}>
 
-        # Email body from file
+        # HTML email body
+        html_body: file://reports/email_body.html
+
+        # Plain text fallback
         body: file://reports/email_body.txt
 
-        # Optional: attach full report
-        attachments: reports/arxiv_digest_*.md
-
-        # Use HTML if you want formatted emails
-        html_body: |
-          <h2>arXiv Quantum ML Papers - $(date +'%Y-%m-%d')</h2>
-          <p><strong>Found ${{ steps.search.outputs.paper_count }} papers</strong></p>
-          <p>View the full report in the attached file or on <a href="https://github.com/${{ github.repository }}/tree/main/reports">GitHub</a>.</p>
-          <pre>$(cat reports/email_body.txt)</pre>
+        # Content type
+        content_type: text/html
 
     - name: Create GitHub Issue (optional)
       if: steps.search.outputs.paper_count > 0
