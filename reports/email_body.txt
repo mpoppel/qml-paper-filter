@@ -1,5 +1,3 @@
-FOUND 0 RELEVANT PAPERS
-Date: 2026-01-06
+FOUND 30 RELEVANT PAPERS
+Date: 2026-01-07
 Search period: Last 7 days
-
-No new papers found in the last 7 days.
