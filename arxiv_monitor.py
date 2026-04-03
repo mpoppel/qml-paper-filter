@@ -5,102 +5,47 @@ import os
 from pathlib import Path
 
 # Configuration
+DAYS_BACK = 7
+CATEGORIES = ["quant-ph", "cs.LG", "cs.AI", "stat.ML"]
+MAX_RESULTS_PER_QUERY = 50  # Fewer queries, more results each
+
+# Consolidated into ~6 broad boolean queries instead of 55 individual ones
 SEARCH_QUERIES = [
-    # Core architecture focus: serial vs parallel QNNs
-    "serial parallel quantum neural network architecture",
-    "quantum neural network expressivity trainability",
+    # Fourier / spectral / frequency analysis of PQCs
+    'ti:"quantum circuit" AND (ti:fourier OR ti:frequency OR ti:spectral OR abs:expressivity)',
 
-    # Fourier / spectral theory of PQCs
-    "quantum circuits Fourier spectrum data encoding",
-    "parameterized quantum circuits frequency analysis",
-    "quantum machine learning Fourier coefficients",
+    # Barren plateaus, trainability, initialization
+    '(ti:"barren plateau" OR ti:"loss landscape" OR ti:"near-zero initialization") AND quantum',
 
-    # DLA / QFIM / overparameterization
-    "dynamical Lie algebra quantum circuits barren plateaus",
-    "quantum Fisher information matrix variational quantum",
-    "overparameterization quantum neural networks",
-    "QFIM rank parameterized quantum circuits",
+    # DLA, QFIM, overparameterization
+    '(ti:"dynamical Lie" OR ti:"Lie algebra" OR ti:"quantum Fisher" OR ti:overparameterization) AND quantum',
 
-    # Barren plateaus — trainability & initialization
-    "barren plateaus variational quantum circuits",
-    "near-zero initialization quantum circuits trainability",
-    "loss landscape quantum neural networks",
+    # Data encoding / re-uploading / feature maps
+    '(ti:"data re-uploading" OR ti:"data encoding" OR ti:"feature map") AND (quantum OR qubit)',
 
-    # Data encoding / feature maps / re-uploading
-    "data re-uploading quantum classifier",
-    "quantum feature map encoding expressivity",
-    "trainable frequency quantum machine learning",
+    # Variational quantum algorithms / QNN architectures broadly
+    '(ti:"variational quantum" OR ti:"quantum neural network" OR ti:"parameterized quantum") AND (machine learning OR trainability OR expressivity)',
 
-    # Generalization & learning theory
-    "generalization bounds quantum machine learning",
-    "quantum kernel methods learning theory",
-
-    # VQE & Hamiltonian simulation (for your TLFIM work)
-    "variational quantum eigensolver barren plateaus",
-    "transverse field Ising model variational quantum",
+    # VQE / Hamiltonian learning
+    '(ti:"variational quantum eigensolver" OR ti:VQE OR ti:"transverse field Ising") AND (barren OR landscape OR layer)',
 ]
 
-# Key papers to find citations for (your active bibliography)
-KEY_REFERENCE_PAPERS = {
-    # Foundational papers you build on
-    "Schuld 2021 data encoding":        "2008.08605",
-    "Pérez-Salinas 2020 re-uploading":  "data re-uploading universal quantum classifier",
-    "Mitarai 2018 circuit learning":    "quantum circuit learning",
-    "McClean 2018 barren plateaus":     "barren plateaus quantum neural network landscapes",
-
-    # Theory papers central to your framework
-    "Cerezo 2021 VQA review":           "variational quantum algorithms review",
-    "Larocca 2024 BP review":           "barren plateaus variational quantum computing review",
-    "Ragone 2024 Lie algebraic BP":     "Lie algebraic theory barren plateaus",
-    "Abbas 2021 QNN power":             "power of quantum neural networks",
-    "Caro 2022 generalization":         "generalization quantum machine learning few training data",
-
-    # Papers directly related to your current work
-    "Barthe 2024 gradients frequencies":"gradients frequency profiles quantum re-uploading",
-    "Li 2025 serial gradient":          "2603.18479",   # serial gradient suppression theorem
-    "Hashimoto 2025 VQE":               "2602.03291",   # VQE paper you replicated
-
-    # DLA / Lie algebra expressivity
-    "Larocca 2022 DLA expressivity":    "diagnosing barren plateaus Lie algebra",
-    "Wiersema 2023 DLA":                "classification quantum neural network Lie algebras",
-    "Fontana 2023 DLA adjoint":         "classical simulations variational quantum circuits Lie",
-
-    # QFIM / overparameterization
-    "Meyer 2021 QFIM":                  "2103.05523",   # QFIM expressibility
-    "Haug 2021 scalable QFIM":          "scalable quantum Fisher information",
-    "Kiani 2022 overparameterization":  "dimensions overparameterization variational quantum",
-
-    # Encoding strategies (ternary / Golomb)
-    "Melo 2023 re-uploading strategies": "re-uploading strategies multivariate quantum",
-    "Schreiber 2023 classical surrogates": "classical surrogates parameterized quantum circuits Fourier",
-}
-
-# Author-based tracking (key researchers in your space)
+# Tracked authors — searched individually but capped tightly
 TRACKED_AUTHORS = [
     "Maria Schuld",
-    "Nathan Killoran",
-    "Zoë Holmes",
     "Zoe Holmes",
     "Marco Cerezo",
-    "Patrick Coles",
     "Martin Larocca",
-    "Frederic Sauvage",
     "Elies Gil-Fuster",
-    "Adrián Pérez-Salinas",
     "Adrian Perez-Salinas",
     "Johannes Jakob Meyer",
-    "Michael Hartmann",
-    "Michael Kölle",     # TUM / Aqarios colleague proximity
-    "Tobias Rosskopf",
+    "Frederic Sauvage",
     "Lennart Bittel",
-    "Mikael Svensson",
-    "Qiaochu Zhang",     # Zhang et al. NZI theorem
 ]
 
-# Keywords for relevance scoring — tuned to your research hierarchy
+# Keywords for relevance scoring
 RELEVANCE_KEYWORDS = {
     'high': [
-        # Your core theoretical objects
         'fourier', 'fourier series', 'fourier spectrum', 'fourier coefficient',
         'frequency spectrum', 'spectral',
         'barren plateau', 'barren plateaus',
@@ -121,31 +66,23 @@ RELEVANCE_KEYWORDS = {
         'quantum machine learning', 'qml',
         'loss landscape', 'gradient vanishing',
         'quantum kernel', 'feature map',
-        'quantum circuit learning',
         'trainability', 'gradient flow',
         'lie algebra', 'lie group',
         'representational power',
-        'circuit ansatz', 'hardware efficient',
     ],
     'low': [
         'variational quantum eigensolver', 'vqe',
         'quantum computing', 'quantum algorithm',
         'qubit', 'quantum gate',
-        'pennylane', 'qiskit',
-        'quantum advantage',
         'generalization', 'learnability',
         'hamiltonian simulation',
     ]
 }
 
-CATEGORIES = ["quant-ph", "cs.LG", "cs.AI", "stat.ML"]
-MAX_RESULTS_PER_QUERY = 25
-DAYS_BACK = 7
-
 
 def calculate_relevance_score(paper):
-    """Calculate relevance score for a paper based on keywords in title and abstract."""
     text = (paper.title + " " + paper.summary).lower()
+    title_lower = paper.title.lower()
     score = 0
     matched_keywords = []
 
@@ -153,6 +90,8 @@ def calculate_relevance_score(paper):
         if keyword in text:
             score += 3
             matched_keywords.append(keyword)
+        if keyword in title_lower:
+            score += 2  # extra title bonus
 
     for keyword in RELEVANCE_KEYWORDS['medium']:
         if keyword in text:
@@ -164,13 +103,6 @@ def calculate_relevance_score(paper):
             score += 1
             matched_keywords.append(keyword)
 
-    # Bonus: title-only match (stronger signal)
-    title_lower = paper.title.lower()
-    for keyword in RELEVANCE_KEYWORDS['high']:
-        if keyword in title_lower:
-            score += 2  # extra weight for title hits
-
-    # Bonus: tracked author match
     paper_author_names = [a.name for a in paper.authors]
     for tracked in TRACKED_AUTHORS:
         if any(tracked.lower() in a.lower() for a in paper_author_names):
@@ -181,7 +113,6 @@ def calculate_relevance_score(paper):
 
 
 def format_paper(paper):
-    """Format a single paper's information."""
     authors = ", ".join([author.name for author in paper.authors[:3]])
     if len(paper.authors) > 3:
         authors += " et al."
@@ -206,18 +137,21 @@ def format_paper(paper):
 
 
 def search_arxiv_papers():
-    """Search arXiv for recent papers matching our criteria."""
     cutoff_date = datetime.datetime.now(timezone.utc) - datetime.timedelta(days=DAYS_BACK)
     all_papers = []
     seen_ids = set()
 
     print(f"Searching from {cutoff_date.strftime('%Y-%m-%d')} onwards...")
 
-    client = arxiv.Client()
+    client = arxiv.Client(
+        page_size=50,
+        delay_seconds=3,   # polite delay between requests
+        num_retries=3
+    )
 
-    # General topic queries
+    # Consolidated topic queries
     for query in SEARCH_QUERIES:
-        print(f"  Query: {query}")
+        print(f"  Query: {query[:80]}...")
 
         search = arxiv.Search(
             query=query,
@@ -234,39 +168,16 @@ def search_arxiv_papers():
                         all_papers.append(paper)
                         seen_ids.add(paper.entry_id)
         except Exception as e:
-            print(f"  Warning: Error searching '{query}': {e}")
+            print(f"  Warning: Error on query: {e}")
             continue
 
-    # Citation proximity searches — papers citing your key references
-    print("\nSearching for papers citing key references...")
-    for ref_name, ref_query in KEY_REFERENCE_PAPERS.items():
-        print(f"  Looking for citations to: {ref_name}")
-
-        search = arxiv.Search(
-            query=ref_query,
-            max_results=15,
-            sort_by=arxiv.SortCriterion.SubmittedDate,
-            sort_order=arxiv.SortOrder.Descending
-        )
-
-        try:
-            for paper in client.results(search):
-                paper_date = max(paper.published, paper.updated)
-                if paper_date >= cutoff_date and paper.entry_id not in seen_ids:
-                    if any(cat in paper.categories for cat in CATEGORIES):
-                        all_papers.append(paper)
-                        seen_ids.add(paper.entry_id)
-        except Exception as e:
-            print(f"  Warning: Error searching citations for '{ref_name}': {e}")
-            continue
-
-    # Author-based searches — new papers from tracked researchers
-    print("\nSearching for new papers from tracked authors...")
+    # Author searches — kept but capped at 3 results each to stay fast
+    print("\nSearching tracked authors...")
     for author in TRACKED_AUTHORS:
         print(f"  Author: {author}")
         search = arxiv.Search(
-            query=f"au:{author}",
-            max_results=5,
+            query=f'au:"{author}"',
+            max_results=3,
             sort_by=arxiv.SortCriterion.SubmittedDate,
             sort_order=arxiv.SortOrder.Descending
         )
@@ -289,7 +200,6 @@ def search_arxiv_papers():
 
 
 def generate_markdown_report(papers):
-    """Generate a markdown report of found papers."""
     today = datetime.datetime.now().strftime('%Y-%m-%d')
 
     report = f"""# arXiv Daily Digest - {today}
@@ -314,7 +224,7 @@ This digest covers:
 """
 
     if not papers:
-        report += "*No new papers found matching your criteria in the last {} days.*\n".format(DAYS_BACK)
+        report += f"*No new papers found matching your criteria in the last {DAYS_BACK} days.*\n"
     else:
         for paper in papers:
             report += format_paper(paper)
@@ -337,36 +247,26 @@ This digest covers:
 
 
 def save_report(report, output_dir="reports"):
-    """Save the report to a markdown file."""
     Path(output_dir).mkdir(parents=True, exist_ok=True)
-
     today = datetime.datetime.now().strftime('%Y-%m-%d')
     filename = f"{output_dir}/arxiv_digest_{today}.md"
-
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(report)
-
     print(f"Report saved to: {filename}")
     return filename
 
 
 def generate_email_body(papers):
-    """Generate plain-text email body."""
     today = datetime.datetime.now().strftime('%Y-%m-%d')
-    paper_count = len(papers)
-
-    plain_text = f"FOUND {paper_count} RELEVANT PAPERS\n"
+    plain_text = f"FOUND {len(papers)} RELEVANT PAPERS\n"
     plain_text += f"Date: {today}\n"
     plain_text += f"Search period: Last {DAYS_BACK} days\n"
-
     if not papers:
         plain_text += f"\nNo new papers found in the last {DAYS_BACK} days.\n"
-
     return plain_text
 
 
 def generate_email_html(papers):
-    """Generate rich HTML email with paper summaries and relevance scores."""
     today = datetime.datetime.now().strftime('%Y-%m-%d')
     paper_count = len(papers)
 
@@ -377,43 +277,28 @@ def generate_email_html(papers):
     <style>
         body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            line-height: 1.6; color: #333; max-width: 800px;
+            margin: 0 auto; padding: 20px; background-color: #f5f5f5;
         }}
         .header {{
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            text-align: center;
+            color: white; padding: 30px; border-radius: 10px;
+            margin-bottom: 30px; text-align: center;
         }}
         .header h1 {{ margin: 0; font-size: 28px; }}
         .header p {{ margin: 10px 0 0 0; opacity: 0.9; }}
         .paper {{
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: white; border-radius: 8px; padding: 20px;
+            margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             border-left: 4px solid #667eea;
         }}
         .paper-title {{ font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 10px; }}
         .paper-title a {{ color: #667eea; text-decoration: none; }}
-        .paper-title a:hover {{ text-decoration: underline; }}
         .paper-meta {{ font-size: 14px; color: #666; margin-bottom: 10px; }}
         .paper-meta span {{ margin-right: 15px; }}
         .relevance-badge {{
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-right: 10px;
+            display: inline-block; padding: 3px 10px; border-radius: 12px;
+            font-size: 12px; font-weight: bold; margin-right: 10px;
         }}
         .relevance-high  {{ background-color: #48bb78; color: white; }}
         .relevance-medium {{ background-color: #ed8936; color: white; }}
@@ -422,13 +307,8 @@ def generate_email_html(papers):
         .paper-keywords {{ font-size: 12px; color: #667eea; margin-top: 10px; font-style: italic; }}
         .paper-links {{ margin-top: 15px; }}
         .paper-links a {{
-            display: inline-block;
-            padding: 8px 15px;
-            margin-right: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
+            display: inline-block; padding: 8px 15px; margin-right: 10px;
+            border-radius: 5px; text-decoration: none; font-size: 14px; font-weight: 500;
         }}
         .btn-arxiv {{ background-color: #667eea; color: white; }}
         .btn-pdf   {{ background-color: #f56565; color: white; }}
@@ -460,20 +340,16 @@ def generate_email_html(papers):
         barren plateaus, and trainable-frequency feature maps.
     </div>
 """
-
         for i, paper in enumerate(papers, 1):
             score = paper.relevance_score
             if score >= 8:
-                relevance_class = "relevance-high"
-                relevance_text = f"High Relevance (Score: {score})"
+                relevance_class, relevance_text = "relevance-high", f"High Relevance (Score: {score})"
             elif score >= 4:
-                relevance_class = "relevance-medium"
-                relevance_text = f"Medium Relevance (Score: {score})"
+                relevance_class, relevance_text = "relevance-medium", f"Medium Relevance (Score: {score})"
             else:
-                relevance_class = "relevance-low"
-                relevance_text = f"Low Relevance (Score: {score})"
+                relevance_class, relevance_text = "relevance-low", f"Low Relevance (Score: {score})"
 
-            authors = ", ".join([author.name for author in paper.authors[:3]])
+            authors = ", ".join([a.name for a in paper.authors[:3]])
             if len(paper.authors) > 3:
                 authors += " et al."
 
@@ -505,7 +381,7 @@ def generate_email_html(papers):
     </div>
 """
 
-    html += f"""
+    html += """
     <div class="footer">
         <p>Automated digest · arXiv QML monitor</p>
         <p>Focus: Serial/Parallel QNNs · DLA · QFIM · Fourier · Barren Plateaus · NZI</p>
@@ -518,7 +394,7 @@ def generate_email_html(papers):
 
 def main():
     print("=" * 60)
-    print("arXiv QML Paper Monitor — Serial/Parallel QNNs, DLA, QFIM")
+    print("arXiv QML Monitor — Serial/Parallel QNNs, DLA, QFIM")
     print("=" * 60)
     print(f"Search date: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"Looking back {DAYS_BACK} day(s)")
@@ -532,15 +408,13 @@ def main():
     print("=" * 60)
 
     report = generate_markdown_report(papers)
-    filename = save_report(report)
+    save_report(report)
 
-    email_body = generate_email_body(papers)
     with open("reports/email_body.txt", 'w', encoding='utf-8') as f:
-        f.write(email_body)
+        f.write(generate_email_body(papers))
 
-    email_html = generate_email_html(papers)
     with open("reports/email_body.html", 'w', encoding='utf-8') as f:
-        f.write(email_html)
+        f.write(generate_email_html(papers))
 
     print("Email body saved to: reports/email_body.txt")
     print("Email HTML saved to: reports/email_body.html")
