@@ -5,43 +5,28 @@
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            line-height: 1.6; color: #333; max-width: 800px;
+            margin: 0 auto; padding: 20px; background-color: #f5f5f5;
         }
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            text-align: center;
+            color: white; padding: 30px; border-radius: 10px;
+            margin-bottom: 30px; text-align: center;
         }
         .header h1 { margin: 0; font-size: 28px; }
         .header p { margin: 10px 0 0 0; opacity: 0.9; }
         .paper {
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: white; border-radius: 8px; padding: 20px;
+            margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             border-left: 4px solid #667eea;
         }
         .paper-title { font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 10px; }
         .paper-title a { color: #667eea; text-decoration: none; }
-        .paper-title a:hover { text-decoration: underline; }
         .paper-meta { font-size: 14px; color: #666; margin-bottom: 10px; }
         .paper-meta span { margin-right: 15px; }
         .relevance-badge {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-right: 10px;
+            display: inline-block; padding: 3px 10px; border-radius: 12px;
+            font-size: 12px; font-weight: bold; margin-right: 10px;
         }
         .relevance-high  { background-color: #48bb78; color: white; }
         .relevance-medium { background-color: #ed8936; color: white; }
@@ -50,13 +35,8 @@
         .paper-keywords { font-size: 12px; color: #667eea; margin-top: 10px; font-style: italic; }
         .paper-links { margin-top: 15px; }
         .paper-links a {
-            display: inline-block;
-            padding: 8px 15px;
-            margin-right: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
+            display: inline-block; padding: 8px 15px; margin-right: 10px;
+            border-radius: 5px; text-decoration: none; font-size: 14px; font-weight: 500;
         }
         .btn-arxiv { background-color: #667eea; color: white; }
         .btn-pdf   { background-color: #f56565; color: white; }
@@ -68,20 +48,38 @@
 <body>
     <div class="header">
         <h1>📚 arXiv QML Digest</h1>
-        <p>2026-04-03 • 85 papers found</p>
+        <p>2026-04-04 • 8 papers found</p>
         <p>Ranked by relevance · Serial/Parallel QNNs · DLA · QFIM · Fourier</p>
     </div>
 
     <div class="summary">
-        <strong>Search Summary:</strong> Found 85 papers in the last 7 days,
+        <strong>Search Summary:</strong> Found 8 papers in the last 7 days,
         sorted by relevance to your research on serial/parallel QNNs, DLA, QFIM, Fourier analysis,
         barren plateaus, and trainable-frequency feature maps.
     </div>
 
     <div class="paper">
         <div class="paper-title">
-            <span class="relevance-badge relevance-high">High Relevance (Score: 14)</span><br>
-            1. <a href="http://arxiv.org/abs/2604.01429v1">Classical shadows with arbitrary group representations</a>
+            <span class="relevance-badge relevance-high">High Relevance (Score: 24)</span><br>
+            1. <a href="http://arxiv.org/abs/2603.27671v1">Benchmarking Encoding Families in Quantum Neural Networks Under Fixed Circuit Area for Frequency Spectrum and Trainability</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Martyna Czuba, Patrick Holzer, Hein Zay Yar Oo</span>
+            <span>📅 2026-03-29</span>
+            <span>🏷️ quant-ph</span>
+        </div>
+        <div class="paper-abstract">Quantum Neural Networks (QNNs) offer a promising framework for integrating quantum computing principles into machine learning, yet their practical capabilities and limitations remain insufficiently studied. In this work, we systematically investigate the trainability and approximation properties of ...</div>
+        <div class="paper-keywords">Matched: fourier, fourier series, frequency spectrum, expressivity, quantum neural network, qnn</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2603.27671v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="https://arxiv.org/pdf/2603.27671v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-high">High Relevance (Score: 10)</span><br>
+            2. <a href="http://arxiv.org/abs/2604.01429v1">Classical shadows with arbitrary group representations</a>
         </div>
         <div class="paper-meta">
             <span>👤 Maxwell West, Frederic Sauvage, Aniruddha Sen et al.</span>
@@ -89,7 +87,7 @@
             <span>🏷️ quant-ph</span>
         </div>
         <div class="paper-abstract">Classical shadows (CS) has recently emerged as an important framework to efficiently predict properties of an unknown quantum state. A common strategy in CS protocols is to parametrize the basis in which one measures the state by a random group action; many examples of this have been proposed and st...</div>
-        <div class="paper-keywords">Matched: lie group, author:Nathan Killoran, author:Martin Larocca, author:Frederic Sauvage</div>
+        <div class="paper-keywords">Matched: lie group, author:Martin Larocca, author:Frederic Sauvage</div>
         <div class="paper-links">
             <a href="http://arxiv.org/abs/2604.01429v1" class="btn-arxiv">📄 View on arXiv</a>
             <a href="https://arxiv.org/pdf/2604.01429v1" class="btn-pdf">📥 Download PDF</a>
@@ -99,1512 +97,108 @@
     <div class="paper">
         <div class="paper-title">
             <span class="relevance-badge relevance-high">High Relevance (Score: 8)</span><br>
-            2. <a href="http://arxiv.org/abs/2604.00244v1">Optical frequency comb Fourier transform spectroscopy of the CH$_2$$^{79}$Br$^{81}$Br, CH$_2$$^{79}$Br$_2$, and CH$_2$$^{81}$Br$_2$ isotopologues in the 1180-1210 cm$^{-1}$ region</a>
+            3. <a href="http://arxiv.org/abs/2604.00620v1">Quantum machine learning for the quantum lattice Boltzmann method: Trainability of variational quantum circuits for the nonlinear collision operator across multiple time steps</a>
         </div>
         <div class="paper-meta">
-            <span>👤 Ibrahim Sadiek, Aleksandr A. Balashov, Adrian Hjältén et al.</span>
-            <span>📅 2026-03-31</span>
-            <span>🏷️ physics.chem-ph, astro-ph.EP, astro-ph.IM</span>
+            <span>👤 Antonio David Bastida Zamora, Ljubomir Budinski, Pierre Sagaut et al.</span>
+            <span>📅 2026-04-01</span>
+            <span>🏷️ quant-ph, physics.flu-dyn</span>
         </div>
-        <div class="paper-abstract">Quantitative spectroscopic detection of dibromomethane, CH$_2$Br$_2$, for environmental monitoring, workplace safety, and exoplanetary studies is limited by the lack of accurate absorption cross-section data and rigorous spectroscopic models. We report the first high-resolution (6.3 MHz point spacin...</div>
-        <div class="paper-keywords">Matched: fourier, spectral</div>
+        <div class="paper-abstract">This study investigates the application of quantum machine learning (QML) to approximate the nonlinear component of the collision operator within the quantum lattice Boltzmann method (QLBM). To achieve this, we train a variational quantum circuit (VQC) to construct an operator $U$. When applied to t...</div>
+        <div class="paper-keywords">Matched: variational quantum circuit, quantum machine learning, qml, trainability</div>
         <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.00244v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.00244v1" class="btn-pdf">📥 Download PDF</a>
+            <a href="http://arxiv.org/abs/2604.00620v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="https://arxiv.org/pdf/2604.00620v1" class="btn-pdf">📥 Download PDF</a>
         </div>
     </div>
 
     <div class="paper">
         <div class="paper-title">
-            <span class="relevance-badge relevance-medium">Medium Relevance (Score: 6)</span><br>
-            3. <a href="http://arxiv.org/abs/2604.02309v1">go-$m$HC: Direct Parameterization of Manifold-Constrained Hyper-Connections via Generalized Orthostochastic Matrices</a>
+            <span class="relevance-badge relevance-high">High Relevance (Score: 8)</span><br>
+            4. <a href="http://arxiv.org/abs/2509.02795v4">Geodesics of Quantum Feature Maps on the Space of Quantum Operators</a>
         </div>
         <div class="paper-meta">
-            <span>👤 Torque Dandachi, Sophia Diggs-Galligan</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.LG, cs.CL</span>
+            <span>👤 Andrew Vlasic</span>
+            <span>📅 2025-09-02</span>
+            <span>🏷️ quant-ph</span>
         </div>
-        <div class="paper-abstract">Doubly stochastic matrices enable learned mixing across residual streams, but parameterizing the set of doubly stochastic matrices (the Birkhoff polytope) exactly and efficiently remains an open challenge. Existing exact methods scale factorially with the number of streams ($d$), while Kronecker-fac...</div>
-        <div class="paper-keywords">Matched: spectral, expressivity</div>
+        <div class="paper-abstract">Recent advancements in the discipline of quantum algorithms have displayed the importance of the geometry of quantum operators. Given this thrust, this paper develops a rigorous geometric framework to analyze how the Riemannian structure of data, under the manifold hypothesis, influences the subspac...</div>
+        <div class="paper-keywords">Matched: quantum machine learning, feature map, lie group, quantum algorithm, quantum gate</div>
         <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02309v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02309v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-medium">Medium Relevance (Score: 6)</span><br>
-            4. <a href="http://arxiv.org/abs/2604.02201v1">On the Role of Depth in the Expressivity of RNNs</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Maude Lizaire, Michael Rizvi-Martel, Éric Dupuis et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.LG</span>
-        </div>
-        <div class="paper-abstract">The benefits of depth in feedforward neural networks are well known: composing multiple layers of linear transformations with nonlinear activations enables complex computations. While similar effects are expected in recurrent neural networks (RNNs), it remains unclear how depth interacts with recurr...</div>
-        <div class="paper-keywords">Matched: expressivity, generalization</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02201v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02201v1" class="btn-pdf">📥 Download PDF</a>
+            <a href="http://arxiv.org/abs/2509.02795v4" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="https://arxiv.org/pdf/2509.02795v4" class="btn-pdf">📥 Download PDF</a>
         </div>
     </div>
 
     <div class="paper">
         <div class="paper-title">
             <span class="relevance-badge relevance-medium">Medium Relevance (Score: 5)</span><br>
-            5. <a href="http://arxiv.org/abs/2604.01309v1">Euclid preparation. Non-Gaussianity of 2-pt statistics likelihood: Parameter inference with a non-Gaussian likelihood in Fourier and configuration space</a>
+            5. <a href="http://arxiv.org/abs/2604.01515v1">Codimension-controlled universality of quantum Fisher information singularities at topological band-touching defects</a>
         </div>
         <div class="paper-meta">
-            <span>👤 Euclid Collaboration, S. Gouyou Beauchamps, J. Bel et al.</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ astro-ph.CO</span>
+            <span>👤 C. A. S. Almeida</span>
+            <span>📅 2026-04-02</span>
+            <span>🏷️ quant-ph, cond-mat.mes-hall</span>
         </div>
-        <div class="paper-abstract">In this work we account for this skewness in parameter inference by modelling the likelihood through an Edgeworth expansion which involves the complete skewness tensor, composed of 1-point, 2-point, and 3-point correlators. To simplify the calculations of this expansion we perform a change of basis ...</div>
-        <div class="paper-keywords">Matched: fourier</div>
+        <div class="paper-abstract">Topological phase transitions in generic multiband systems are mediated by band-touching defects whose codimension -- the number of momentum directions along which the gap closes linearly -- varies across universality classes. Although singular behavior of fidelity susceptibilities and quantum Fishe...</div>
+        <div class="paper-keywords">Matched: quantum fisher information</div>
         <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01309v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01309v1" class="btn-pdf">📥 Download PDF</a>
+            <a href="http://arxiv.org/abs/2604.01515v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="https://arxiv.org/pdf/2604.01515v1" class="btn-pdf">📥 Download PDF</a>
         </div>
     </div>
 
     <div class="paper">
         <div class="paper-title">
             <span class="relevance-badge relevance-medium">Medium Relevance (Score: 5)</span><br>
-            6. <a href="http://arxiv.org/abs/2604.00782v1">A P-Adaptive Hybridizable Discontinuous Galerkin Spectral Element Method for Electrostatic Particle-in-Cell Simulations</a>
+            6. <a href="http://arxiv.org/abs/2603.29196v1">Calculating the quantum Fisher information via the truncated Wigner method</a>
         </div>
         <div class="paper-meta">
-            <span>👤 Tobias Ott, Marcel Pfeiffer, Stephen Copplestone</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ physics.comp-ph</span>
+            <span>👤 Thakur G. M. Hiranandani, Joseph J. Hope, Simon A. Haine</span>
+            <span>📅 2026-03-31</span>
+            <span>🏷️ quant-ph</span>
         </div>
-        <div class="paper-abstract">This paper presents a p-adaptive high-order hybridizable discontinuous Galerkin spectral element method (HDG-SEM) for solving the Poisson equation in electrostatic plasma simulations using particle-in-cell (PIC) schemes. This approach enables element-local refinement of the polynomial degree, concen...</div>
-        <div class="paper-keywords">Matched: spectral</div>
+        <div class="paper-abstract">In this work, we propose new methods of parameter estimation using stochastic sampling quantum phase-space simulations. We show that it is possible to compute the quantum Fisher information (QFI) from semiclassical stochastic samples using the Truncated Wigner Approximation (TWA). This method extend...</div>
+        <div class="paper-keywords">Matched: quantum fisher information</div>
         <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.00782v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.00782v1" class="btn-pdf">📥 Download PDF</a>
+            <a href="http://arxiv.org/abs/2603.29196v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="https://arxiv.org/pdf/2603.29196v1" class="btn-pdf">📥 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            <span class="relevance-badge relevance-medium">Medium Relevance (Score: 5)</span><br>
+            7. <a href="http://arxiv.org/abs/2603.29188v1">Quantum Fisher information in many-photon states from shift current shot noise</a>
+        </div>
+        <div class="paper-meta">
+            <span>👤 Evgenii Barts, Takahiro Morimoto, Naoto Nagaosa</span>
+            <span>📅 2026-03-31</span>
+            <span>🏷️ cond-mat.mes-hall, quant-ph</span>
+        </div>
+        <div class="paper-abstract">Quantum Fisher information (QFI) sets the ultimate precision of optical phase measurements and reveals multiphoton entanglement, but it is not accessible with conventional photodetection. We theoretically predict that a photodetector utilizing the shot noise of the quantum-geometric shift current of...</div>
+        <div class="paper-keywords">Matched: quantum fisher information</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2603.29188v1" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="https://arxiv.org/pdf/2603.29188v1" class="btn-pdf">📥 Download PDF</a>
         </div>
     </div>
 
     <div class="paper">
         <div class="paper-title">
             <span class="relevance-badge relevance-medium">Medium Relevance (Score: 4)</span><br>
-            7. <a href="http://arxiv.org/abs/2604.02320v1">Large-scale Codec Avatars: The Unreasonable Effectiveness of Large-scale Avatar Pretraining</a>
+            8. <a href="http://arxiv.org/abs/2303.09822v3">Advantage of discrete variable representation in variational quantum eigensolvers for vibrational energy calculations</a>
         </div>
         <div class="paper-meta">
-            <span>👤 Junxuan Li, Rawal Khirodkar, Chengan He et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.CV, cs.GR</span>
-        </div>
-        <div class="paper-abstract">High-quality 3D avatar modeling faces a critical trade-off between fidelity and generalization. On the one hand, multi-view studio data enables high-fidelity modeling of humans with precise control over expressions and poses, but it struggles to generalize to real-world data due to limited scale and...</div>
-        <div class="paper-keywords">Matched: expressivity, generalization</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02320v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02320v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-medium">Medium Relevance (Score: 4)</span><br>
-            8. <a href="http://arxiv.org/abs/2604.02234v1">Explicit constructions of mutually unbiased bases via Hadamard matrices</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Jean-Christophe Pain</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ quant-ph, math-ph</span>
-        </div>
-        <div class="paper-abstract">We present a detailed computational and algebraic study of Mutually Unbiased Bases (MUBs) in finite-dimensional Hilbert spaces, with a particular focus on dimensions 2, 3, 4, and the challenging case of 6. Starting from the Hadamard-phase parametrization, we derive explicit analytical conditions for...</div>
-        <div class="paper-keywords">Matched: fourier, qubit</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02234v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02234v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 3)</span><br>
-            9. <a href="http://arxiv.org/abs/2604.02324v1">Grounded Token Initialization for New Vocabulary in LMs for Generative Recommendation</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Daiwei Chen, Zhoutong Fu, Chengming Jiang et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.CL, cs.AI, cs.LG</span>
-        </div>
-        <div class="paper-abstract">Language models (LMs) are increasingly extended with new learnable vocabulary tokens for domain-specific tasks, such as Semantic-ID tokens in generative recommendation. The standard practice initializes these new tokens as the mean of existing vocabulary embeddings, then relies on supervised fine-tu...</div>
-        <div class="paper-keywords">Matched: spectral</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02324v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02324v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 3)</span><br>
-            10. <a href="http://arxiv.org/abs/2604.02272v1">X-ray Response of the Fully-Depleted, p-Channel SiSeRO-CCD</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Julian Cuevas-Zepeda, Joseph Noonan, Claudio Chavez et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ physics.ins-det, astro-ph.IM</span>
-        </div>
-        <div class="paper-abstract">We present an X-ray characterization of a fully depleted, 725 $μ$m thick p-channel SiSeRO CCD. Measurements with a $^{55}$Fe source yield an energy resolution of $54 \pm 0.9$ eV ($14.6 \pm 0.25 e^{-}$) at 5.9 keV for single-pixel events, demonstrating that the SiSeRO amplifier preserves the intrinsi...</div>
-        <div class="paper-keywords">Matched: spectral</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02272v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02272v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 3)</span><br>
-            11. <a href="http://arxiv.org/abs/2604.02261v1">GECAM discovery of a peculiar magnetar X-ray burst (MXB 221120) from SGR J1935+2154 associated with a fast radio burst</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Wen-Jun Tan, Yue Wang, Chen-Wei Wang et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ astro-ph.HE</span>
-        </div>
-        <div class="paper-abstract">Fast radio bursts (FRBs) are enigmatic cosmic transients of millisecond duration observed in the radio band. The identification of FRB-associated magnetar X-ray bursts (MXBs) from galactic magnetar SGR J1935+2154 suggests that at least a fraction of FRBs can be produced from magnetar activity. Howev...</div>
-        <div class="paper-keywords">Matched: spectral</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02261v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02261v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 3)</span><br>
-            12. <a href="http://arxiv.org/abs/2604.02232v1">On the universality of multiexcisive functors</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Tobias Barthel, Kaif Hilman, Nikolay Konovalov</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ math.AT, math.CT</span>
-        </div>
-        <div class="paper-abstract">We provide a multiplicative classification of polynomial endofunctors on spectra in terms of their Mackey functors of cross--effects. More precisely, we prove that various categories of multivariable excisive functors from spectra to spectra are symmetric monoidally equivalent to the corresponding v...</div>
-        <div class="paper-keywords">Matched: spectral</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02232v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02232v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 3)</span><br>
-            13. <a href="http://arxiv.org/abs/2604.02214v1">Quadratic gravity corrections to scalar QNMs of rapidly rotating black holes</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Stef J. B. Husken, Tom van der Steen, Simon Maenaut et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ gr-qc</span>
-        </div>
-        <div class="paper-abstract">In an effective-field-theory framework for gravity, black-hole quasinormal mode spectra acquire corrections in quadratic-curvature, scalar-tensor extensions of general relativity. Previous calculations of such corrections were limited to moderate spins, since the corresponding background solutions r...</div>
-        <div class="paper-keywords">Matched: spectral</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02214v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02214v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 3)</span><br>
-            14. <a href="http://arxiv.org/abs/2604.01872v1">Spectropolarimetry of the changing-look active galactic nucleus NGC 1566 and its potential link to supermassive black hole binaries</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 F. Marin, V. H. Sasse, J. Biedermann et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ astro-ph.GA</span>
-        </div>
-        <div class="paper-abstract">The AGN NGC~1566 is known to present dramatic and regular spectral shape changes, associated with the appearance and disappearance of broad emission lines. The underlying mechanism responsible for such changes is yet to be identified, but occultation, eccentric accretion disks, turbulent disk-domina...</div>
-        <div class="paper-keywords">Matched: spectral</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01872v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01872v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 3)</span><br>
-            15. <a href="http://arxiv.org/abs/2604.01323v1">Three Thousand Motion-Confirmed L and T Dwarf Candidates from the Backyard Worlds:~Planet 9 Citizen Science Project</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Adam C. Schneider, Marc J. Kuchner, Jacqueline K. Faherty et al.</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ astro-ph.SR</span>
-        </div>
-        <div class="paper-abstract">The Backyard Worlds: Planet 9 citizen science project uses data from the Wide-field Infrared Survey Explorer to detect infrared objects with significant motion. In this work, we present the majority of the L and T dwarf candidates discovered through this effort. For each candidate, we provide proper...</div>
-        <div class="paper-keywords">Matched: spectral</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01323v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01323v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 3)</span><br>
-            16. <a href="http://arxiv.org/abs/2604.01274v1">Non-Rigid 3D Shape Correspondences: From Foundations to Open Challenges and Opportunities</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Aleksei Zhuravlev, Lennart Bastian, Dongliang Cao et al.</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ cs.GR, cs.CV</span>
-        </div>
-        <div class="paper-abstract">Estimating correspondences between deformed shape instances is a long-standing problem in computer graphics; numerous applications, from texture transfer to statistical modelling, rely on recovering an accurate correspondence map. Many methods have thus been proposed to tackle this challenging probl...</div>
-        <div class="paper-keywords">Matched: spectral</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01274v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01274v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 3)</span><br>
-            17. <a href="http://arxiv.org/abs/2604.00327v1">Predictor-Driven Diffusion for Spatiotemporal Generation</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Yuki Yasuda, Tobias Bischoff</span>
-            <span>📅 2026-03-31</span>
-            <span>🏷️ physics.flu-dyn, physics.comp-ph, physics.geo-ph</span>
-        </div>
-        <div class="paper-abstract">Multiscale spatial structure complicates temporal prediction because small-scale spatial fluctuations influence large-scale evolution, yet resolving all scales is often intractable. Standard diffusion models do not address this problem effectively since they apply uniform decay across all Fourier mo...</div>
-        <div class="paper-keywords">Matched: fourier</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.00327v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.00327v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 2)</span><br>
-            18. <a href="http://arxiv.org/abs/2604.02311v1">Space-Efficient Quantum Algorithm for Elliptic Curve Discrete Logarithms with Resource Estimation</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Han Luo, Ziyi Yang, Ziruo Wang et al.</span>
-            <span>📅 2026-04-02</span>
+            <span>👤 K. Asnaashari, D. Bondarenko, R. V. Krems</span>
+            <span>📅 2023-03-17</span>
             <span>🏷️ quant-ph</span>
         </div>
-        <div class="paper-abstract">Solving the Elliptic Curve Discrete Logarithm Problem (ECDLP) is critical for evaluating the quantum security of widely deployed elliptic-curve cryptosystems. Consequently, minimizing the number of logical qubits required to execute this algorithm is a key object. In implementations of Shor's algori...</div>
-        <div class="paper-keywords">Matched: quantum algorithm, qubit</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02311v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02311v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 1)</span><br>
-            19. <a href="http://arxiv.org/abs/2604.02329v1">Generative World Renderer</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Zheng-Hui Huang, Zhixiang Wang, Jiaming Tan et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.CV</span>
-        </div>
-        <div class="paper-abstract">Scaling generative inverse and forward rendering to real-world scenarios is bottlenecked by the limited realism and temporal coherence of existing synthetic datasets. To bridge this persistent domain gap, we introduce a large-scale, dynamic dataset curated from visually complex AAA games. Using a no...</div>
-        <div class="paper-keywords">Matched: generalization</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02329v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02329v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 1)</span><br>
-            20. <a href="http://arxiv.org/abs/2604.02327v1">Steerable Visual Representations</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Jona Ruthardt, Manu Gaur, Deva Ramanan et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.CV, cs.AI</span>
-        </div>
-        <div class="paper-abstract">Pretrained Vision Transformers (ViTs) such as DINOv2 and MAE provide generic image features that can be applied to a variety of downstream tasks such as retrieval, classification, and segmentation. However, such representations tend to focus on the most salient visual cues in the image, with no way ...</div>
-        <div class="paper-keywords">Matched: generalization</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02327v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02327v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 1)</span><br>
-            21. <a href="http://arxiv.org/abs/2604.02226v1">When to ASK: Uncertainty-Gated Language Assistance for Reinforcement Learning</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Juarez Monteiro, Nathan Gavenski, Gianlucca Zuin et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.AI, cs.LG</span>
-        </div>
-        <div class="paper-abstract">Reinforcement learning (RL) agents often struggle with out-of-distribution (OOD) scenarios, leading to high uncertainty and random behavior. While language models (LMs) contain valuable world knowledge, larger ones incur high computational costs, hindering real-time use, and exhibit limitations in a...</div>
-        <div class="paper-keywords">Matched: generalization</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02226v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02226v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 1)</span><br>
-            22. <a href="http://arxiv.org/abs/2604.02027v1">Quantum search algorithm for similar subgraph identification under fixed edge removal</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Ruben Kara, Sven Danz, Tobias Stollenwerk et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ quant-ph</span>
-        </div>
-        <div class="paper-abstract">We introduce a novel quantum algorithm for similar subgraph identification in form of an NP-hard cardinality-constrained binary quadratic optimization problem. Given a weighted reference graph with Laplacian $\boldsymbol{B}$, our algorithm determines the subgraph featuring Laplacian $\boldsymbol{B'}...</div>
-        <div class="paper-keywords">Matched: quantum algorithm</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02027v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02027v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 1)</span><br>
-            23. <a href="http://arxiv.org/abs/2604.01841v1">Retrieval-aligned Tabular Foundation Models Enable Robust Clinical Risk Prediction in Electronic Health Records Under Real-world Constraints</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Minh-Khoi Pham, Thang-Long Nguyen Ho, Thao Thi Phuong Dao et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.AI</span>
-        </div>
-        <div class="paper-abstract">Clinical prediction from structured electronic health records (EHRs) is challenging due to high dimensionality, heterogeneity, class imbalance, and distribution shift. While tabular in-context learning (TICL) and retrieval-augmented methods perform well on generic benchmarks, their behavior in clini...</div>
-        <div class="paper-keywords">Matched: generalization</div>
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01841v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01841v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            24. <a href="http://arxiv.org/abs/2604.02330v1">ActionParty: Multi-Subject Action Binding in Generative Video Games</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Alexander Pondaven, Ziyi Wu, Igor Gilitschenski et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.CV, cs.AI, cs.LG</span>
-        </div>
-        <div class="paper-abstract">Recent advances in video diffusion have enabled the development of "world models" capable of simulating interactive environments. However, these models are largely restricted to single-agent settings, failing to control multiple agents simultaneously in a scene. In this work, we tackle a fundamental...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02330v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02330v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            25. <a href="http://arxiv.org/abs/2604.02322v1">Batched Contextual Reinforcement: A Task-Scaling Law for Efficient Reasoning</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Bangji Yang, Hongbo Ma, Jiajun Fan et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.LG, cs.AI, cs.CL</span>
-        </div>
-        <div class="paper-abstract">Large Language Models employing Chain-of-Thought reasoning achieve strong performance but suffer from excessive token consumption that inflates inference costs. Existing efficiency methods such as explicit length penalties, difficulty estimators, or multi-stage curricula either degrade reasoning qua...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02322v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02322v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            26. <a href="http://arxiv.org/abs/2604.02321v1">Robust Correlation-Induced Localization Under Time-Reversal Symmetry Breaking</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Bikram Pain, Sthitadhi Roy, Jens H. Bardarson et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cond-mat.dis-nn, cond-mat.stat-mech, quant-ph</span>
-        </div>
-        <div class="paper-abstract">We study Anderson localization in a one-dimensional disordered system with long-range correlated hopping decaying as $1/r^{a}$ with complex hopping amplitudes that break time-reversal symmetry in a tunable fashion by varying their argument. We find analytically a corelation-induced algebraic localiz...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02321v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02321v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            27. <a href="http://arxiv.org/abs/2604.02315v1">Beyond the Assistant Turn: User Turn Generation as a Probe of Interaction Awareness in Language Models</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Sarath Shekkizhar, Romain Cosentino, Adam Earle</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.AI</span>
-        </div>
-        <div class="paper-abstract">Standard LLM benchmarks evaluate the assistant turn: the model generates a response to an input, a verifier scores correctness, and the analysis ends. This paradigm leaves unmeasured whether the LLM encodes any awareness of what follows the assistant response. We propose user-turn generation as a pr...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02315v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02315v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            28. <a href="http://arxiv.org/abs/2604.02314v1">Towards High-Brightness Perfect Photon Blockade</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Zhi-Guang Lu, Xin-You Lü</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ quant-ph</span>
-        </div>
-        <div class="paper-abstract">Single-photon sources with high single-photon purity and high brightness are key elements of many future quantum technologies. While photon blockade (PB) is widely exploited in the development of such sources, achieving the coexistence of high purity and high brightness remains a long-standing chall...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02314v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02314v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            29. <a href="http://arxiv.org/abs/2604.02313v1">Topological Effects in Neural Network Field Theory</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Christian Ferko, James Halverson, Vishnu Jejjala et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ hep-th, cs.LG</span>
-        </div>
-        <div class="paper-abstract">Neural network field theory formulates field theory as a statistical ensemble of fields defined by a network architecture and a density on its parameters. We extend the construction to topological settings via the inclusion of discrete parameters that label the topological quantum number. We recover...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02313v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02313v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            30. <a href="http://arxiv.org/abs/2604.02307v1">Detecting Symmetry-Resolved Entanglement: A Quantum Monte Carlo Approach</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Kuangjie Chen, Weizhen Jia, Xiaopeng Li et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cond-mat.str-el, cond-mat.stat-mech, hep-th</span>
-        </div>
-        <div class="paper-abstract">Symmetry and entanglement are two fundamental concepts in quantum many-body physics. Their interplay is captured by symmetry-resolved entanglement, which decomposes the total entanglement into contributions from different symmetry sectors. Computing symmetry-resolved entanglement in strongly interac...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02307v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02307v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            31. <a href="http://arxiv.org/abs/2604.02301v1">Lemniscate phase trajectories for high-fidelity GHZ state preparation in trapped-ion chains</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Evgeny V. Anikin, Andrey Chuchalin, Dimitrii Donchenko et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ quant-ph</span>
-        </div>
-        <div class="paper-abstract">In trapped-ion chains, multipartite GHZ states can be prepared natively with the help of a single bichromatic laser pulse. However, higher-order terms in the expansion in the Lamb-Dicke parameter $η$ limit the GHZ state preparation infidelity for rectangular and bell-like pulses to the order of $η^4...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02301v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02301v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            32. <a href="http://arxiv.org/abs/2604.02297v1">Commutator Estimates for Low-Temperature Fermi Gases</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Jacky J. Chong, Laurent Lafleche, Jinyeop Lee et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ math-ph, math.AP, math.SP</span>
-        </div>
-        <div class="paper-abstract">We investigate the semiclassical regularity of thermal equilibria in the presence of a harmonic potential at low temperature; that is, we obtain the asymptotic behavior of the Schatten norms of commutators of the one-body operators associated with these equilibria and the position and momentum opera...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02297v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02297v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            33. <a href="http://arxiv.org/abs/2604.02296v1">VOID: Video Object and Interaction Deletion</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Saman Motamed, William Harvey, Benjamin Klein et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.CV, cs.AI</span>
-        </div>
-        <div class="paper-abstract">Existing video object removal methods excel at inpainting content "behind" the object and correcting appearance-level artifacts such as shadows and reflections. However, when the removed object has more significant interactions, such as collisions with other objects, current models fail to correct t...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02296v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02296v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            34. <a href="http://arxiv.org/abs/2604.02292v1">Taming the Exponential: A Fast Softmax Surrogate for Integer-Native Edge Inference</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Dimitrios Danopoulos, Enrico Lupi, Michael Kagan et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.LG, cs.AR</span>
-        </div>
-        <div class="paper-abstract">Softmax can become a computational bottleneck in the Transformer model's Multi-Head Attention (MHA) block, particularly in small models under low-precision inference, where exponentiation and normalization incur significant overhead. As such, we suggest using Head-Calibrated Clipped-Linear Softmax (...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02292v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02292v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            35. <a href="http://arxiv.org/abs/2604.02291v1">TensorPool: A 3D-Stacked 8.4TFLOPS/4.3W Many-Core Domain-Specific Processor for AI-Native Radio Access Networks</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Marco Bertuletti, Yichao Zhang, Diyou Shen et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.AR</span>
-        </div>
-        <div class="paper-abstract">The upcoming integration of AI in the physical layer (PHY) of 6G radio access networks (RAN) will enable a higher quality of service in challenging transmission scenarios. However, deeply optimized AI-Native PHY models impose higher computational complexity compared to conventional baseband, challen...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02291v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02291v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            36. <a href="http://arxiv.org/abs/2604.02289v1">Omni123: Exploring 3D Native Foundation Models with Limited 3D Data by Unifying Text to 2D and 3D Generation</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Chongjie Ye, Cheng Cao, Chuanyu Pan et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.CV, cs.AI</span>
-        </div>
-        <div class="paper-abstract">Recent multimodal large language models have achieved strong performance in unified text and image understanding and generation, yet extending such native capability to 3D remains challenging due to limited data. Compared to abundant 2D imagery, high-quality 3D assets are scarce, making 3D synthesis...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02289v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02289v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            37. <a href="http://arxiv.org/abs/2604.02288v1">Unifying Group-Relative and Self-Distillation Policy Optimization via Sample Routing</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Gengsheng Li, Tianyu Yang, Junfeng Fang et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.LG, cs.AI</span>
-        </div>
-        <div class="paper-abstract">Reinforcement learning with verifiable rewards (RLVR) has become a standard paradigm for post-training large language models. While Group Relative Policy Optimization (GRPO) is widely adopted, its coarse credit assignment uniformly penalizes failed rollouts, lacking the token-level focus needed to e...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02288v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02288v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            38. <a href="http://arxiv.org/abs/2604.02280v1">Novel Memory Forgetting Techniques for Autonomous AI Agents: Balancing Relevance and Efficiency</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Payal Fofadiya, Sunil Tiwari</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.AI, cs.CV</span>
-        </div>
-        <div class="paper-abstract">Long-horizon conversational agents require persistent memory for coherent reasoning, yet uncontrolled accumulation causes temporal decay and false memory propagation. Benchmarks such as LOCOMO and LOCCO report performance degradation from 0.455 to 0.05 across stages, while MultiWOZ shows 78.2% accur...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02280v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02280v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            39. <a href="http://arxiv.org/abs/2604.02276v1">De Jure: Iterative LLM Self-Refinement for Structured Extraction of Regulatory Rules</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Keerat Guliani, Deepkamal Gill, David Landsman et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.AI, cs.CL, cs.LG</span>
-        </div>
-        <div class="paper-abstract">Regulatory documents encode legally binding obligations that LLM-based systems must respect. Yet converting dense, hierarchically structured legal text into machine-readable rules remains a costly, expert-intensive process. We present De Jure, a fully automated, domain-agnostic pipeline for extracti...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02276v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02276v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            40. <a href="http://arxiv.org/abs/2604.02270v1">Crystalite: A Lightweight Transformer for Efficient Crystal Modeling</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Tin Hadži Veljković, Joshua Rosenthal, Ivor Lončarić et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.LG, cs.AI</span>
-        </div>
-        <div class="paper-abstract">Generative models for crystalline materials often rely on equivariant graph neural networks, which capture geometric structure well but are costly to train and slow to sample. We present Crystalite, a lightweight diffusion Transformer for crystal modeling built around two simple inductive biases. Th...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02270v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02270v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            41. <a href="http://arxiv.org/abs/2604.02269v1">Tensor invariants for multipartite entanglement classification</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Sylvain Carrozza, Johann Chevrier, Luca Lionni</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ math-ph, hep-th, quant-ph</span>
-        </div>
-        <div class="paper-abstract">Organising the space of entanglement structures of a multipartite quantum system is a much more challenging task than its bipartite version: while the local unitary (LU) orbit of a bipartite pure state can be conveniently characterized by its entanglement spectrum, invariants of multipartite entangl...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02269v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02269v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            42. <a href="http://arxiv.org/abs/2604.02245v1">Search for dark photons at future e$^+$e$^-$ colliders</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Mikael Berggren</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ hep-ph</span>
-        </div>
-        <div class="paper-abstract">In a class of theories, dark matter is explained by postulating the existence of a `dark sector', which interacts gravitationally with ordinary matter. If this dark sector contains a U(1) symmetry, and a corresponding `dark' photon ($A_{D}$) , it is natural to expect that this particle kineticly mix...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02245v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02245v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            43. <a href="http://arxiv.org/abs/2604.02238v1">Generative AI Spotlights the Human Core of Data Science: Implications for Education</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Nathan Taback</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.CY, cs.AI, stat.AP</span>
-        </div>
-        <div class="paper-abstract">Generative AI (GAI) reveals an irreducible human core at the center of data science: advances in GAI should sharpen, rather than diminish, the focus on human reasoning in data science education. GAI can now execute many routine data science workflows, including cleaning, summarizing, visualizing, mo...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02238v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02238v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            44. <a href="http://arxiv.org/abs/2604.02227v1">Sensitivity analysis for stopping criteria with application to organ transplantations</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Xingyu Ren, Michael C. Fu, Steven I. Marcus</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ eess.SY, math.OC, stat.ME</span>
-        </div>
-        <div class="paper-abstract">We consider a stopping problem and its application to the decision-making process regarding the optimal timing of organ transplantation for individual patients. At each decision period, the patient state is inspected and a decision is made whether to transplant. If the organ is transplanted, the pro...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02227v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02227v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            45. <a href="http://arxiv.org/abs/2604.02225v1">Stochastic Control for Organ Donations: A Review</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Xingyu Ren, Michael C. Fu, Steven I. Marcus</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ eess.SY</span>
-        </div>
-        <div class="paper-abstract">We review the literature on individual patient organ acceptance decision making by presenting a Markov Decision Process (MDP) model to formulate the organ acceptance decision process as a stochastic control problem. Under the umbrella of the MDP framework, we classify and summarize the major researc...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02225v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02225v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            46. <a href="http://arxiv.org/abs/2604.02212v1">Phase estimation with autoregressive padding (PEAP): addressing inaccuracies and biases in EEG analysis</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Miriam Kirchhoff, Johanna Rösch, Maria Ermolova et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ q-bio.NC</span>
-        </div>
-        <div class="paper-abstract">Accurate phase estimation at the edge of data segments is crucial for EEG applications such as EEG-TMS in offline and real-time data analysis. Our research evaluates the phase estimation performance of four commonly used methods (Phastimate, SSPE, ETP, and PhastPadding) for accuracy and systemic bia...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02212v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02212v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            47. <a href="http://arxiv.org/abs/2604.02210v1">Rigidity of the timelike marked length spectrum and length-twist coordinates of singular de-Sitter tori</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Martin Mion-Mouton</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ math.DG, math.GT</span>
-        </div>
-        <div class="paper-abstract">In this paper, we study the closed timelike geodesics of de-Sitter tori with one singularity and prove their uniqueness in their free homotopy class. We introduce the notion of timelike marked length spectrum of such a torus, and establish its rigidity with respect to the lengths of two homotopy cla...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02210v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02210v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            48. <a href="http://arxiv.org/abs/2604.02175v1">Shot-to-shot noise cancellation for parametric oscillators</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Martynas Skrabulis, Martin Colombano Sosa, Nicola Carlon Zambon et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ quant-ph</span>
-        </div>
-        <div class="paper-abstract">Powerful approaches to squeeze the motional state of a harmonic oscillator rely on the stepwise modulation of its resonance frequency. Such protocols can be limited by forces that vary slowly between experimental runs but are constant during a single experimental shot. Such shot-to-shot noise gives ...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02175v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02175v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            49. <a href="http://arxiv.org/abs/2604.02150v1">Samplet limits and multiwavelets</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Gianluca Giacchi, Michael Multerer, Jacopo Quizi</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ math.NA, math.PR, math.ST</span>
-        </div>
-        <div class="paper-abstract">Samplets are data adapted multiresolution analyses of localized discrete signed measures. They can be constructed on scattered data sites in arbitrary dimension and such that they exhibit vanishing moments with respect to any prescribed set of primitives. We consider the samplet construction in a pr...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02150v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02150v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            50. <a href="http://arxiv.org/abs/2604.02135v1">GaelEval: Benchmarking LLM Performance for Scottish Gaelic</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Peter Devine, William Lamb, Beatrice Alex et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.CL</span>
-        </div>
-        <div class="paper-abstract">Multilingual large language models (LLMs) often exhibit emergent 'shadow' capabilities in languages without official support, yet their performance on these languages remains uneven and under-measured. This is particularly acute for morphosyntactically rich minority languages such as Scottish Gaelic...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02135v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02135v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            51. <a href="http://arxiv.org/abs/2604.02126v1">Hedging market risk and uncertainty via a robust portfolio approach</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Adele Ravagnani, Mattia Chiappari, Andrea Flori et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ q-fin.RM</span>
-        </div>
-        <div class="paper-abstract">Shorting for hedging exposes to risk when the market dynamics is uncertain. Managing uncertainty and risk exposure is key in portfolio management practice. This paper develops a robust framework for dynamic minimum-variance hedging that explicitly accounts for forecast uncertainty in volatility esti...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02126v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02126v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            52. <a href="http://arxiv.org/abs/2604.02108v1">Cross-Modal Visuo-Tactile Object Perception</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Anirvan Dutta, Simone Tasciotti, Claudia Cusseddu et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.RO, cs.LG</span>
-        </div>
-        <div class="paper-abstract">Estimating physical properties is critical for safe and efficient autonomous robotic manipulation, particularly during contact-rich interactions. In such settings, vision and tactile sensing provide complementary information about object geometry, pose, inertia, stiffness, and contact dynamics, such...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02108v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02108v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            53. <a href="http://arxiv.org/abs/2604.02096v1">ProVega: A Grammar to Ease the Prototyping, Creation, and Reproducibility of Progressive Data Analysis and Visualization Solutions</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Matteo Filosa, Graziano Blasilli, Emilio Martino et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.HC</span>
-        </div>
-        <div class="paper-abstract">Modern data analysis requires speed for massive datasets. Progressive Data Analysis and Visualization (PDAV) emerged as a discipline to address this problem, providing fast response times while maintaining interactivity with controlled accuracy. Yet it remains difficult to implement and reproduce. T...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02096v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02096v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            54. <a href="http://arxiv.org/abs/2604.02016v1">Optimizing Interventions for Agent-Based Infectious Disease Simulations</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Anja Wolpers, Johannes Ponge, Adelinde M. Uhrmacher</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.MA, cs.AI</span>
-        </div>
-        <div class="paper-abstract">Non-pharmaceutical interventions (NPIs) are commonly used tools for controlling infectious disease transmission when pharmaceutical options are unavailable. Yet, identifying effective interventions that minimize societal disruption remains challenging. Agent-based simulation is a popular tool for an...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.02016v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.02016v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            55. <a href="http://arxiv.org/abs/2604.01999v1">Tree-independence number and forbidden induced subgraphs: excluding a $6$-vertex path and a $(2,t)$-biclique</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Maria Chudnovsky, Julien Codsi, J. Pascal Gollin et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ math.CO</span>
-        </div>
-        <div class="paper-abstract">We show that for every positive integer ${t \geq 2}$ there exists an integer $s$ such that every graph that contains no induced subgraph isomorphic to either the $6$-vertex path or the $(2,t)$-biclique, the complete bipartite graph $K_{2,t}$, has tree-independence number at most $s$. This result mak...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01999v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01999v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            56. <a href="http://arxiv.org/abs/2604.01980v1">No evidence for dynamical dark energy from the Combo correlation of GRBs</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Marco Muccino, Massimo Della Valle, Luca Izzo et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ astro-ph.CO</span>
-        </div>
-        <div class="paper-abstract">Recently, the Dark Energy Spectroscopic Instrument (DESI) collaboration has presented results indicating that dark energy may exhibit dynamical behavior. Calibrated gamma-ray burst (GRB) correlations can be employed to verify or reject a time-evolution of the dark energy (DE) equation of state, $ω(z...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01980v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01980v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            57. <a href="http://arxiv.org/abs/2604.01954v1">Optimization Opportunities for Cloud-Based Data Pipeline Infrastructures</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Johannes Jablonski, Georg-Daniel Schwarz, Philip Heltweg et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.DC</span>
-        </div>
-        <div class="paper-abstract">Cloud infrastructure supports the efficient operation of data pipelines regarding requirements like cost, speed, and resource utilization. We present an integrated view of optimization opportunities for cloud-based data pipelines by conducting a systematic review of existing literature on optimizati...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01954v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01954v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            58. <a href="http://arxiv.org/abs/2604.01894v1">SHARC: Reference point driven Spherical Harmonic Representation for Complex Shapes</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Panagiotis Sapoutzoglou, George Terzakis, Maria Pateraki</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.CV, cs.CG</span>
-        </div>
-        <div class="paper-abstract">We propose SHARC, a novel framework that synthesizes arbitrary, genus-agnostic shapes by means of a collection of Spherical Harmonic (SH) representations of distance fields. These distance fields are anchored at optimally placed reference points in the interior volume of the surface in a way that ma...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01894v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01894v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            59. <a href="http://arxiv.org/abs/2604.01855v1">Efficient Constraint Generation for Stochastic Shortest Path Problems</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Johannes Schmalz, Felipe Trevizan</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.AI</span>
-        </div>
-        <div class="paper-abstract">Stochastic Shortest Path problems (SSPs) are traditionally solved by computing each state's cost-to-go by applying Bellman backups. A Bellman backup updates a state's cost-to-go by iterating through every applicable action, computing the cost-to-go after applying each one, and selecting a minimal ac...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01855v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01855v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            60. <a href="http://arxiv.org/abs/2604.01844v1">FaCT-GS: Fast and Scalable CT Reconstruction with Gaussian Splatting</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Pawel Tomasz Pieta, Rasmus Juul Pedersen, Sina Borgi et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.CV</span>
-        </div>
-        <div class="paper-abstract">Gaussian Splatting (GS) has emerged as a dominating technique for image rendering and has quickly been adapted for the X-ray Computed Tomography (CT) reconstruction task. However, despite being on par or better than many of its predecessors, the benefits of GS are typically not substantial enough to...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01844v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01844v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            61. <a href="http://arxiv.org/abs/2604.01828v1">Milky-Way-like stars in a galaxy core 8 billion years ago revealed by gravitational lensing</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Quirino D'Amato, Filippo Mannucci, Alessandro Sonnenfeld et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ astro-ph.GA</span>
-        </div>
-        <div class="paper-abstract">The assembly of stellar-dominated cores in elliptical galaxies is key to understanding how cosmic structures evolved. Gravitational lensing offers unique insights into the nature of their stars. We report the discovery of the smallest known quadruply lensed quasar (radius ~0.2"), whose lensing galax...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01828v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01828v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            62. <a href="http://arxiv.org/abs/2604.01615v1">Analysis of LLM Performance on AWS Bedrock: Receipt-item Categorisation Case Study</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Gabby Sanchez, Sneha Oommen, Cassandra T. Britto et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cs.AI, cs.SE</span>
-        </div>
-        <div class="paper-abstract">This paper presents a systematic, cost-aware evaluation of large language models (LLMs) for receipt-item categorisation within a production-oriented classification framework. We compare four instruction-tuned models available through AWS Bedrock: Claude 3.7 Sonnet, Claude 4 Sonnet, Mixtral 8x7B Inst...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01615v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01615v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            63. <a href="http://arxiv.org/abs/2604.01543v1">The Mpemba effect likes to hit a wall</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Yue Liu, Tan Van Vu, Raphaël Chétrite et al.</span>
-            <span>📅 2026-04-02</span>
-            <span>🏷️ cond-mat.stat-mech</span>
-        </div>
-        <div class="paper-abstract">The historical Mpemba effect involves a first-order phase transition. This has prompted the experimental realization of microscopic proxies in the form of a colloidal particle trapped in an asymmetric double well, for which the Mpemba effect has indeed been observed. We establish that the existence ...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01543v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01543v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            64. <a href="http://arxiv.org/abs/2604.01477v1">Soft MPCritic: Amortized Model Predictive Value Iteration</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Thomas Banker, Nathan P. Lawrence, Ali Mesbah</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ cs.LG, eess.SY</span>
-        </div>
-        <div class="paper-abstract">Reinforcement learning (RL) and model predictive control (MPC) offer complementary strengths, yet combining them at scale remains computationally challenging. We propose soft MPCritic, an RL-MPC framework that learns in (soft) value space while using sample-based planning for both online control and...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01477v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01477v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            65. <a href="http://arxiv.org/abs/2604.01465v1">New physics in multi-lepton tau decays</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Yohei Ema, Patrick J. Fox, Matheus Hostert et al.</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ hep-ph, hep-ex</span>
-        </div>
-        <div class="paper-abstract">Dark particles with lepton-flavor-violating couplings to the tau lepton can induce rare neutrinoless $τ$ decays with large final state multiplicities. We study models where transitions of the type $τ^\pm\to \ell^\pm\,φ$, with $φ$ a light new particle, initiate a chain of decays in the dark sector th...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01465v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01465v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            66. <a href="http://arxiv.org/abs/2604.01411v1">Test-Time Scaling Makes Overtraining Compute-Optimal</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Nicholas Roberts, Sungjun Cho, Zhiqi Gao et al.</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ cs.LG, cs.CL, stat.ML</span>
-        </div>
-        <div class="paper-abstract">Modern LLMs scale at test-time, e.g. via repeated sampling, where inference cost grows with model size and the number of samples. This creates a trade-off that pretraining scaling laws, such as Chinchilla, do not address. We present Train-to-Test ($T^2$) scaling laws that jointly optimize model size...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01411v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01411v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            67. <a href="http://arxiv.org/abs/2604.01375v1">RIFT: A RubrIc Failure Mode Taxonomy and Automated Diagnostics</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Zhengyang Qi, Charles Dickens, Derek Pham et al.</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ cs.AI</span>
-        </div>
-        <div class="paper-abstract">Rubric-based evaluation is widely used in LLM benchmarks and training pipelines for open-ended, less verifiable tasks. While prior work has demonstrated the effectiveness of rubrics using downstream signals such as reinforcement learning outcomes, there remains no principled way to diagnose rubric q...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01375v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01375v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            68. <a href="http://arxiv.org/abs/2604.01307v1">Space-Efficient Text Indexing with Mismatches using Function Inversion</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Jackson Bibbens, Levi Borevitz, Samuel McCauley</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ cs.DS</span>
-        </div>
-        <div class="paper-abstract">A classic data structure problem is to preprocess a string T of length $n$ so that, given a query $q$, we can quickly find all substrings of T with Hamming distance at most $k$ from the query string. Variants of this problem have seen significant research both in theory and in practice. For a wide p...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01307v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01307v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            69. <a href="http://arxiv.org/abs/2604.01169v1">Bridging the Simulation-to-Experiment Gap with Generative Models using Adversarial Distribution Alignment</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Kai Nelson, Tobias Kreiman, Sergey Levine et al.</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ cs.LG, cond-mat.mtrl-sci, q-bio.BM</span>
-        </div>
-        <div class="paper-abstract">A fundamental challenge in science and engineering is the simulation-to-experiment gap. While we often possess prior knowledge of physical laws, these physical laws can be too difficult to solve exactly for complex systems. Such systems are commonly modeled using simulators, which impose computation...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01169v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01169v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            70. <a href="http://arxiv.org/abs/2604.01150v1">Stochastically-constrained Koiter shell models</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Prince Romeo Mensah, Pierre Marie Ngougoue Ngougoue</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ math.AP</span>
-        </div>
-        <div class="paper-abstract">We derive a stochastically-constrained Koiter shell model in line with the SALT (Stochastic Advection by Lie Transport) approach introduced by Holm [Proc. A. 471 (2015)]. First, we deduce the stochastic partial differential equations for the generalised nonlinearly- and linearly-elastic Koiter shell...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01150v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01150v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            71. <a href="http://arxiv.org/abs/2604.01123v1">First results of AMBRA: Abundant Seeds and Early Mergers as a Pathway to the First Massive Black Holes</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Yihao Zhou, Aklant Kumar Bhowmick, Tiziana Di Matteo et al.</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ astro-ph.GA</span>
-        </div>
-        <div class="paper-abstract">AMBRA combines the large cosmological volume and statistical power of ASTRID with the physically motivated gas-based black hole seeding models from BRAHMA. Motivated by JWST's discoveries of massive black holes (BHs) at $z\gtrsim 9$, AMBRA adopts a lenient heavy-seed prescription from the BRAHMA sui...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01123v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01123v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            72. <a href="http://arxiv.org/abs/2604.01079v1">Automated Generation of Cybersecurity Exercise Scenarios</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Charilaos Skandylas, Mikael Asplund</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ cs.CR, cs.SE</span>
-        </div>
-        <div class="paper-abstract">There is a growing need for cybersecurity professionals with practical knowledge and experience to meet societal needs and comply with new standards and regulations. At the same time, the advances in software technology and artificial intelligence point towards a future where software agents will pl...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.01079v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.01079v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            73. <a href="http://arxiv.org/abs/2604.00894v1">MultiWave: A computational lab for adaptive numerical methods approximating hyperbolic balance laws</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Adrian Kolb, Aleksey Sikstel</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ math.NA</span>
-        </div>
-        <div class="paper-abstract">We present the MultiWave C++-framework for adaptive numerical methods approximating hyperbolic balance laws. MultiWave has been designed as a computational laboratory where new mathematical concepts can be quickly implemented and tested. We demonstrate the realisation of an adaptive perturbation dis...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.00894v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.00894v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            74. <a href="http://arxiv.org/abs/2604.00811v1">Deconfounding Scores and Representation Learning for Causal Effect Estimation with Weak Overlap</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Oscar Clivio, Alexander D'Amour, Alexander Franks et al.</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ stat.ML, cs.LG, stat.ME</span>
-        </div>
-        <div class="paper-abstract">Overlap, also known as positivity, is a key condition for causal treatment effect estimation. Many popular estimators suffer from high variance and become brittle when features differ strongly across treatment groups. This is especially challenging in high dimensions: the curse of dimensionality can...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.00811v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.00811v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            75. <a href="http://arxiv.org/abs/2604.00805v1">Euclid preparation. Impact of redshift distribution uncertainties on the joint analysis of photometric galaxy clustering and weak gravitational lensing</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Euclid Collaboration, K. A. Bertmann, A. Porredon et al.</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ astro-ph.CO</span>
-        </div>
-        <div class="paper-abstract">One of the $\textit{Euclid}$ mission's key projects is the so-called 3$\times$2pt analysis, that is, the combination of cosmic shear, photometric galaxy clustering, and galaxy-galaxy lensing. Although $\textit{Euclid}$ has established quality requirements for the photo-$z$ accuracy needed for the we...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.00805v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.00805v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            76. <a href="http://arxiv.org/abs/2604.00784v1">An Approach to Enriching Surgical Video Datasets for Fine-Grained Spatial-Temporal Understanding of Vision-Language Models</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Lennart Maack, Alexander Schlaefer</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ cs.CV</span>
-        </div>
-        <div class="paper-abstract">Surgical video understanding is a crucial prerequisite for advancing Computer-Assisted Surgery. While vision-language models (VLMs) have recently been applied to the surgical domain, existing surgical vision-language datasets lack in capturing and evaluating complex, interleaved spatial-temporal dyn...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.00784v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.00784v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            77. <a href="http://arxiv.org/abs/2604.00695v1">A comparison of the spin-phonon behaviour of Fe$_2$P-based magnetocaloric materials</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Mikael S. Andersson, Simon R. Larsen, Erna K. Delczeg-Czirjak et al.</span>
-            <span>📅 2026-04-01</span>
-            <span>🏷️ cond-mat.mtrl-sci</span>
-        </div>
-        <div class="paper-abstract">Magnetic refrigeration can provide an environmentally friendly technology to reduce significantly the energy consumption of cooling devices. To retain the sustainability of the device, all parts must be made from abundant materials, excluding e.g. rare earth elements. As such, materials based on Fe$...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.00695v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.00695v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            78. <a href="http://arxiv.org/abs/2604.00069v1">Perspective: Towards sustainable exploration of chemical spaces with machine learning</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Leonardo Medrano Sandonas, David Balcells, Anton Bochkarev et al.</span>
-            <span>📅 2026-03-31</span>
-            <span>🏷️ cs.LG, cond-mat.mtrl-sci, cs.AI</span>
-        </div>
-        <div class="paper-abstract">Artificial intelligence is transforming molecular and materials science, but its growing computational and data demands raise critical sustainability challenges. In this Perspective, we examine resource considerations across the AI-driven discovery pipeline--from quantum-mechanical (QM) data generat...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.00069v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.00069v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            79. <a href="http://arxiv.org/abs/2603.29730v1">mlr3mbo: Bayesian Optimization in R</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Marc Becker, Lennart Schneider, Martin Binder et al.</span>
-            <span>📅 2026-03-31</span>
-            <span>🏷️ stat.ML, cs.LG</span>
-        </div>
-        <div class="paper-abstract">We present mlr3mbo, a comprehensive and modular toolbox for Bayesian optimization in R. mlr3mbo supports single- and multi-objective optimization, multi-point proposals, batch and asynchronous parallelization, input and output transformations, and robust error handling. While it can be used for many...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2603.29730v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2603.29730v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            80. <a href="http://arxiv.org/abs/2604.00066v1">Evolution Strategies for Deep RL pretraining</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Adrian Martínez, Ananya Gupta, Hanka Goralija et al.</span>
-            <span>📅 2026-03-31</span>
-            <span>🏷️ cs.LG</span>
-        </div>
-        <div class="paper-abstract">Although Deep Reinforcement Learning has proven highly effective for complex decision-making problems, it demands significant computational resources and careful parameter adjustment in order to develop successful strategies. Evolution strategies offer a more straightforward, derivative-free approac...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2604.00066v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2604.00066v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            81. <a href="http://arxiv.org/abs/2603.29582v1">A Strong Linear Programming Relaxation for Weighted Tree Augmentation</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Vincent Cohen-Addad, Marina Drygala, Nathan Klein et al.</span>
-            <span>📅 2026-03-31</span>
-            <span>🏷️ cs.DS</span>
-        </div>
-        <div class="paper-abstract">The Weighted Tree Augmentation Problem (WTAP) is a fundamental network design problem where the goal is to find a minimum-cost set of additional edges (links) to make an input tree 2-edge-connected. While a 2-approximation is standard and the integrality gap of the classic Cut LP relaxation is known...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2603.29582v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2603.29582v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            82. <a href="http://arxiv.org/abs/2603.29396v1">Is my model perplexed for the right reason? Contrasting LLMs' Benchmark Behavior with Token-Level Perplexity</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Zoë Prins, Samuele Punzo, Frank Wildenburg et al.</span>
-            <span>📅 2026-03-31</span>
-            <span>🏷️ cs.CL</span>
-        </div>
-        <div class="paper-abstract">Standard evaluations of Large language models (LLMs) focus on task performance, offering limited insight into whether correct behavior reflects appropriate underlying mechanisms and risking confirmation bias. We introduce a simple, principled interpretability framework based on token-level perplexit...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2603.29396v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2603.29396v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            83. <a href="http://arxiv.org/abs/2603.28129v1">A Position Statement on Endovascular Models and Effectiveness Metrics for Mechanical Thrombectomy Navigation, on behalf of the Stakeholder Taskforce for AI-assisted Robotic Thrombectomy (START)</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Harry Robertshaw, Anna Barnes, Phil Blakelock et al.</span>
-            <span>📅 2026-03-30</span>
-            <span>🏷️ cs.RO</span>
-        </div>
-        <div class="paper-abstract">While we are making progress in overcoming infectious diseases and cancer; one of the major medical challenges of the mid-21st century will be the rising prevalence of stroke. Large vessels occlusions are especially debilitating, yet effective treatment (needed within hours to achieve best outcomes)...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2603.28129v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2603.28129v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            84. <a href="http://arxiv.org/abs/2603.28102v1">Tianwen-2 target asteroid (469219) Kamo'oalewa probably develops an Itokawa-compositional but ultra-highly space-weathered surface</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 Pengfei Zhang, Guozheng Zhang, Zichen Wei et al.</span>
-            <span>📅 2026-03-30</span>
-            <span>🏷️ astro-ph.EP</span>
-        </div>
-        <div class="paper-abstract">China's Tianwen-2 mission plans to return samples from a small, rapidly spinning Earth quasi-satellite (469219) Kamo'oalewa. Previous studies linked Kamo'oalewa to lunar composition and origin. Here, we propose another scenario. We reanalyzed the reflectance spectrum of Kamo'oalewa and obtained an a...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2603.28102v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2603.28102v1" class="btn-pdf">📥 Download PDF</a>
-        </div>
-    </div>
-
-    <div class="paper">
-        <div class="paper-title">
-            <span class="relevance-badge relevance-low">Low Relevance (Score: 0)</span><br>
-            85. <a href="http://arxiv.org/abs/2603.26258v1">ARTA: Adaptive Mixed-Resolution Token Allocation for Efficient Dense Feature Extraction</a>
-        </div>
-        <div class="paper-meta">
-            <span>👤 David Hagerman, Roman Naeem, Erik Brorsson et al.</span>
-            <span>📅 2026-03-27</span>
-            <span>🏷️ cs.CV, cs.AI, cs.LG</span>
-        </div>
-        <div class="paper-abstract">We present ARTA, a mixed-resolution coarse-to-fine vision transformer for efficient dense feature extraction. Unlike models that begin with dense high-resolution (fine) tokens, ARTA starts with low-resolution (coarse) tokens and uses a lightweight allocator to predict which regions require more fine...</div>
-        
-        <div class="paper-links">
-            <a href="http://arxiv.org/abs/2603.26258v1" class="btn-arxiv">📄 View on arXiv</a>
-            <a href="https://arxiv.org/pdf/2603.26258v1" class="btn-pdf">📥 Download PDF</a>
+        <div class="paper-abstract">While quantum computing algorithms have been widely applied for electronic structure calculations, applications to molecular dynamics remain scarce. Complex and varied landscapes of molecular potential energy surfaces give rise to vibrational states with a wide range of properties, making it difficu...</div>
+        <div class="paper-keywords">Matched: variational quantum eigensolver, vqe, quantum computing, qubit</div>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2303.09822v3" class="btn-arxiv">📄 View on arXiv</a>
+            <a href="https://arxiv.org/pdf/2303.09822v3" class="btn-pdf">📥 Download PDF</a>
         </div>
     </div>
 
