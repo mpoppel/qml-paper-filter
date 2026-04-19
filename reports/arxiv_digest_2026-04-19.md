@@ -1,0 +1,216 @@
+# arXiv Daily Digest - 2026-04-19
+
+**Search Period:** Last 7 days  
+**Papers Found:** 15
+
+## Summary
+
+This digest covers:
+- Serial vs. parallel QNN architectures (expressivity, trainability)
+- Fourier analysis of parameterized quantum circuits
+- Dynamical Lie algebra (DLA) and QFIM rank theory
+- Barren plateaus, overparameterization, near-zero initialization
+- Data re-uploading / trainable frequency feature maps
+- VQE and Hamiltonian learning
+
+---
+
+## Papers
+
+
+### [Spectral methods: crucial for machine learning, natural for quantum computers?](http://arxiv.org/abs/2603.24654v2)
+**Authors:** Vasilis Belis, Joseph Bowles, Rishabh Gupta et al.  
+**Published:** 2026-03-25  
+**Updated:** 2026-04-14  
+**Categories:** quant-ph, cs.LG, stat.ML  
+
+**Abstract:** This article presents an argument for why quantum computers could unlock new methods for machine learning. We argue that spectral methods, in particular those that learn, regularise, or otherwise manipulate the Fourier spectrum of a machine learning model, are often natural for quantum computers. For example, if a generative machine learning model is represented by a quantum state, the Quantum Fou...
+
+[View on arXiv](http://arxiv.org/abs/2603.24654v2) | [PDF](https://arxiv.org/pdf/2603.24654v2)
+
+---
+
+### [Large Language Models Can Help Mitigate Barren Plateaus in Quantum Neural Networks](http://arxiv.org/abs/2502.13166v3)
+**Authors:** Jun Zhuang, Chaowen Guan  
+**Published:** 2025-02-17  
+**Updated:** 2026-04-12  
+**Categories:** quant-ph, cs.AI, cs.CL, cs.LG  
+
+**Abstract:** In the era of noisy intermediate-scale quantum (NISQ) computing, Quantum Neural Networks (QNNs) have emerged as a promising approach for various applications, yet their training is often hindered by barren plateaus (BPs), where gradient variance vanishes exponentially as the qubit size increases. Most initialization-based mitigation strategies rely heavily on pre-designed static parameter distribu...
+
+[View on arXiv](http://arxiv.org/abs/2502.13166v3) | [PDF](https://arxiv.org/pdf/2502.13166v3)
+
+---
+
+### [Frustration-Induced Expressibility Limitations in Variational Quantum Algorithms](http://arxiv.org/abs/2604.11688v1)
+**Authors:** Sandip Maiti  
+**Published:** 2026-04-13  
+**Updated:** 2026-04-13  
+**Categories:** quant-ph  
+
+**Abstract:** Geometric frustration, arising from competing interactions that prevent simultaneous energy minimization, presents a fundamental challenge for variational quantum algorithms applied to quantum many-body systems. We investigate the transverse-field Ising model on a square lattice with frustrated diagonal coupling and show that geometric frustration leads to strongly inhomogeneous correlations that ...
+
+[View on arXiv](http://arxiv.org/abs/2604.11688v1) | [PDF](https://arxiv.org/pdf/2604.11688v1)
+
+---
+
+### [Mitigating Barren Plateaus in Quantum Denoising Diffusion Probabilistic Model](http://arxiv.org/abs/2512.06695v2)
+**Authors:** Haipeng Cao, Kaining Zhang, Dacheng Tao et al.  
+**Published:** 2025-12-07  
+**Updated:** 2026-04-15  
+**Categories:** cs.LG, quant-ph  
+
+**Abstract:** Quantum generative models exploit quantum superposition and entanglement to enhance learning efficiency for both classical and quantum data. Recently, inspired by classical diffusion frameworks, the quantum denoising diffusion probabilistic model (QuDDPM) has emerged as a powerful tool for learning correlated noise models, many-body phases, and topological data structure. However, we demonstrate t...
+
+[View on arXiv](http://arxiv.org/abs/2512.06695v2) | [PDF](https://arxiv.org/pdf/2512.06695v2)
+
+---
+
+### [Adaptive H-EFT-VA: A Provably Safe Trajectory Through the Trainability-Expressibility Landscape of Variational Quantum Algorithms](http://arxiv.org/abs/2604.10607v1)
+**Authors:** Eyad I. B. Hamid  
+**Published:** 2026-04-12  
+**Updated:** 2026-04-12  
+**Categories:** quant-ph, cs.LG, hep-th  
+
+**Abstract:** H-EFT-VA established a physics-informed solution to the Barren Plateau (BP) problem via a hierarchical EFT UV-cutoff, guaranteeing gradient variance in Omega(1/poly(N)). However, localization restricts the ansatz to a polynomial subspace, creating a reference-state gap for states distant from |0>^N. We introduce Adaptive H-EFT-VA (A-H-EFT) to navigate the trainability-expressibility tradeoff by ex...
+
+[View on arXiv](http://arxiv.org/abs/2604.10607v1) | [PDF](https://arxiv.org/pdf/2604.10607v1)
+
+---
+
+### [Design Space Exploration of Hybrid Quantum Neural Networks for Chronic Kidney Disease](http://arxiv.org/abs/2604.13608v1)
+**Authors:** Muhammad Kashif, Hanzalah Mohamed Siraj, Nouhaila Innan et al.  
+**Published:** 2026-04-15  
+**Updated:** 2026-04-15  
+**Categories:** cs.LG, cs.AI  
+
+**Abstract:** Hybrid Quantum Neural Networks (HQNNs) have recently emerged as a promising paradigm for near-term quantum machine learning. However, their practical performance strongly depends on design choices such as classical-to-quantum data encoding, quantum circuit architecture, measurement strategy and shots. In this paper, we present a comprehensive design space exploration of HQNNs for Chronic Kidney Di...
+
+[View on arXiv](http://arxiv.org/abs/2604.13608v1) | [PDF](https://arxiv.org/pdf/2604.13608v1)
+
+---
+
+### [Variational Quantum Physics-Informed Neural Networks for Hydrological PDE-Constrained Learning with Inherent Uncertainty Quantification](http://arxiv.org/abs/2604.09374v2)
+**Authors:** Prasad Nimantha Madusanka Ukwatta Hewage, Midhun Chakkravarthy, Ruvan Kumara Abeysekara  
+**Published:** 2026-04-10  
+**Updated:** 2026-04-14  
+**Categories:** quant-ph, cs.LG  
+
+**Abstract:** We propose a Hybrid Quantum-Classical Physics-Informed Neural Network (HQC-PINN) that integrates parameterized variational quantum circuits into the PINN framework for hydrological PDE-constrained learning. Our architecture encodes multi-source remote sensing features into quantum states via trainable angle encoding, processes them through a hardware-efficient variational ansatz with entangling la...
+
+[View on arXiv](http://arxiv.org/abs/2604.09374v2) | [PDF](https://arxiv.org/pdf/2604.09374v2)
+
+---
+
+### [Geodesics of Quantum Feature Maps on the Space of Quantum Operators](http://arxiv.org/abs/2509.02795v5)
+**Authors:** Andrew Vlasic  
+**Published:** 2025-09-02  
+**Updated:** 2026-04-13  
+**Categories:** quant-ph  
+
+**Abstract:** Recent advancements in the discipline of quantum algorithms have displayed the importance of the geometry of quantum operators. Given this thrust, this paper develops a rigorous geometric framework to analyze how the Riemannian structure of data, under the manifold hypothesis, influences the subspace of quantum gates induced by quantum feature maps. While numerous encoding schemes have been propos...
+
+[View on arXiv](http://arxiv.org/abs/2509.02795v5) | [PDF](https://arxiv.org/pdf/2509.02795v5)
+
+---
+
+### [Optimal algorithmic complexity of inference in quantum kernel methods](http://arxiv.org/abs/2604.15214v1)
+**Authors:** Elies Gil-fuster, Seongwook Shin, Sofiene Jerbi et al.  
+**Published:** 2026-04-16  
+**Updated:** 2026-04-16  
+**Categories:** quant-ph, cs.LG  
+
+**Abstract:** Quantum kernel methods are among the leading candidates for achieving quantum advantage in supervised learning. A key bottleneck is the cost of inference: evaluating a trained model on new data requires estimating a weighted sum $\sum_{i=1}^N α_i k(x,x_i)$ of $N$ kernel values to additive precision $\varepsilon$, where $α$ is the vector of trained coefficients. The standard approach estimates each...
+
+[View on arXiv](http://arxiv.org/abs/2604.15214v1) | [PDF](https://arxiv.org/pdf/2604.15214v1)
+
+---
+
+### [GAT-QNN: Genetic Algorithm-Based Training of Hybrid Quantum Neural Networks](http://arxiv.org/abs/2604.15048v1)
+**Authors:** Tasnim Ahmed, Alberto Marchisio, Muhammad Kashif et al.  
+**Published:** 2026-04-16  
+**Updated:** 2026-04-16  
+**Categories:** quant-ph  
+
+**Abstract:** Hybrid Quantum Neural Networks (HQNNs) combine classical learning with parameterized quantum circuits, but their practical performance is often limited by (i) the noise of Noisy Intermediate-Scale Quantum (NISQ) devices and (ii) the large, discrete design space of quantum circuit architectures. Moreover, HQNNs are commonly trained using a fixed circuit and a single backend, even though deployment ...
+
+[View on arXiv](http://arxiv.org/abs/2604.15048v1) | [PDF](https://arxiv.org/pdf/2604.15048v1)
+
+---
+
+### [Assembling Extensive Quantum Fisher Information in Stabilizer Systems](http://arxiv.org/abs/2604.15268v1)
+**Authors:** Arnau Lira-Solanilla, Sreemayee Aditya, Xhek Turkeshi et al.  
+**Published:** 2026-04-16  
+**Updated:** 2026-04-16  
+**Categories:** quant-ph, cond-mat.stat-mech  
+
+**Abstract:** We introduce a systematic framework to construct nonlocal observables with extensive quantum Fisher information (QFI) density in stabilizer codes. The construction maps stabilizer generators to dual Ising spins whose correlators equal string order parameters, converting hidden nonlocal order into a metrologically accessible observable. Applying this to monitored cluster codes and the toric code, w...
+
+[View on arXiv](http://arxiv.org/abs/2604.15268v1) | [PDF](https://arxiv.org/pdf/2604.15268v1)
+
+---
+
+### [Path Integral Approach to Quantum Fisher Information](http://arxiv.org/abs/2604.12763v1)
+**Authors:** Francis J. Headley, Mahdi RouhbakhshNabati, Henry Harper-Gardner et al.  
+**Published:** 2026-04-14  
+**Updated:** 2026-04-14  
+**Categories:** quant-ph, cond-mat.stat-mech, hep-th  
+
+**Abstract:** We present a real-time path-integral formulation of the quantum Fisher information for dynamical parameter estimation. For pure states undergoing unitary evolution, we show that the quantum Fisher information can be expressed as a connected symmetrized covariance of a time-integrated action deformation, equivalently as an integrated insertion of $\partial_λS$ in the propagator. This reformulation ...
+
+[View on arXiv](http://arxiv.org/abs/2604.12763v1) | [PDF](https://arxiv.org/pdf/2604.12763v1)
+
+---
+
+### [A Bundle Isomorphism Relating Complex Velocity to Quantum Fisher Operators](http://arxiv.org/abs/2604.12187v2)
+**Authors:** Jorge Meza-Domínguez  
+**Published:** 2026-04-14  
+**Updated:** 2026-04-16  
+**Categories:** quant-ph, cs.IT, gr-qc, math-ph, math.QA  
+
+**Abstract:** We show that averaging matter dynamics over stochastic gravitational fluctuations gives rise to a complex velocity field \(η_μ = π_μ - i u_μ\) living as a section of the pullback bundle \(E = π_{2}^{*}(T^{*}M)\to \mathcal{C}\times M\). We prove that \(η_μ\) is isomorphic, via the Schrödinger representation, to the symmetric logarithmic derivative (SLD) operator \(L_μ\) on the Hilbert space \(\math...
+
+[View on arXiv](http://arxiv.org/abs/2604.12187v2) | [PDF](https://arxiv.org/pdf/2604.12187v2)
+
+---
+
+### [Reachability Constraints in Variational Quantum Circuits: Optimization within Polynomial Group Module](http://arxiv.org/abs/2604.13735v1)
+**Authors:** Yun-Tak Oh, Dongsoo Lee, Jungyoul Park et al.  
+**Published:** 2026-04-15  
+**Updated:** 2026-04-15  
+**Categories:** quant-ph, cs.CC, cs.ET, cs.LG  
+
+**Abstract:** This work identifies a necessary condition for any variational quantum approach to reach the exact ground state. Briefly, the norms of the projections of the input and the ground state onto each group module must match, implying that module weights of the solution state have to be known in advance in order to reach the exact ground state. An exemplary case is provided by matchgate circuits applied...
+
+[View on arXiv](http://arxiv.org/abs/2604.13735v1) | [PDF](https://arxiv.org/pdf/2604.13735v1)
+
+---
+
+### [Boson sampling beyond the dilute regime: second moments and anti-concentration](http://arxiv.org/abs/2604.14323v1)
+**Authors:** Hela Mhiri, Hugo Thomas, Léo Monbroussou et al.  
+**Published:** 2026-04-15  
+**Updated:** 2026-04-15  
+**Categories:** quant-ph  
+
+**Abstract:** Boson sampling is a leading candidate for demonstrating quantum advantage in photonic systems. Despite significant experimental and theoretical progress, a characterization of its output statistics remains incomplete. This is especially true beyond the dilute regime, where photon collisions and bunching become significant. The associated saturated regime, characterized by mode number growing linea...
+
+[View on arXiv](http://arxiv.org/abs/2604.14323v1) | [PDF](https://arxiv.org/pdf/2604.14323v1)
+
+---
+
+---
+
+## Search Configuration
+
+**Queries:**
+- ti:"quantum circuit" AND (ti:fourier OR ti:frequency OR ti:spectral OR abs:expressivity)
+- (ti:"barren plateau" OR ti:"loss landscape" OR ti:"near-zero initialization") AND quantum
+- (ti:"dynamical Lie" OR ti:"Lie algebra" OR ti:"quantum Fisher" OR ti:overparameterization) AND quantum
+- (ti:"data re-uploading" OR ti:"data encoding" OR ti:"feature map") AND (quantum OR qubit)
+- (ti:"variational quantum" OR ti:"quantum neural network" OR ti:"parameterized quantum") AND (machine learning OR trainability OR expressivity)
+- (ti:"variational quantum eigensolver" OR ti:VQE OR ti:"transverse field Ising") AND (barren OR landscape OR layer)
+
+**Tracked Authors:** Maria Schuld, Zoe Holmes, Marco Cerezo, Martin Larocca, Elies Gil-Fuster, Adrian Perez-Salinas, Johannes Jakob Meyer, Frederic Sauvage, Lennart Bittel
+
+**Categories:** quant-ph, cs.LG, cs.AI, stat.ML
+**Lookback Period:** 7 days
