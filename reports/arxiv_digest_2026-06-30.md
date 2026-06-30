@@ -1,0 +1,132 @@
+# arXiv Daily Digest - 2026-06-30
+
+**Search Period:** Last 7 days  
+**Papers Found:** 8
+
+## Summary
+
+This digest covers:
+- Serial vs. parallel QNN architectures (expressivity, trainability)
+- Fourier analysis of parameterized quantum circuits
+- Dynamical Lie algebra (DLA) and QFIM rank theory
+- Barren plateaus, overparameterization, near-zero initialization
+- Data re-uploading / trainable frequency feature maps
+- VQE and Hamiltonian learning
+
+---
+
+## Papers
+
+
+### [Parameter-Efficient Continuous-Variable Photonic Quantum Neural Networks for Edge Quantum AI: Demonstration in Oral Cancer Detection](http://arxiv.org/abs/2606.28252v1)
+**Authors:** Akshay Bhagwan Sonawane, Sophie Choe, Lakshman Tamil  
+**Published:** 2026-06-26  
+**Updated:** 2026-06-26  
+**Categories:** quant-ph, cs.LG  
+
+**Abstract:** Early detection of oral cancer markedly improves clinical outcomes, yet specialized diagnostic tools remain scarce in low-resource settings. Smartphone-based screening is a scalable alternative but needs lightweight models that run within edge-hardware constraints. Hybrid classical-quantum architectures are emerging candidates for parameter-efficient learning, yet most rely on qubit hardware that ...
+
+[View on arXiv](http://arxiv.org/abs/2606.28252v1) | [PDF](https://arxiv.org/pdf/2606.28252v1)
+
+---
+
+### [The Cost of Removing Tunability in Quantum Data Re-Uploading](http://arxiv.org/abs/2606.25598v1)
+**Authors:** Anthony Yuezhang Liu, Lirandë Pira  
+**Published:** 2026-06-24  
+**Updated:** 2026-06-24  
+**Categories:** quant-ph  
+
+**Abstract:** Fixed encoding data re-uploading quantum circuits provide a striking example of universality emerging from a highly constrained architecture. However, universality alone is insufficient for assessing the theoretical and practical value of fixed and tunable upload circuits. The resource cost of removing tunability remains poorly understood. In this work, we establish quantitative depth-error scalin...
+
+[View on arXiv](http://arxiv.org/abs/2606.25598v1) | [PDF](https://arxiv.org/pdf/2606.25598v1)
+
+---
+
+### [Beyond Single Trajectories: Optimal Control and Jordan-Lie Algebra in Hybrid Quantum Walks for Combinatorial Optimization](http://arxiv.org/abs/2604.25760v2)
+**Authors:** Tianen Chen, Yun Shang  
+**Published:** 2026-04-28  
+**Updated:** 2026-06-25  
+**Categories:** quant-ph  
+
+**Abstract:** The Quantum Approximate Optimization Algorithm (QAOA) follows a single, fixed evolution path, overlooking the potential computational advantage of coherently superposing multiple trajectories. Here we overcome this limitation with a hybrid quantum walk (HQW) ansatz that super poses multiple Hamiltonian-driven paths coherently within each circuit layer via a dynamical coin operator. QAOA emerges as...
+
+[View on arXiv](http://arxiv.org/abs/2604.25760v2) | [PDF](https://arxiv.org/pdf/2604.25760v2)
+
+---
+
+### [Nonlocal effects via Local Quantum Fisher Information: Characterizations and Interpretations](http://arxiv.org/abs/2606.29795v1)
+**Authors:** R. Muthuganesan  
+**Published:** 2026-06-29  
+**Updated:** 2026-06-29  
+**Categories:** quant-ph  
+
+**Abstract:** We introduce a quantum Fisher information based measurement-induced nonlocality (QFI-MIN), which quantifies the maximal statistical distinguishability induced by locally invariant unitary dynamics. The proposed measure inherits desirable properties including positivity, local unitary invariance, monotonicity under local operations, and immunity to the local ancilla problem. Analytical expressions ...
+
+[View on arXiv](http://arxiv.org/abs/2606.29795v1) | [PDF](https://arxiv.org/pdf/2606.29795v1)
+
+---
+
+### [Particle-preserving fermionic shadows with mode-independent sample complexity](http://arxiv.org/abs/2606.27254v1)
+**Authors:** Maxwell West, M. Cerezo, Martin Larocca  
+**Published:** 2026-06-25  
+**Updated:** 2026-06-25  
+**Categories:** quant-ph  
+
+**Abstract:** We consider the problem of learning expectation values of particle-preserving operators with respect to an unknown $η$-particle $n$-mode fermionic state via classical shadows. Our main application is to estimating overlaps with arbitrary Slater determinant states: While it is known that such overlaps can, in the average case, be learnt to a fixed additive precision with a constant number of sample...
+
+[View on arXiv](http://arxiv.org/abs/2606.27254v1) | [PDF](https://arxiv.org/pdf/2606.27254v1)
+
+---
+
+### [Alleviating the Sparse Matrix Scaling Bottleneck in Adaptive VQE via High-Order Taylor State Evolution](http://arxiv.org/abs/2606.29692v1)
+**Authors:** Hermawan Kresno Dipojono  
+**Published:** 2026-06-29  
+**Updated:** 2026-06-29  
+**Categories:** quant-ph  
+
+**Abstract:** The Variational Quantum Eigensolver (VQE) is a leading algorithm for noisy intermediate-scale quantum (NISQ) devices, but its adaptive variants (e.g., ADAPT-VQE) suffer from severe classical simulation bottlenecks during the ansatz growth phase. Representing and exponentiating pool operators for multi-qubit systems constructs massive sparse matrices that quickly scale to millions of elements, chok...
+
+[View on arXiv](http://arxiv.org/abs/2606.29692v1) | [PDF](https://arxiv.org/pdf/2606.29692v1)
+
+---
+
+### [Unbiased Hamiltonian Simulation by Reversing Trotter Error Dynamics](http://arxiv.org/abs/2606.29741v1)
+**Authors:** Keisuke Murota, Yuta Kikuchi, Enrico Rinaldi et al.  
+**Published:** 2026-06-29  
+**Updated:** 2026-06-29  
+**Categories:** quant-ph  
+
+**Abstract:** Owing to their simplicity and low overhead, Suzuki--Trotter formulas remain the de facto Hamiltonian simulation methods on current quantum computing platforms. Systematic Trotter errors, however, will quickly become limiting when scaling to larger problems and aiming for higher accuracy. We present a mechanism that removes the systematic error of any $k$-th order Suzuki--Trotter simulation, at the...
+
+[View on arXiv](http://arxiv.org/abs/2606.29741v1) | [PDF](https://arxiv.org/pdf/2606.29741v1)
+
+---
+
+### [Exact log-depth preparation of highly entangled matrix product states](http://arxiv.org/abs/2606.24475v1)
+**Authors:** Keisuke Murota, Frédéric Sauvage, Marco Ballarin et al.  
+**Published:** 2026-06-23  
+**Updated:** 2026-06-23  
+**Categories:** quant-ph  
+
+**Abstract:** Preparing matrix product states (MPS) on a quantum device is a key subroutine in many quantum algorithms. The most competitive methods, based on the renormalisation group, prepare translationally invariant MPS of size $L$ and bond dimension $χ$, up to an error $\varepsilon$, in circuit depth $\tilde O(χ^{4}\log(L/\varepsilon))$ or $\tilde O(χ^{6}\log\log(L/\varepsilon))$. We improve multiple aspec...
+
+[View on arXiv](http://arxiv.org/abs/2606.24475v1) | [PDF](https://arxiv.org/pdf/2606.24475v1)
+
+---
+
+---
+
+## Search Configuration
+
+**Queries:**
+- ti:"quantum circuit" AND (ti:fourier OR ti:frequency OR ti:spectral OR abs:expressivity)
+- (ti:"barren plateau" OR ti:"loss landscape" OR ti:"near-zero initialization") AND quantum
+- (ti:"dynamical Lie" OR ti:"Lie algebra" OR ti:"quantum Fisher" OR ti:overparameterization) AND quantum
+- (ti:"data re-uploading" OR ti:"data encoding" OR ti:"feature map") AND (quantum OR qubit)
+- (ti:"variational quantum" OR ti:"quantum neural network" OR ti:"parameterized quantum") AND (machine learning OR trainability OR expressivity)
+- (ti:"variational quantum eigensolver" OR ti:VQE OR ti:"transverse field Ising") AND (barren OR landscape OR layer)
+
+**Tracked Authors:** Maria Schuld, Zoe Holmes, Marco Cerezo, Martin Larocca, Elies Gil-Fuster, Adrian Perez-Salinas, Johannes Jakob Meyer, Frederic Sauvage, Lennart Bittel
+
+**Categories:** quant-ph, cs.LG, cs.AI, stat.ML
+**Lookback Period:** 7 days
