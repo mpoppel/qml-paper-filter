@@ -41,6 +41,10 @@ TRACKED_AUTHORS = [
     "Johannes Jakob Meyer",
     "Frederic Sauvage",
     "Lennart Bittel",
+    "Michael Spannowsky",
+    "Vishal S. Ngairangbam",
+    "Hela Mhiri",
+    "Jonas Landmann"
 ]
 
 # Keywords for relevance scoring
